@@ -1,0 +1,66 @@
+.button-links-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.button_sec_raw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 10px;
+  background-color: #000000;
+  outline: 3px #181717 solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+  width: 20%;
+}
+
+.button_sec_raw .text_sec_raw {
+  color: white;
+  font-family: "Space Mono", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: 400ms;
+}
+
+.button_sec_raw svg {
+  fill: #fafafa;
+  width: 24px; /* Adjust the size as needed */
+  height: 24px; /* Adjust the size as needed */
+}
+
+#sendEmail svg {
+  fill: #ffffff; /* Blanc par défaut */
+  transition: fill 400ms;
+}
+
+#sendEmail:hover svg {
+  fill: black; /* Noir au survol */
+  color: black;
+  background-color: transparent;
+}
+
+.button_sec_raw svg path {
+  transition: 400ms;
+}
+
+.button_sec_raw:hover {
+  background-color: transparent;
+}
+
+.button_sec_raw:hover .text_sec_raw {
+  color: #181717;
+}
+
+.button_sec_raw:hover svg path {
+  fill: #000000;
+}
