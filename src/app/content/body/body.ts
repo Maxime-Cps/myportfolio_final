@@ -4,7 +4,7 @@ import {Background} from '../background/background';
 @Component({
   selector: 'app-body',
   imports: [
-    Background
+    Background,
   ],
   templateUrl: './body.html',
   styleUrl: './body.scss'

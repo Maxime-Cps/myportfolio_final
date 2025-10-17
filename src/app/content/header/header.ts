@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import {Navigation} from '../navigation/navigation';
 import {RouterLink} from '@angular/router';
+import {NavigationContainer} from '../../tools/navigation-container/navigation-container';
 
 @Component({
   selector: 'app-header',
   imports: [
-    Navigation,
-    RouterLink
+    RouterLink,
+    NavigationContainer
   ],
   templateUrl: './header.html',
   styleUrl: './header.scss'

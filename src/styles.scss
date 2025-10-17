@@ -5,7 +5,7 @@
 /* ------------------------------- */
 
 $main-color: #3d3d3d;
-$secondary-color: #2ecc71;
+$secondary-color: rgba(255, 156, 127, 0.79);
 $border-radius: 5px;
 $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 $font-main :  'Space Mono', monospace;
@@ -14,6 +14,17 @@ $font-main :  'Space Mono', monospace;
 /*          Global Styles          */
 /* ------------------------------- */
 
+
+.home.container, .experiences.container, .aboutme.container, .project.container, .contact.container {
+  z-index: 0;
+}
+
+#app-navigation {
+  position: sticky;
+  top: 40%;
+  z-index: 1000;
+  padding: 0 0.5rem ;
+}
 
 html, body {
   height: 100%;
@@ -41,23 +52,16 @@ h1 {
 
 button {
   font-family: $font-main;
-  background-color: $secondary-color;
-  border: none;
-  border-radius: $border-radius;
-  color: white;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  box-shadow: $box-shadow;
-  transition: background-color 0.3s ease;
-  &:hover {
-    background-color: color.adjust($secondary-color, $lightness: -10%);
-  }
 }
 
 nav {
   display: flex;
   justify-content: center;
-
+  button {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
 }
 
 ul {
@@ -151,7 +155,6 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
   padding: 1rem;
 }
 
@@ -162,56 +165,74 @@ img {
   justify-content: left;
   font-size: 1.5rem;
   font-weight: bold;
+  width: 50%;
 }
 
 #header-h1 {
   align-self: center;
   text-align: left;
   justify-content: left;
-  margin-left: 1rem;
+  margin: 0 0 0 0.8rem;
   width: 20%;
 }
 
-.experiences-menu {
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 10px;
+  background-color: #000000;
+  outline: 3px #181717 solid;
+  outline-offset: -3px;
+  border-radius: $border-radius;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+  width: 100%;
+  color: white;
+  &:hover {
+    color: white;
+    background-color: color.adjust($secondary-color, $lightness: -10%);
+  }
+}
+
+.experiences {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin-top: 10rem;
-  .card {
+  color: white;
+  &:hover {
+    color: $secondary-color;
+  }
+  a {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background: #000000;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow;
-    padding: 1rem;
-    margin: 1rem;
-    width: 200px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    &:hover {
-      transform: translateY(-10px);
-    }
-    button {
-      width: 100%;
-      padding: 10px 15px;
-      gap: 10px;
-      background-color: #000000;
-      outline: 3px #181717 solid;
-      outline-offset: -3px;
-      border-radius: $border-radius;
-      border: none;
-      cursor: pointer;
-      transition: 400ms;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    .card {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      background: #000000;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+      padding: 1rem;
+      width: 200px;
+      text-align: center;
+      transition: transform 0.3s ease;
       &:hover {
-        background-color: white;
-        color: #000000;
+        transform: translateY(-10px);
+      }
+      p {
+        margin: 0.5rem 0 0 0;
+        font-weight: bold;
+        text-decoration: none;
       }
     }
   }
