@@ -6,8 +6,36 @@
 }
 
 .svg-container {
-  display: flex;
+  width: 100%; /* make the grid span the card so centering works */
+  display: grid;
+  grid-template-columns: repeat(3, max-content); /* up to 3 icons, size to content */
+  gap: 12px;
+  align-items: center;
+  justify-items: center; /* center each icon inside its cell */
+  justify-content: center; /* center the entire grid inside the card */
 }
+
+.card-container .glass .svg-container svg {
+  width: 32px;
+  height: 32px;
+  margin: 0 6px; /* small horizontal gap */
+  fill: #fff;
+  display: block;
+}
+
+/* Responsive: 2 per row on medium screens, 1 per row on small screens */
+@media (max-width: 800px) {
+  .svg-container {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (max-width: 480px) {
+  .svg-container {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
 
 .card-container .glass {
   position: relative;
