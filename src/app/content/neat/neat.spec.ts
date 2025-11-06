@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Background } from './background';
+import { Neat } from './neat';
 
-describe('Background', () => {
-  let component: Background;
-  let fixture: ComponentFixture<Background>;
+describe('Neat', () => {
+  let component: Neat;
+  let fixture: ComponentFixture<Neat>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Background]
+      imports: [Neat]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Background);
+    fixture = TestBed.createComponent(Neat);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

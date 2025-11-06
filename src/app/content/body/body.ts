@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import {Background} from '../background/background';
+import {RouterOutlet} from '@angular/router';
+import {NeatComponent} from '../neat/neat';
 
 @Component({
   selector: 'app-body',
   imports: [
-    Background,
+    RouterOutlet,
+    NeatComponent,
   ],
   templateUrl: './body.html',
   styleUrl: './body.scss'

@@ -6,7 +6,9 @@
 
 $main-color: #3d3d3d;
 $secondary-color: rgba(255, 156, 127, 0.79);
-$border-radius: 5px;
+$white-color: #F5F5F5;
+$button-border-radius: 5px;
+$border-radius: 30px;
 $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 $font-main :  'Space Mono', monospace;
 
@@ -26,7 +28,17 @@ $font-main :  'Space Mono', monospace;
   padding: 0 0.5rem ;
 }
 
+.neat-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 html, body {
+  //background-image: url("../public/assets/img/neat.png");
   height: 100%;
   margin: 0;
   padding: 0;
@@ -34,14 +46,12 @@ html, body {
 
 body {
   font-family: $font-main;
-  color: #333;
+  color: $white-color;
   margin: 0;
   padding: 0;
 }
 header {
-  background-color: $main-color;
-  color: white;
-  padding: 1rem;
+  padding-top: 16px;
   text-align: center;
 }
 
@@ -97,6 +107,9 @@ footer {
 }
 
 .container {
+  backdrop-filter: blur(30px);
+  box-shadow: 0 4px 6px rgba(227, 228, 237, 0.11);
+  border: 2px solid rgba(255, 156, 127, 0.18);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -104,9 +117,12 @@ footer {
   max-width: 800px;
   margin: 2rem auto;
   padding: 1rem;
-  background: white;
+  //background: linear-gradient(to bottom right, #2b2565, #30be96) ;
   border-radius: $border-radius;
-  box-shadow: $box-shadow;
+}
+
+.background-container {
+
 }
 
 #bg-wrap {
@@ -152,10 +168,16 @@ img {
 }
 
 .header-container {
+  backdrop-filter: blur(30px);
+  box-shadow: 0 4px 6px rgba(227, 228, 237, 0.11);
+  border: 2px solid rgba(255, 156, 127, 0.18);
+  color: white;
+  margin: 0 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 1rem;
+  border-radius: $border-radius;
 }
 
 .header-title {
@@ -185,7 +207,7 @@ button {
   background-color: #000000;
   outline: 3px #181717 solid;
   outline-offset: -3px;
-  border-radius: $border-radius;
+  border-radius: $button-border-radius;
   border: none;
   cursor: pointer;
   transition: 400ms;
