@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {RouterLink} from '@angular/router';
-import {NavigationContainer} from '../../tools/navigation-container/navigation-container';
+import {NavigationContainer} from '../../../tools/navigation-container/navigation-container';
 
 @Component({
   selector: 'app-header',

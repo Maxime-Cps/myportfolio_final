@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {RouterOutlet} from '@angular/router';
-import {NeatComponent} from '../neat/neat';
+import {NeatComponent} from '../../components/neat/neat';
 
 @Component({
   selector: 'app-body',

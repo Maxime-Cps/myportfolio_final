@@ -3,7 +3,7 @@ import { Component, AfterViewInit, OnDestroy, ViewChild, ElementRef, Inject } fr
 import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID } from '@angular/core';
 import { NeatGradient } from '@firecms/neat';
-import { config } from '../../config/neat-config';
+import { config } from '../../../config/neat-config';
 
 @Component({
   selector: 'app-neat',
