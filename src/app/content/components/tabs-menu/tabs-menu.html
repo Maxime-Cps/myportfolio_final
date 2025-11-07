@@ -1,0 +1,25 @@
+<div class="card">
+  <p-tabs class="tabsElement" value="0">
+    <p-tablist class="tabList">
+      @for (tab of tabs; track tab.value) {
+        <p-tab [value]="tab.value">{{ tab.title }}</p-tab>
+      }
+    </p-tablist>
+    <p-tabpanels class="tabPanelElement">
+      @for (tab of tabs; track tab.value) {
+        <p-tabpanel class="tabPanelElement" [value]="tab.value">
+          @if (tab.value == "tools") {
+            <app-tools-tab></app-tools-tab>
+          } @else if (tab.value == "languages") {
+            <app-languages-tab></app-languages-tab>
+          } @else if (tab.value == "frameworks") {
+            <app-frameworks-tab></app-frameworks-tab>
+          } @else if (tab.value == "ides") {
+            <app-ides-tab></app-ides-tab>
+          }
+
+        </p-tabpanel>
+      }
+    </p-tabpanels>
+  </p-tabs>
+</div>

@@ -1,9 +1,9 @@
 <section class="timeline-studies">
 
-<p-timeline [value]="events" align="alternate" class="customized-timeline">
+<p-timeline [value]="events" align="alternate" class="customized-timeline" style="margin: 0 15rem;">
   <ng-template #marker let-event>
-        <span class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm" [style]="{ 'background-color': event.color }">
-            <i [class]="event.icon"></i>
+        <span class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm">
+            <i id="timeline-icon" [class]="event.icon" ></i>
         </span>
   </ng-template>
   <ng-template #content let-event>
@@ -24,7 +24,6 @@
         {{ event.description }}
       </p>
       }
-      <p-button label="Read more" [text]="true" />
     </p-card>
   </ng-template>
 </p-timeline>

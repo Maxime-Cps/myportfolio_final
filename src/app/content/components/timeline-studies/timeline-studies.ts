@@ -5,6 +5,7 @@ import { ButtonModule } from 'primeng/button';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import {NgOptimizedImage} from '@angular/common';
 
+
 @Component({
   selector: 'app-timeline-studies',
   standalone: true,
@@ -20,7 +21,7 @@ export class TimelineStudies {
       {
         status: "Baccalauréat Scientifique, Option Sciences de l'Ingénieur, Spécialité ISN",
         date: '2020',
-        icon: 'pi pi-book',
+        icon: 'pi pi-check-circle',
         color: '#4B9CD3',
         image: 'lyceeJeanMonnet.jpeg',
         description: "Baccalauréat obtenu en 2020 avec mention Assez Bien. " +
@@ -36,7 +37,7 @@ export class TimelineStudies {
       {
         status: 'BUT Informatique',
         date: '2023-2026',
-        icon: 'pi pi-briefcase',
+        icon: 'pi pi-spin pi-spinner-dotted',
         color: '#F0AD4E',
         image: 'butInfo.png',
         description: 'Développement Informatique Front et Back-end, Gestion de Projets, Réseaux, DevOps.'

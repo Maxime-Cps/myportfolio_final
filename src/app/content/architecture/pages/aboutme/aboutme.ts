@@ -5,7 +5,6 @@ import {TimelineStudies} from '../../../components/timeline-studies/timeline-stu
 @Component({
   selector: 'app-aboutme',
   imports: [
-    CardTools,
     TimelineStudies
   ],
   templateUrl: './aboutme.html',
