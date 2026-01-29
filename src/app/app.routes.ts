@@ -3,8 +3,6 @@ import {Home} from './content/architecture/pages/home/home';
 import {Aboutme} from './content/architecture/pages/aboutme/aboutme';
 import {Projects} from './content/architecture/pages/projects/projects';
 import {Experiences} from './content/architecture/pages/experiences/experiences';
-import {ExpPro} from './content/architecture/pages/experiences/exp-pro/exp-pro';
-import {ExpInfo} from './content/architecture/pages/experiences/exp-info/exp-info';
 
 export const routes: Routes = [
   {
@@ -31,15 +29,5 @@ export const routes: Routes = [
     path: 'home/experiences',
     component: Experiences,
     title: 'Experiences - myportfolio'
-  },
-  {
-    path: 'home/experiences/exp-pro',
-    component: ExpPro,
-    title: 'Experiences - Professionnelles'
-  },
-  {
-    path: 'home/experiences/exp-info',
-    component: ExpInfo,
-    title: 'Experiences - Informatiques'
   },
 ];

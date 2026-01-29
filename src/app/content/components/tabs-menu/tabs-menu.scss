@@ -1,49 +1,68 @@
-.tabList {
-  background: none;
-}
-
-.tabsElement {
-  background: none;
-  margin: 0 15rem;
+.skills-grid-container {
+  margin-top: 2rem;
   backdrop-filter: blur(30px);
   box-shadow: 0 4px 6px rgba(227, 228, 237, 0.11);
   border: 2px solid rgba(255, 156, 127, 0.18);
   border-radius: 15px;
+  padding: 1.5rem;
 }
 
-#tabElement {
-  border-color: #F5F5F5
-}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 
-#iconElement {
-  color: #F5F5F5
-}
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-.labelElement {
-  color: #F5F5F5
-}
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-.tabPanelElement {
-  background: none;
-}
-
-/* Define keyframe animations */
-@keyframes rotate-out {
-  to {
-    transform: rotate(90deg);
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
   }
 }
-@keyframes rotate-in {
-  from {
-    transform: rotate(-90deg);
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.2s, background 0.2s;
+
+  &:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.05);
   }
 }
-/* Target view transition pseudo-elements */
-::view-transition-old(count),
-::view-transition-new(count) {
-  animation-duration: 200ms;
-  animation-name: -ua-view-transition-fade-in, rotate-in;
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ::ng-deep svg {
+    width: 40px;
+    height: 40px;
+  }
 }
-::view-transition-old(count) {
-  animation-name: -ua-view-transition-fade-out, rotate-out;
+
+.skill-name {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #F5F5F5;
+  text-align: center;
+}
+
+.skill-badge {
+  margin-top: 0.25rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  color: #fff;
+  font-weight: 500;
 }

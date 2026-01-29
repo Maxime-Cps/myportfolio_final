@@ -1,0 +1,31 @@
+<div class="hobbies-grid">
+  @for (hobby of hobbies; track hobby.name) {
+    <div class="hobby-card">
+      <div class="hobby-visual">
+        @if (hobby.image) {
+          <img [src]="hobby.image" [alt]="hobby.name" />
+        } @else {
+          <div class="hobby-icon" [innerHTML]="getSafeIcon(hobby.icon)"></div>
+        }
+      </div>
+      <div class="hobby-content">
+        <h3 class="hobby-name">{{ hobby.name }}</h3>
+        <p class="hobby-description">{{ hobby.description }}</p>
+        <div class="hobby-tags">
+          @for (tag of hobby.tags; track tag) {
+            <span class="hobby-tag">{{ tag }}</span>
+          }
+        </div>
+        @if (hobby.links) {
+          <div class="hobby-links">
+            @for (link of hobby.links; track link.label) {
+              <a [href]="link.url" target="_blank" rel="noopener noreferrer" class="hobby-link" [title]="link.label">
+                <span [innerHTML]="getSafeIcon(link.icon)"></span>
+              </a>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>

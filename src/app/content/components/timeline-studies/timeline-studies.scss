@@ -1,0 +1,78 @@
+.timeline-studies {
+  width: 100%;
+}
+
+.customized-timeline {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+
+// Fix alignment for alternate timeline
+::ng-deep {
+  .p-timeline {
+    &.p-timeline-alternate {
+      .p-timeline-event {
+        flex: 1;
+
+        &:nth-child(even) {
+          .p-timeline-event-content {
+            text-align: left;
+          }
+        }
+
+        &:nth-child(odd) {
+          .p-timeline-event-content {
+            text-align: right;
+          }
+        }
+      }
+
+      .p-timeline-event-opposite {
+        flex: 1;
+      }
+
+      .p-timeline-event-content {
+        flex: 1;
+      }
+    }
+  }
+
+  .p-card {
+    background: transparent;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 4px 6px rgba(227, 228, 237, 0.11);
+    border: 2px solid rgba(255, 156, 127, 0.18);
+    border-radius: 15px;
+
+    .p-card-header {
+      color: #F5F5F5;
+    }
+
+    .p-card-subtitle {
+      color: rgba(245, 245, 245, 0.7);
+    }
+
+    .p-card-body {
+      padding: 1rem;
+    }
+
+    .p-card-content {
+      color: #F5F5F5;
+
+      p {
+        margin: 0.5rem 0 0 0;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .p-timeline-event-connector {
+    background: rgba(255, 156, 127, 0.3);
+  }
+}

@@ -1,25 +1,13 @@
-<div class="card">
-  <p-tabs class="tabsElement" value="0">
-    <p-tablist class="tabList">
-      @for (tab of tabs; track tab.value) {
-        <p-tab [value]="tab.value">{{ tab.title }}</p-tab>
-      }
-    </p-tablist>
-    <p-tabpanels class="tabPanelElement">
-      @for (tab of tabs; track tab.value) {
-        <p-tabpanel class="tabPanelElement" [value]="tab.value">
-          @if (tab.value == "tools") {
-            <app-tools-tab></app-tools-tab>
-          } @else if (tab.value == "languages") {
-            <app-languages-tab></app-languages-tab>
-          } @else if (tab.value == "frameworks") {
-            <app-frameworks-tab></app-frameworks-tab>
-          } @else if (tab.value == "ides") {
-            <app-ides-tab></app-ides-tab>
-          }
-
-        </p-tabpanel>
-      }
-    </p-tabpanels>
-  </p-tabs>
+<div class="skills-grid-container">
+  <div class="skills-grid">
+    @for (skill of skills; track skill.name) {
+      <div class="skill-item">
+        <div class="skill-icon" [innerHTML]="getSafeIcon(skill.icon)"></div>
+        <span class="skill-name">{{ skill.name }}</span>
+        <span class="skill-badge" [style.background-color]="categories[skill.category].color">
+          {{ categories[skill.category].label }}
+        </span>
+      </div>
+    }
+  </div>
 </div>

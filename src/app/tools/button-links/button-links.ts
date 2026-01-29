@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-button-links',
@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './button-links.scss'
 })
 export class ButtonLinks {
+  showAnimation = input(false);
 
   openGithub() {
     const url = 'https://github.com/Maxime-Cps';

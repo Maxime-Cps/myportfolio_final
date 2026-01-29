@@ -1,4 +1,4 @@
-<div class="home container">
+<div id="home-container" class="home container" [class.fade-in-fwd-third]="showAnimation()">
   <div class="intro-image">
     <img id="selfie" ngSrc="/assets/img/me.png" height="344" width="344" alt="Photo de Maxime Chapuis" />
   </div>
@@ -9,6 +9,5 @@
     <h3>Front et Back End</h3>
   </div>
 </div>
-<app-button-links></app-button-links>
-<app-tabs-menu></app-tabs-menu>
+<app-button-links [showAnimation]="showAnimation()"></app-button-links>
 

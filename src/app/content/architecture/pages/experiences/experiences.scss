@@ -1,0 +1,231 @@
+.experiences-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+
+  h1 {
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #F5F5F5;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(255, 156, 127, 0.8), transparent);
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+  }
+}
+
+.experiences-timeline {
+  width: 100%;
+}
+
+.customized-timeline {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @media (max-width: 768px) {
+    padding: 0 0.5rem;
+  }
+}
+
+.timeline-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 156, 127, 0.2);
+  border: 2px solid rgba(255, 156, 127, 0.5);
+}
+
+#timeline-icon {
+  font-size: 1.2rem;
+  color: #F5F5F5;
+}
+
+// PrimeNG overrides
+::ng-deep {
+  .p-timeline.p-timeline-alternate {
+    .p-timeline-event {
+      min-height: 100px;
+    }
+
+    .p-timeline-event-opposite,
+    .p-timeline-event-content {
+      flex: 1;
+    }
+
+    // Odd items (1st, 3rd...) - content on the right
+    .p-timeline-event:nth-child(odd) {
+      .p-timeline-event-content {
+        text-align: left;
+        padding-left: 1rem;
+      }
+    }
+
+    // Even items (2nd, 4th...) - content on the left
+    .p-timeline-event:nth-child(even) {
+      .p-timeline-event-content {
+        text-align: left;
+        padding-right: 1rem;
+      }
+
+      .exp-header {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .p-card {
+    margin: 1rem;
+    padding: 1rem;
+    background: transparent;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 4px 6px rgba(227, 228, 237, 0.11);
+    border: 2px solid rgba(255, 156, 127, 0.18);
+    border-radius: 15px;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    .p-card-body {
+      padding: 1.25rem;
+    }
+
+    .p-card-content {
+      color: #F5F5F5;
+    }
+  }
+
+  .p-timeline-event-connector {
+    background: rgba(255, 156, 127, 0.3);
+  }
+}
+
+.exp-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.company-logo {
+  border-radius: 8px;
+  object-fit: contain;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.exp-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.exp-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #F5F5F5;
+}
+
+.exp-company {
+  font-size: 0.95rem;
+  color: rgba(255, 65, 30, 0.9);
+  font-weight: 500;
+}
+
+.exp-date {
+  font-size: 0.85rem;
+  color: rgba(245, 245, 245, 0.6);
+}
+
+.exp-description {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: rgba(245, 245, 245, 0.8);
+  font-style: italic;
+}
+
+.exp-tasks {
+  margin: 0.75rem 0;
+  padding-left: 1.25rem;
+  text-align: left !important;
+  display: block !important;
+  flex-direction: column !important;
+  list-style-type: disc !important;
+  align-items: flex-start !important;
+
+  li {
+    display: list-item !important;
+    margin: 0 0 0.4rem 0 !important;
+    font-size: 0.85rem;
+    color: #F5F5F5;
+    line-height: 1.4;
+  }
+}
+
+.exp-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: flex-start;
+}
+
+.tech-tag {
+  background: rgba(45, 45, 45, 0.2);
+  color: #dfdfdf;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .experiences-container {
+    padding: 1rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .exp-header {
+    flex-direction: column;
+  }
+
+  .exp-header-text {
+    align-items: flex-start;
+  }
+
+  .company-logo {
+    align-self: flex-start;
+  }
+
+  ::ng-deep {
+    .p-timeline.p-timeline-alternate {
+      .p-timeline-event-opposite {
+        display: none;
+      }
+
+      .p-timeline-event-content {
+        padding-left: 1rem !important;
+        padding-right: 0 !important;
+      }
+    }
+  }
+}

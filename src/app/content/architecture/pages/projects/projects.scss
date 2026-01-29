@@ -1,0 +1,164 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.card-container {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1;
+  position: relative;
+  border-radius: 70px;
+}
+
+.card-container::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #000000 0%, #eb592f 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.jesso {
+  .content p {
+    color: #474747;
+  }
+
+  .card .img-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, #20a050 0%, #2ba838 100% );
+    transition: scale 0.6s, rotate 0.6s, filter 1s;
+  }
+}
+
+.bingy, .WTFAU {
+  .card .img-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, #20a050 0%, #2ba838 100% );
+    transition: scale 0.6s, rotate 0.6s, filter 1s;
+  }
+}
+
+.GolfIT {
+  .content p {
+    color: #474747;
+  }
+
+  .card .img-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, #20a050 0%, #2ba838 100% );
+    transition: scale 0.6s, rotate 0.6s, filter 1s;
+  }
+}
+
+.crashbandibooks .card .img-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #000000 0%, #eb592f 100% );
+  transition: scale 0.6s, rotate 0.6s, filter 1s;
+}
+
+.pookemon .card .img-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #000000 0%, #eb592f 100% );
+  transition: scale 0.6s, rotate 0.6s, filter 1s;
+}
+
+.labyrinthe {
+  .content p {
+    color: #474747;
+  }
+
+  .card .img-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, #20a050 0%, #2ba838 100% );
+    transition: scale 0.6s, rotate 0.6s, filter 1s;
+  }
+}
+
+
+
+.card .img-content svg {
+  width: 50px;
+  height: 50px;
+  fill: #fafafa;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #e8e8e8;
+  padding: 20px 24px;
+  line-height: 1.5;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(50px);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card .content .heading {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.card:hover .content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover .img-content {
+  scale: 2.5;
+  rotate: 30deg;
+  filter: blur(7px);
+}
+
+.card:hover .img-content svg {
+  fill: transparent;
+}

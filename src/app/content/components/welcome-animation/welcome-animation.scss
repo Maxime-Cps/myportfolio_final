@@ -1,0 +1,64 @@
+@use '../../../../styles.scss' as *;
+
+.header-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 50%;
+}
+
+#header-h1 {
+  font-style: italic;
+  font-family: $font-title;
+  font-size: 8rem;
+  align-self: center;
+  text-align: left;
+  justify-content: left;
+  margin: 0 0 0 0.8rem;
+}
+
+#logo {
+  width: 80%;
+  height: auto;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation logo-entry
+ * ----------------------------------------
+ */
+
+@keyframes logo-entry {
+  0% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  99% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+}
+
+.logo-entry {
+  position: absolute;
+  z-index: 1000;
+  animation: logo-entry 4s ease-in-out 0.5s both;
+}
