@@ -4,8 +4,8 @@
       <div class="skill-item">
         <div class="skill-icon" [innerHTML]="getSafeIcon(skill.icon)"></div>
         <span class="skill-name">{{ skill.name }}</span>
-        <span class="skill-badge" [style.background-color]="categories[skill.category].color">
-          {{ categories[skill.category].label }}
+        <span class="skill-badge" [style.background-color]="categories()[skill.category].color">
+          {{ categories()[skill.category].label }}
         </span>
       </div>
     }

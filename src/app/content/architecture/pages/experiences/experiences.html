@@ -1,8 +1,8 @@
 <div class="experiences-container">
-  <h1>Mes Expériences Professionnelles</h1>
+  <h1>{{ 'experiences.title' | translate }}</h1>
 
   <section class="experiences-timeline navigation-animation">
-    <p-timeline [value]="experiences" align="alternate" class="customized-timeline">
+    <p-timeline [value]="experiences()" align="alternate" class="customized-timeline">
       <ng-template #marker let-exp>
         <span class="timeline-marker">
           <i [class]="exp.icon" id="timeline-icon"></i>
@@ -17,7 +17,7 @@
               }
               <div class="exp-header-text">
                 <h3 class="exp-title">{{ exp.title }}</h3>
-                <span class="exp-company">{{ exp.company }}@if (exp.location) { • {{ exp.location }}}</span>
+                <span class="exp-company">{{ exp.company }}@if (exp.location) { - {{ exp.location }}}</span>
                 <span class="exp-date">{{ exp.date }}</span>
               </div>
             </div>

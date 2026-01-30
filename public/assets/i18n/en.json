@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "experiences": "Experiences",
+    "contact": "Contact"
+  },
+  "header": {
+    "title": "My Portfolio"
+  },
+  "home": {
+    "greeting": "Hi!",
+    "intro": "I'm Maxime Chapuis",
+    "role1": "Junior Developer",
+    "role2": "Front and Back End",
+    "imageAlt": "Photo of Maxime Chapuis"
+  },
+  "buttons": {
+    "cv": "My Resume"
+  },
+  "aboutme": {
+    "parcours": "My Journey",
+    "softSkills": "Soft Skills",
+    "hardSkills": "Technical Skills",
+    "passions": "My Passions"
+  },
+  "timeline": {
+    "bac": {
+      "status": "Scientific Baccalaureate, Engineering Sciences Option, ISN Specialty",
+      "description": "Baccalaureate obtained in 2020 with Honors. Specialization in Computer Science and Digital Sciences. Jean Monnet High School."
+    },
+    "licence": {
+      "status": "Bachelor's Degree in Engineering Physics"
+    },
+    "but": {
+      "status": "Bachelor of Technology in Computer Science",
+      "description": "Front and Back-end Development, Project Management, Networks, DevOps."
+    }
+  },
+  "softSkills": {
+    "teamwork": {
+      "title": "Teamwork",
+      "description": "Collaborating effectively with diverse profiles"
+    },
+    "communication": {
+      "title": "Communication",
+      "description": "Communicating clearly with teams and clients"
+    },
+    "adaptability": {
+      "title": "Adaptability",
+      "description": "Adjusting quickly to new situations"
+    },
+    "problemSolving": {
+      "title": "Problem Solving",
+      "description": "Analyzing and finding creative solutions"
+    },
+    "curiosity": {
+      "title": "Curiosity",
+      "description": "Continuously learning new technologies"
+    },
+    "organization": {
+      "title": "Organization",
+      "description": "Managing my time and prioritizing tasks"
+    }
+  },
+  "categories": {
+    "language": "Language",
+    "framework": "Framework",
+    "tool": "Tool",
+    "ide": "IDE"
+  },
+  "hobbies": {
+    "music": {
+      "name": "Electronic Music",
+      "description": "DJ & Producer passionate about electronic music"
+    },
+    "golf": {
+      "name": "Golf",
+      "description": "Licensed player since 2024 passionate about this sport"
+    },
+    "motorsport": {
+      "name": "Motorsport",
+      "description": "Passionate about endurance and F1, amateur simracer"
+    },
+    "association": {
+      "name": "Community Involvement",
+      "description": "Vice President Events (CORE Student Association) - Mission Officer (ARIANE Student Association)"
+    }
+  },
+  "projects": {
+    "crashbandibooks": {
+      "title": "Crash BandiBooks",
+      "description": "A serious game developed to illustrate the role of Data Librarians in research data management."
+    },
+    "wtfau": {
+      "title": "WTFAU",
+      "description": "My authentication platform for all my services."
+    },
+    "jesso": {
+      "title": "Jesso",
+      "description": "The management application for student associations."
+    },
+    "bingy": {
+      "title": "Bingy",
+      "description": "Mobile app for creating TV series and movie watchlists."
+    },
+    "golfit": {
+      "title": "GolfIT (WIP)",
+      "description": "An app tracking your golf games and statistics."
+    },
+    "labyrinthe": {
+      "title": "Labyrinth",
+      "description": "The Labyrinth board game recreated in Java."
+    },
+    "pookemon": {
+      "title": "POOkemon",
+      "description": "The Pokemon card game on your terminal! All coded in Java."
+    }
+  },
+  "experiences": {
+    "title": "My Professional Experiences",
+    "items": {
+      "alternance": {
+        "title": "Developer Apprenticeship",
+        "date": "September 2025 - August 2026",
+        "description": "3rd year apprenticeship of Bachelor of Technology in Computer Science",
+        "tasks": [
+          "Development and maintenance of Jalios platforms in Java JSP",
+          "Development of Web applications with Angular and TypeScript",
+          "API development with C# .NET",
+          "Participation in planning and code review meetings"
+        ]
+      },
+      "stage": {
+        "title": "Java JSP Developer Internship",
+        "date": "April 2025 - June 2025",
+        "description": "End of 2nd year internship of Bachelor of Technology in Computer Science",
+        "tasks": [
+          "Development and maintenance of Jalios platforms in Java JSP",
+          "Collaboration with the team to improve existing features",
+          "Participation in planning and code review meetings"
+        ]
+      },
+      "rectorat": {
+        "title": "Exams and Competitions Department Assistant",
+        "date": "May 2023 - July 2023",
+        "tasks": [
+          "Preparation of subject envelopes",
+          "Delivery of subjects to various high schools and middle schools in Alsace"
+        ]
+      },
+      "restaurant": {
+        "title": "Waiter",
+        "date": "May 2022 - September 2022",
+        "tasks": [
+          "Taking customer orders",
+          "Bringing dishes and drinks to customers",
+          "Ensuring the cleanliness of the premises"
+        ]
+      },
+      "intermarche": {
+        "title": "Versatile Commercial Employee at Drive",
+        "date": "June 2021 - August 2021",
+        "tasks": [
+          "Preparation and delivery of orders",
+          "Management of order storage (cold chain...)"
+        ]
+      }
+    }
+  },
+  "footer": {
+    "copyright": "2025 Maxime Chapuis. All rights reserved."
+  }
+}

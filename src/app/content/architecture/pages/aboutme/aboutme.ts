@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import {CardTools} from '../../../../tools/card-tools/card-tools';
-import {TimelineStudies} from '../../../components/timeline-studies/timeline-studies';
-import {TabsMenu} from '../../../components/tabs-menu/tabs-menu';
-import {SoftSkills} from './soft-skills/soft-skills';
-import {Hobbies} from './hobbies/hobbies';
+import { TimelineStudies } from '../../../components/timeline-studies/timeline-studies';
+import { TabsMenu } from '../../../components/tabs-menu/tabs-menu';
+import { SoftSkills } from './soft-skills/soft-skills';
+import { Hobbies } from './hobbies/hobbies';
+import { TranslatePipe } from '../../../../core/pipes/translate.pipe';
 
 @Component({
   selector: 'app-aboutme',
@@ -11,7 +11,8 @@ import {Hobbies} from './hobbies/hobbies';
     TimelineStudies,
     TabsMenu,
     SoftSkills,
-    Hobbies
+    Hobbies,
+    TranslatePipe
   ],
   templateUrl: './aboutme.html',
   styleUrl: './aboutme.scss'

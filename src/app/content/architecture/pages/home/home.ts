@@ -1,13 +1,14 @@
 import { Component, OnInit, signal, PLATFORM_ID, inject } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser, NgOptimizedImage } from '@angular/common';
 import { ButtonLinks } from '../../../../tools/button-links/button-links';
-import { NgOptimizedImage } from '@angular/common';
+import { TranslatePipe } from '../../../../core/pipes/translate.pipe';
 
 @Component({
   selector: 'app-home',
   imports: [
     ButtonLinks,
     NgOptimizedImage,
+    TranslatePipe
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss'

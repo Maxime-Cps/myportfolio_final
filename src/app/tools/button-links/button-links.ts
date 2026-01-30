@@ -1,8 +1,9 @@
 import { Component, input } from '@angular/core';
+import { TranslatePipe } from '../../core/pipes/translate.pipe';
 
 @Component({
   selector: 'app-button-links',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './button-links.html',
   styleUrl: './button-links.scss'
 })

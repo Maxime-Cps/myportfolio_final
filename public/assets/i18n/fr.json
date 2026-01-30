@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "A Propos",
+    "projects": "Projets",
+    "experiences": "Experiences",
+    "contact": "Contact"
+  },
+  "header": {
+    "title": "Mon Portfolio"
+  },
+  "home": {
+    "greeting": "Bonjour !",
+    "intro": "Je suis Maxime Chapuis",
+    "role1": "Developpeur Junior",
+    "role2": "Front et Back End",
+    "imageAlt": "Photo de Maxime Chapuis"
+  },
+  "buttons": {
+    "cv": "Mon CV"
+  },
+  "aboutme": {
+    "parcours": "Mon parcours",
+    "softSkills": "Competences humaines",
+    "hardSkills": "Competences techniques",
+    "passions": "Mes passions"
+  },
+  "timeline": {
+    "bac": {
+      "status": "Baccalaureat Scientifique, Option Sciences de l'Ingenieur, Specialite ISN",
+      "description": "Baccalaureat obtenu en 2020 avec mention Assez Bien. Specialisation en Informatique et Sciences du Numerique. Lycee Jean Monnet."
+    },
+    "licence": {
+      "status": "Licence de Physique Ingenierie"
+    },
+    "but": {
+      "status": "BUT Informatique",
+      "description": "Developpement Informatique Front et Back-end, Gestion de Projets, Reseaux, DevOps."
+    }
+  },
+  "softSkills": {
+    "teamwork": {
+      "title": "Travail d'equipe",
+      "description": "Collaborer efficacement avec differents profils"
+    },
+    "communication": {
+      "title": "Communication",
+      "description": "Echanger clairement avec les equipes et clients"
+    },
+    "adaptability": {
+      "title": "Adaptabilite",
+      "description": "M'ajuster rapidement aux nouvelles situations"
+    },
+    "problemSolving": {
+      "title": "Resolution de problemes",
+      "description": "Analyser et trouver des solutions creatives"
+    },
+    "curiosity": {
+      "title": "Curiosite",
+      "description": "Apprendre continuellement de nouvelles technologies"
+    },
+    "organization": {
+      "title": "Organisation",
+      "description": "Gerer mon temps et prioriser les taches"
+    }
+  },
+  "categories": {
+    "language": "Langage",
+    "framework": "Framework",
+    "tool": "Outil",
+    "ide": "IDE"
+  },
+  "hobbies": {
+    "music": {
+      "name": "Musique Electronique",
+      "description": "DJ & Producteur passionne de musique electronique"
+    },
+    "golf": {
+      "name": "Golf",
+      "description": "Joueur licencie depuis 2024 passionne par ce sport"
+    },
+    "motorsport": {
+      "name": "Sport Automobile",
+      "description": "Passionne d'endurance et de F1, simracer amateur"
+    },
+    "association": {
+      "name": "Engagement Associatif",
+      "description": "Vice President Evenement (CORE) - Charge de mission (ARIANE)"
+    }
+  },
+  "projects": {
+    "crashbandibooks": {
+      "title": "Crash BandiBooks",
+      "description": "Un jeu serieux developpe pour illustrer le role des Data Librarians dans la gestion des donnees de recherche."
+    },
+    "wtfau": {
+      "title": "WTFAU",
+      "description": "Ma plateforme d'authentification pour tout mes services."
+    },
+    "jesso": {
+      "title": "Jesso",
+      "description": "L'application de gestion pour association etudiante."
+    },
+    "bingy": {
+      "title": "Bingy",
+      "description": "Application mobile de creation de watchlist pour series et films."
+    },
+    "golfit": {
+      "title": "GolfIT (WIP)",
+      "description": "Une application retracant vos parties et vos statistiques au golf."
+    },
+    "labyrinthe": {
+      "title": "Labyrinthe",
+      "description": "Le jeu de plateau Labyrinthe recree en Java."
+    },
+    "pookemon": {
+      "title": "POOkemon",
+      "description": "Le jeu de carte Pokemon sur votre terminal ! Le tout code en Java."
+    }
+  },
+  "experiences": {
+    "title": "Mes Experiences Professionnelles",
+    "items": {
+      "alternance": {
+        "title": "Alternance Developpeur",
+        "date": "Septembre 2025 - Aout 2026",
+        "description": "Alternance de 3eme annee de BUT Informatique",
+        "tasks": [
+          "Developpement et maintenance de plateformes Jalios en Java JSP",
+          "Developpement d'applications Web avec Angular et TypeScript",
+          "Developpement d'API avec C# .NET",
+          "Participation aux reunions de planification et de revue de code"
+        ]
+      },
+      "stage": {
+        "title": "Stage Developpeur Java JSP",
+        "date": "Avril 2025 - Juin 2025",
+        "description": "Stage de fin de 2eme annee de BUT Informatique",
+        "tasks": [
+          "Developpement et maintenance de plateformes Jalios en Java JSP",
+          "Collaboration avec l'equipe pour ameliorer les fonctionnalites existantes",
+          "Participation aux reunions de planification et de revue de code"
+        ]
+      },
+      "rectorat": {
+        "title": "Assistant Departement Examens et Concours",
+        "date": "Mai 2023 - Juillet 2023",
+        "tasks": [
+          "Preparation des enveloppes sujets",
+          "Livraisons des sujets dans les differents lycees et colleges relais d'Alsace"
+        ]
+      },
+      "restaurant": {
+        "title": "Runner / Serveur",
+        "date": "Mai 2022 - Septembre 2022",
+        "tasks": [
+          "Prise des commandes du client",
+          "Apporter les plats et boissons au client",
+          "S'assurer de la proprete des lieux"
+        ]
+      },
+      "intermarche": {
+        "title": "Employe Commercial Polyvalent au Drive",
+        "date": "Juin 2021 - Aout 2021",
+        "tasks": [
+          "Preparation et livraison des commandes",
+          "Gestion du stockage des commandes (chaine du froid...)"
+        ]
+      }
+    }
+  },
+  "footer": {
+    "copyright": "2025 Maxime Chapuis. Tous droits reserves."
+  }
+}

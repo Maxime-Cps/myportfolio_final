@@ -1,5 +1,5 @@
 <div class="soft-skills-grid">
-  @for (skill of softSkills; track skill.title) {
+  @for (skill of softSkills(); track skill.title) {
     <div class="skill-card">
       <i [class]="skill.icon"></i>
       <h3>{{ skill.title }}</h3>

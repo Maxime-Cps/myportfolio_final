@@ -1,95 +1,107 @@
-import { Component } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from 'primeng/card';
 import { NgOptimizedImage } from '@angular/common';
+import { TranslationService } from '../../../../core/services/translation.service';
+import { TranslatePipe } from '../../../../core/pipes/translate.pipe';
 
 interface Experience {
-  title: string;
+  titleKey: string;
   company: string;
   location?: string;
-  date: string;
+  dateKey: string;
   icon: string;
   image?: string;
-  description?: string;
-  tasks: string[];
+  descriptionKey?: string;
+  tasksKey: string;
   technologies?: string[];
 }
 
 @Component({
   selector: 'app-experiences',
-  imports: [TimelineModule, CardModule, NgOptimizedImage],
+  imports: [TimelineModule, CardModule, NgOptimizedImage, TranslatePipe],
   templateUrl: './experiences.html',
   styleUrl: './experiences.scss'
 })
 export class Experiences {
-  experiences: Experience[] = [
+  private readonly translationService = inject(TranslationService);
+
+  experienceConfigs: Experience[] = [
     {
-      title: 'Alternance Développeur',
+      titleKey: 'experiences.items.alternance.title',
       company: 'CAPCOD',
       location: 'Strasbourg',
-      date: 'Septembre 2025 - Août 2026',
+      dateKey: 'experiences.items.alternance.date',
       icon: 'pi pi-code',
       image: 'capcod.jpeg',
-      description: 'Alternance de 3ème année de BUT Informatique',
-      tasks: [
-        'Développement et maintenance de plateformes Jalios en Java JSP',
-        'Développement d\'applications Web avec Angular et TypeScript',
-        'Développement d\'API avec C# .NET',
-        'Participation aux réunions de planification et de revue de code'
-      ],
+      descriptionKey: 'experiences.items.alternance.description',
+      tasksKey: 'experiences.items.alternance.tasks',
       technologies: ['Java', 'JSP', 'Angular', 'TypeScript', 'C#', '.NET', 'Git']
     },
     {
-      title: 'Stage Développeur Java JSP',
+      titleKey: 'experiences.items.stage.title',
       company: 'CAPCOD',
       location: 'Strasbourg',
-      date: 'Avril 2025 - Juin 2025',
+      dateKey: 'experiences.items.stage.date',
       icon: 'pi pi-briefcase',
       image: 'capcod.jpeg',
-      description: 'Stage de fin de 2ème année de BUT Informatique',
-      tasks: [
-        'Développement et maintenance de plateformes Jalios en Java JSP',
-        'Collaboration avec l\'équipe pour améliorer les fonctionnalités existantes',
-        'Participation aux réunions de planification et de revue de code'
-      ],
+      descriptionKey: 'experiences.items.stage.description',
+      tasksKey: 'experiences.items.stage.tasks',
       technologies: ['Java', 'JSP', 'Jalios', 'Git']
     },
     {
-      title: 'Assistant Département Examens et Concours',
+      titleKey: 'experiences.items.rectorat.title',
       company: 'Rectorat de Strasbourg',
       location: 'Strasbourg',
       image: 'ac_strasbourg.svg',
-      date: 'Mai 2023 - Juillet 2023',
+      dateKey: 'experiences.items.rectorat.date',
       icon: 'pi pi-building',
-      tasks: [
-        'Préparation des enveloppes sujets',
-        'Livraisons des sujets dans les différents lycées et collèges relais d\'Alsace'
-      ]
+      tasksKey: 'experiences.items.rectorat.tasks'
     },
     {
-      title: 'Runner / Serveur',
+      titleKey: 'experiences.items.restaurant.title',
       company: 'Restaurant Au Petit Bois Vert',
       location: 'Strasbourg',
       image: 'au_petit_bois_vert.jpg',
-      date: 'Mai 2022 - Septembre 2022',
+      dateKey: 'experiences.items.restaurant.date',
       icon: 'pi pi-star',
-      tasks: [
-        'Prise des commandes du client',
-        'Apporter les plats et boissons au client',
-        'S\'assurer de la propreté des lieux'
-      ]
+      tasksKey: 'experiences.items.restaurant.tasks'
     },
     {
-      title: 'Employé Commercial Polyvalent au Drive',
-      company: 'Intermarché',
-      location: 'Crépy-en-Valois',
+      titleKey: 'experiences.items.intermarche.title',
+      company: 'Intermarche',
+      location: 'Crepy-en-Valois',
       image: 'intermarche.jpg',
-      date: 'Juin 2021 - Août 2021',
+      dateKey: 'experiences.items.intermarche.date',
       icon: 'pi pi-shopping-cart',
-      tasks: [
-        'Préparation et livraison des commandes',
-        'Gestion du stockage des commandes (chaîne du froid...)'
-      ]
+      tasksKey: 'experiences.items.intermarche.tasks'
     }
   ];
+
+  experiences = computed(() => {
+    return this.experienceConfigs.map(config => {
+      const title = this.translationService.get(config.titleKey);
+      const date = this.translationService.get(config.dateKey);
+      const description = config.descriptionKey ? this.translationService.get(config.descriptionKey) : undefined;
+      return {
+        title: typeof title === 'string' ? title : config.titleKey,
+        company: config.company,
+        location: config.location,
+        date: typeof date === 'string' ? date : config.dateKey,
+        icon: config.icon,
+        image: config.image,
+        description: typeof description === 'string' ? description : undefined,
+        tasks: this.getTranslatedTasks(config.tasksKey),
+        technologies: config.technologies
+      };
+    });
+  });
+
+  private getTranslatedTasks(key: string): string[] {
+    const tasks = this.translationService.get(key);
+    if (Array.isArray(tasks)) {
+      return tasks.filter((t): t is string => typeof t === 'string');
+    }
+    return typeof tasks === 'string' ? [tasks] : [key];
+  }
 }

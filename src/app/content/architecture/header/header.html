@@ -2,8 +2,13 @@
   <div class="header-container" [class.slide-in-blurred-left]="showAnimation()">
     <div class="header-title">
       <img routerLink="/home" id="logo" src="/messmocky.PNG" alt="messmocky.png" />
-      <h1 id="header-h1">Mon Portfolio</h1>
+      <h1 id="header-h1">{{ 'header.title' | translate }}</h1>
     </div>
-    <app-navigation-container></app-navigation-container>
+    <div class="header-right">
+      <app-navigation-container></app-navigation-container>
+      <button class="lang-toggle" (click)="toggleLanguage()">
+        {{ translationService.lang() === 'fr' ? 'EN' : 'FR' }}
+      </button>
+    </div>
   </div>
 </header>

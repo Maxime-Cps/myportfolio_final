@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { TranslationService } from '../../../core/services/translation.service';
 
 interface Skill {
   name: string;
@@ -8,7 +9,7 @@ interface Skill {
 }
 
 interface CategoryInfo {
-  label: string;
+  labelKey: string;
   color: string;
 }
 
@@ -18,12 +19,26 @@ interface CategoryInfo {
   styleUrl: './tabs-menu.scss'
 })
 export class TabsMenu {
-  categories: Record<string, CategoryInfo> = {
-    language: { label: 'Langage', color: '#3b82f6' },
-    framework: { label: 'Framework', color: '#22c55e' },
-    tool: { label: 'Outil', color: '#f59e0b' },
-    ide: { label: 'IDE', color: '#a855f7' }
+  private readonly translationService = inject(TranslationService);
+
+  private categoryConfigs: Record<string, CategoryInfo> = {
+    language: { labelKey: 'categories.language', color: '#3b82f6' },
+    framework: { labelKey: 'categories.framework', color: '#22c55e' },
+    tool: { labelKey: 'categories.tool', color: '#f59e0b' },
+    ide: { labelKey: 'categories.ide', color: '#a855f7' }
   };
+
+  categories = computed(() => {
+    const result: Record<string, { label: string; color: string }> = {};
+    for (const [key, config] of Object.entries(this.categoryConfigs)) {
+      const label = this.translationService.get(config.labelKey);
+      result[key] = {
+        label: typeof label === 'string' ? label : config.labelKey,
+        color: config.color
+      };
+    }
+    return result;
+  });
 
   skills: Skill[] = [
     // Langages
@@ -54,7 +69,7 @@ export class TabsMenu {
     { name: 'Eclipse', category: 'ide', icon: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.28218 16.3642C4.10453 9.81902 9.01664 4.04317 15.4021 3C10.3832 3.08177 6.3879 5.1297 3.87097 9.50805C1.21367 14.128 1.39629 18.8433 4.3592 23.2749C6.96433 27.1701 10.7869 28.969 15.4543 29C8.88371 27.8788 4.4412 22.2417 4.28218 16.3642ZM5.59779 12.0429C5.46114 12.4047 5.47853 12.4108 5.87358 12.4108C13.607 12.4108 21.3416 12.4108 29.075 12.4108C29.2154 12.4108 29.3558 12.4108 29.4937 12.4108C29.4974 12.3737 29.5061 12.3526 29.5011 12.334C29.4775 12.2461 29.4514 12.1581 29.4229 12.0714C28.4837 9.28133 26.7208 7.11941 24.2871 5.5051C21.5255 3.67273 18.452 3.14743 15.2369 3.74831C10.4465 4.64281 7.30473 7.53817 5.59779 12.0429ZM5.36175 13.817C5.20025 13.7922 5.15677 13.8715 5.13689 14.0165C5.08844 14.3795 5.0462 14.7425 5.02136 15.1092C5.01142 15.2591 5.03999 15.3012 5.1928 15.3C6.46989 15.2913 7.74575 15.2901 9.02285 15.2864C9.09366 15.2901 9.16571 15.2963 9.23652 15.2963C14.7561 15.2963 20.2757 15.2963 25.7953 15.2963C25.8661 15.2963 25.9382 15.2901 26.009 15.2864C27.2749 15.2901 28.5421 15.2889 29.808 15.3012C29.9918 15.3025 30.0092 15.2244 29.9943 15.0857C29.9571 14.7524 29.8999 14.4191 29.8875 14.0846C29.8788 13.8492 29.7869 13.8133 29.5707 13.8133C21.5715 13.8195 13.5734 13.8183 5.57419 13.8183C5.50213 13.8183 5.43008 13.8269 5.35927 13.817H5.36175ZM29.8105 16.7C28.5433 16.7074 27.2774 16.7099 26.0102 16.7124C25.9394 16.7087 25.8674 16.7025 25.7966 16.7025C20.277 16.7025 14.7561 16.7025 9.23652 16.7025C9.16571 16.7025 9.09366 16.7087 9.02285 16.7124C7.74823 16.7087 6.47362 16.7074 5.19901 16.7C5.05738 16.6988 5.00893 16.7235 5.02136 16.8834C5.04869 17.2587 5.08472 17.6317 5.1431 18.0046C5.1605 18.1161 5.18037 18.1842 5.32324 18.1842C6.63885 18.1743 7.95322 18.1718 9.26882 18.1669C9.34958 18.1718 9.43157 18.1805 9.51232 18.1805C14.8493 18.1805 20.185 18.1805 25.522 18.1805C25.6028 18.1805 25.6847 18.1718 25.7655 18.1669C27.0724 18.1718 28.3806 18.1755 29.6875 18.1817C29.7906 18.1817 29.8614 18.1656 29.8726 18.038C29.9086 17.6527 29.9509 17.2687 29.9968 16.8846C30.0155 16.7322 29.9521 16.6988 29.8105 16.7ZM9.14708 17.6193C9.14584 17.6168 9.14584 17.6143 9.14459 17.6118C9.14584 17.6131 9.14708 17.6143 9.14832 17.6143C9.14832 17.6156 9.14708 17.6168 9.14708 17.6193ZM29.2229 19.5892C21.4186 19.583 13.6144 19.583 5.81023 19.5854C5.71705 19.5854 5.60649 19.5309 5.53071 19.6362C5.5071 19.7651 5.57667 19.8741 5.61394 19.9881C7.26994 24.9301 12.715 29.7619 20.3018 28.165C23.3691 27.5195 25.7382 25.78 27.6215 23.3369C28.4477 22.264 29.0812 21.0845 29.4527 19.7762C29.5943 19.4529 29.3148 19.5892 29.2229 19.5892Z" fill="white"/></svg>` }
   ];
 
-  constructor(private sanitizer: DomSanitizer) {}
+  private readonly sanitizer = inject(DomSanitizer);
 
   getSafeIcon(icon: string): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(icon);

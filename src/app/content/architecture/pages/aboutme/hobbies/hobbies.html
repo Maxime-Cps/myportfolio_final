@@ -1,5 +1,5 @@
 <div class="hobbies-grid">
-  @for (hobby of hobbies; track hobby.name) {
+  @for (hobby of hobbies(); track hobby.name) {
     <div class="hobby-card">
       <div class="hobby-visual">
         @if (hobby.image) {
