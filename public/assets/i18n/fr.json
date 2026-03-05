@@ -89,34 +89,57 @@
     }
   },
   "projects": {
+    "StrasTaRoute": {
+      "title": "StrasTaRoute",
+      "description": "Une application mobile et web pour sécuriser les évènements sportifs dans l'Eurométropole de Strasbourg.",
+      "longDescription": "StrasTaRoute est une application innovante developpee pour securiser les evenements sportifs dans l'Eurometropole de Strasbourg. Elle permet aux organisateurs de planifier des itineraires securises, de gerer les points de controle et de communiquer en temps reel avec les participants et les equipes de securite. L'application integre des fonctionnalites de geolocalisation, d'alertes en temps reel et de gestion des incidents."
+    },
     "crashbandibooks": {
       "title": "Crash BandiBooks",
-      "description": "Un jeu serieux developpe pour illustrer le role des Data Librarians dans la gestion des donnees de recherche."
+      "description": "Un jeu serieux developpe pour illustrer le role des Data Librarians dans la gestion des donnees de recherche.",
+      "longDescription": "Crash BandiBooks est un serious game educatif developpe en collaboration avec l'Universite de Strasbourg. Le jeu permet aux joueurs de comprendre le role crucial des Data Librarians dans la gestion, la preservation et le partage des donnees de recherche. A travers des missions interactives, les joueurs apprennent les bonnes pratiques de gestion des donnees, les enjeux de l'open science et l'importance de la documentation."
     },
     "wtfau": {
       "title": "WTFAU",
-      "description": "Ma plateforme d'authentification pour tout mes services."
+      "description": "Ma plateforme d'authentification pour tout mes services.",
+      "longDescription": "WTFAU (Who The F*** Are You?) est ma plateforme centralisée d'authentification. Elle permet de gérer l'authentification unique (SSO) pour tous mes projets personnels. Construite avec des technologies modernes, elle offre une sécurite robuste avec support OAuth2, gestion des sessions et vérification en deux étapes."
     },
     "jesso": {
       "title": "Jesso",
-      "description": "L'application de gestion pour association etudiante."
+      "description": "L'application de gestion pour association etudiante.",
+      "longDescription": "Jesso est une application complète de gestion pour les associations étudiantes. Elle permet de gérer les membres, les évènements, la trésorerie et les communications internes. Développée pour répondre aux besoins spécifiques des associations étudiantes, elle simplifie la gestion quotidienne et favorise l'engagement des membres."
     },
     "bingy": {
       "title": "Bingy",
-      "description": "Application mobile de creation de watchlist pour series et films."
+      "description": "Application mobile de création de watchlist pour séries et films.",
+      "longDescription": "Bingy est une application mobile permettant de créer et gérer des watchlists personnalisées pour les séries et films. Elle integré l'API TMDB pour fournir des informations détaillées sur les contenus, permet de suivre sa progression et de partager ses recommandations avec ses amis. L'interface intuitive facilite la decouverte de nouveaux contenus."
     },
     "golfit": {
       "title": "GolfIT (WIP)",
-      "description": "Une application retracant vos parties et vos statistiques au golf."
+      "description": "Une application retracant vos parties et vos statistiques au golf.",
+      "longDescription": "GolfIT est une application en cours de developpement destinee aux golfeurs. Elle permet d'enregistrer ses parties, de suivre ses statistiques detaillees (nombre de coups, fairways touches, greens en regulation) et d'analyser sa progression au fil du temps. L'objectif est de fournir un outil complet pour ameliorer son jeu."
     },
     "labyrinthe": {
       "title": "Labyrinthe",
-      "description": "Le jeu de plateau Labyrinthe recree en Java."
+      "description": "Le jeu de plateau Labyrinthe recree en Java.",
+      "longDescription": "Recreation numerique du celebre jeu de plateau Labyrinthe en Java. Ce projet permet de jouer au jeu classique sur ordinateur avec une interface graphique fidele a l'original. Il inclut la generation aleatoire de labyrinthes, la gestion des deplacements et la logique complete du jeu pour 2 a 4 joueurs."
     },
     "pookemon": {
       "title": "POOkemon",
-      "description": "Le jeu de carte Pokemon sur votre terminal ! Le tout code en Java."
+      "description": "Le jeu de carte Pokemon sur votre terminal ! Le tout code en Java.",
+      "longDescription": "POOkemon est une implementation en ligne de commande du jeu de cartes Pokemon, entierement codee en Java. Ce projet met en pratique les principes de la Programmation Orientee Objet avec un systeme complet de combats, de types de Pokemon, d'attaques et d'effets speciaux. Une maniere ludique d'apprendre la POO !"
+    },
+    "PlanMyRave": {
+      "title": "PlanMyRave",
+      "description": "Application web pour organiser vos prochaines sorties en festivals et concerts.",
+      "longDescription": "PlanMyRave est une application web destinée aux amateurs de musique électronique. Elle permet de découvrir les prochains festivals et concerts, de planifier ses sorties, de partager des évènements avec ses amis et de gérer son budget. L'application intègre des fonctionnalités sociales pour connecter les passionnés de musique."
     }
+  },
+  "projectModal": {
+    "technologies": "Technologies",
+    "viewGithub": "Voir sur GitHub",
+    "viewDemo": "Voir la demo",
+    "close": "Fermer"
   },
   "experiences": {
     "title": "Mes Experiences Professionnelles",
@@ -171,5 +194,22 @@
   },
   "footer": {
     "copyright": "2025 Maxime Chapuis. Tous droits reserves."
+  },
+  "contact": {
+    "title": "Me Contacter",
+    "name": "Nom",
+    "email": "Email",
+    "subject": "Sujet",
+    "message": "Message",
+    "send": "Envoyer",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé ! Je vous répondrai dès que possible.",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "placeholders": {
+      "name": "Votre nom",
+      "email": "votre@email.com",
+      "subject": "Sujet de votre message",
+      "message": "Votre message..."
+    }
   }
 }

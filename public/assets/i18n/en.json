@@ -89,34 +89,52 @@
     }
   },
   "projects": {
+    "StrasTaRoute": {
+      "title": "StrasTaRoute",
+      "description": "A mobile and web application to secure sports events in the Strasbourg Eurometropolis.",
+      "longDescription": "StrasTaRoute is an innovative application developed to secure sports events in the Strasbourg Eurometropolis. It allows organizers to plan secure routes, manage checkpoints and communicate in real-time with participants and security teams. The application integrates geolocation features, real-time alerts and incident management."
+    },
     "crashbandibooks": {
       "title": "Crash BandiBooks",
-      "description": "A serious game developed to illustrate the role of Data Librarians in research data management."
+      "description": "A serious game developed to illustrate the role of Data Librarians in research data management.",
+      "longDescription": "Crash BandiBooks is an educational serious game developed in collaboration with the University of Strasbourg. The game helps players understand the crucial role of Data Librarians in managing, preserving and sharing research data. Through interactive missions, players learn best practices for data management, open science challenges and the importance of documentation."
     },
     "wtfau": {
       "title": "WTFAU",
-      "description": "My authentication platform for all my services."
+      "description": "My authentication platform for all my services.",
+      "longDescription": "WTFAU (What The F*** Authentication) is my centralized authentication platform. It provides single sign-on (SSO) for all my personal projects. Built with modern technologies, it offers robust security with OAuth2 support, session management and two-factor verification."
     },
     "jesso": {
       "title": "Jesso",
-      "description": "The management application for student associations."
+      "description": "The management application for student associations.",
+      "longDescription": "Jesso is a comprehensive management application for student associations. It allows managing members, events, treasury and internal communications. Developed to meet the specific needs of university associations, it simplifies daily management and promotes member engagement."
     },
     "bingy": {
       "title": "Bingy",
-      "description": "Mobile app for creating TV series and movie watchlists."
+      "description": "Mobile app for creating TV series and movie watchlists.",
+      "longDescription": "Bingy is a mobile application for creating and managing personalized watchlists for series and movies. It integrates the TMDB API to provide detailed content information, allows tracking progress and sharing recommendations with friends. The intuitive interface makes discovering new content easy."
     },
     "golfit": {
       "title": "GolfIT (WIP)",
-      "description": "An app tracking your golf games and statistics."
+      "description": "An app tracking your golf games and statistics.",
+      "longDescription": "GolfIT is an application under development for golfers. It allows recording games, tracking detailed statistics (strokes, fairways hit, greens in regulation) and analyzing progress over time. The goal is to provide a complete tool to improve your game."
     },
     "labyrinthe": {
       "title": "Labyrinth",
-      "description": "The Labyrinth board game recreated in Java."
+      "description": "The Labyrinth board game recreated in Java.",
+      "longDescription": "Digital recreation of the famous Labyrinth board game in Java. This project allows playing the classic game on computer with a graphical interface faithful to the original. It includes random maze generation, movement management and complete game logic for 2 to 4 players."
     },
     "pookemon": {
       "title": "POOkemon",
-      "description": "The Pokemon card game on your terminal! All coded in Java."
+      "description": "The Pokemon card game on your terminal! All coded in Java.",
+      "longDescription": "POOkemon is a command-line implementation of the Pokemon card game, entirely coded in Java. This project puts Object-Oriented Programming principles into practice with a complete system of battles, Pokemon types, attacks and special effects. A fun way to learn OOP!"
     }
+  },
+  "projectModal": {
+    "technologies": "Technologies",
+    "viewGithub": "View on GitHub",
+    "viewDemo": "View Demo",
+    "close": "Close"
   },
   "experiences": {
     "title": "My Professional Experiences",
@@ -171,5 +189,22 @@
   },
   "footer": {
     "copyright": "2025 Maxime Chapuis. All rights reserved."
+  },
+  "contact": {
+    "title": "Contact Me",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Message sent! I'll get back to you as soon as possible.",
+    "error": "An error occurred. Please try again.",
+    "placeholders": {
+      "name": "Your name",
+      "email": "your@email.com",
+      "subject": "Subject of your message",
+      "message": "Your message..."
+    }
   }
 }
