@@ -2,6 +2,7 @@ import { Component, signal, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslatePipe } from '../../../../core/pipes/translate.pipe';
+import { environment } from '../../../../../environments/environment';
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 
@@ -38,7 +39,7 @@ export class Contact {
     this.status.set('loading');
 
     const body = {
-      access_key: 'REMPLACE_PAR_TA_CLE_WEB3FORMS',
+      access_key: environment.web3formsKey,
       ...this.contactForm.value
     };
 

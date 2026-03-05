@@ -3,6 +3,7 @@ import {Home} from './content/architecture/pages/home/home';
 import {Aboutme} from './content/architecture/pages/aboutme/aboutme';
 import {Projects} from './content/architecture/pages/projects/projects';
 import {Experiences} from './content/architecture/pages/experiences/experiences';
+import {Contact} from './content/architecture/pages/contact/contact';
 
 export const routes: Routes = [
   {
@@ -29,5 +30,10 @@ export const routes: Routes = [
     path: 'home/experiences',
     component: Experiences,
     title: 'Experiences - myportfolio'
+  },
+  {
+    path: 'home/contact',
+    component: Contact,
+    title: 'Contact - myportfolio'
   },
 ];
