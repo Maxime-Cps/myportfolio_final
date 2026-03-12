@@ -347,7 +347,7 @@ button {
 }
 
 .slide-in-blurred-left {
-  animation: slide-in-blurred-left 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) 4.5s both;
+  animation: slide-in-blurred-left 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.2s both;
 }
 
 /**
@@ -387,7 +387,7 @@ button {
 }
 
 .fade-in-fwd-third {
-  animation: fade-in-fwd-third 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 5.5s both;
+  animation: fade-in-fwd-third 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.8s both;
 }
 
 .navigation-animation {

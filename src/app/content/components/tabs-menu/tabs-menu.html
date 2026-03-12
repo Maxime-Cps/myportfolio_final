@@ -7,6 +7,13 @@
         <span class="skill-badge" [style.background-color]="categories()[skill.category].color">
           {{ categories()[skill.category].label }}
         </span>
+        <div class="skill-bar-track">
+          <div
+            class="skill-bar-fill"
+            [style.width]="barsVisible() ? (proficiencyMap[skill.name]) + '%' : '0%'"
+            [style.background-color]="categories()[skill.category].color"
+          ></div>
+        </div>
       </div>
     }
   </div>

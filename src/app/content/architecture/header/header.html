@@ -1,7 +1,8 @@
+<div class="scroll-progress-bar" [style.width.%]="scrollProgress()"></div>
 <header>
   <div class="header-container" [class.slide-in-blurred-left]="showAnimation()">
     <div class="header-title">
-      <img routerLink="/home" id="logo" src="/messmocky.PNG" alt="messmocky.png" />
+      <img routerLink="/home" id="logo" src="/messmocky.PNG" alt="messmocky.png" (click)="onLogoClick()" />
       <h1 id="header-h1">{{ 'header.title' | translate }}</h1>
     </div>
     <div class="header-right">
@@ -12,3 +13,35 @@
     </div>
   </div>
 </header>
+
+@if (showEasterEgg()) {
+  <div class="easter-egg-overlay" (click)="closeEasterEgg()">
+    @for (piece of confettiPieces(); track $index) {
+      <div
+        class="confetti-piece"
+        [style.left]="piece.left"
+        [style.animation-delay]="piece.delay"
+        [style.animation-duration]="piece.duration"
+        [style.background-color]="piece.color"
+        [style.width]="piece.size"
+        [style.height]="piece.size"
+        [style.--rotation]="piece.rotation"
+      ></div>
+    }
+    <div class="easter-egg-card" (click)="$event.stopPropagation()">
+      <button class="easter-egg-close" (click)="closeEasterEgg()">✕</button>
+      <div class="easter-egg-title">🎉 Easter egg trouvé !</div>
+      <p class="easter-egg-subtitle">Tu as cliqué 5 fois sur le logo... voilà ce que ça a coûté :</p>
+      <div class="easter-egg-stats">
+        @for (stat of easterEggStats; track stat.label) {
+          <div class="easter-egg-stat">
+            <span class="stat-emoji">{{ stat.emoji }}</span>
+            <span class="stat-value">{{ stat.value }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+        }
+      </div>
+      <p class="easter-egg-footer">Ces chiffres sont totalement inventés. Ou pas. 👀</p>
+    </div>
+  </div>
+}

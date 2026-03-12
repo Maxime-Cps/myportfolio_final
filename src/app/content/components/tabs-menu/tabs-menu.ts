@@ -1,4 +1,5 @@
-import { Component, inject, computed } from '@angular/core';
+import { Component, inject, computed, signal, ElementRef, AfterViewInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { TranslationService } from '../../../core/services/translation.service';
 import { ISkill, ICategoryInfo } from '../../../core/models/skill.interface';
@@ -8,8 +9,33 @@ import { ISkill, ICategoryInfo } from '../../../core/models/skill.interface';
   templateUrl: './tabs-menu.html',
   styleUrl: './tabs-menu.scss'
 })
-export class TabsMenu {
+export class TabsMenu implements AfterViewInit {
   private readonly translationService = inject(TranslationService);
+  private readonly el = inject(ElementRef);
+  private readonly platformId = inject(PLATFORM_ID);
+
+  barsVisible = signal(false);
+
+  readonly proficiencyMap: Record<string, number> = {
+    // Languages
+    'Java': 80, 'TypeScript': 88, 'C#': 75, 'PHP': 60,
+    'HTML': 90, 'CSS': 85, 'C': 65,
+    // Frameworks
+    'Angular': 88, 'React': 70, '.NET': 70, 'Laravel': 55,
+    // Tools
+    'GitHub': 90, 'GitLab': 80, 'Docker': 65, 'Figma': 70,
+    // IDEs
+    'WebStorm': 85, 'IntelliJ IDEA': 85, 'VS Code': 90, 'Eclipse': 60
+  };
+
+  ngAfterViewInit(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { this.barsVisible.set(true); observer.disconnect(); } },
+      { threshold: 0.2 }
+    );
+    observer.observe(this.el.nativeElement);
+  }
 
   private categoryConfigs: Record<string, ICategoryInfo> = {
     language: { labelKey: 'categories.language', color: '#3b82f6' },
