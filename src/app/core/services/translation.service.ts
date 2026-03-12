@@ -2,13 +2,9 @@ import { Injectable, signal, computed, PLATFORM_ID, inject } from '@angular/core
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
+import { ITranslationObject, TranslationValue } from '../models/translation.interface';
 
 export type Language = 'fr' | 'en';
-
-type TranslationValue = string | string[] | TranslationObject;
-interface TranslationObject {
-  [key: string]: TranslationValue;
-}
 
 @Injectable({ providedIn: 'root' })
 export class TranslationService {
@@ -17,7 +13,7 @@ export class TranslationService {
   private readonly STORAGE_KEY = 'portfolio-language';
 
   private currentLang = signal<Language>('fr');
-  private translations = signal<TranslationObject>({});
+  private translations = signal<ITranslationObject>({});
   private isLoaded = signal(false);
 
   readonly lang = computed(() => this.currentLang());
@@ -53,7 +49,7 @@ export class TranslationService {
   private async loadTranslations(lang: Language): Promise<void> {
     try {
       const data = await firstValueFrom(
-        this.http.get<TranslationObject>(`/assets/i18n/${lang}.json`)
+        this.http.get<ITranslationObject>(`/assets/i18n/${lang}.json`)
       );
       this.translations.set(data);
       this.currentLang.set(lang);

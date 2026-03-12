@@ -7,7 +7,7 @@
     <div class="header-right">
       <app-navigation-container></app-navigation-container>
       <button class="lang-toggle" (click)="toggleLanguage()">
-        {{ translationService.lang() === 'fr' ? 'EN' : 'FR' }}
+        {{ currentLang() === 'fr' ? 'FR' : 'EN' }}
       </button>
     </div>
   </div>

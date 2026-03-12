@@ -1,0 +1,76 @@
+@if (project(); as proj) {
+  <p-dialog
+    [visible]="visible()"
+    (visibleChange)="onHide()"
+    [modal]="true"
+    [dismissableMask]="true"
+    [closable]="true"
+    [draggable]="false"
+    [resizable]="false"
+    styleClass="project-modal"
+    [style]="{ width: '90vw', maxWidth: '800px' }"
+  >
+    <ng-template #header>
+      <span class="modal-title">{{ proj.titleKey | translate }}</span>
+    </ng-template>
+
+    <div class="modal-content">
+      @if (currentImage(); as image) {
+        <div class="gallery">
+          <div class="main-image" [style.background]="'linear-gradient(-45deg, ' + proj.gradientColors[0] + ' 0%, ' + proj.gradientColors[1] + ' 100%)'">
+            <img [src]="image.src" [alt]="image.alt" />
+          </div>
+
+          @if (proj.images.length > 1) {
+            <div class="thumbnails">
+              @for (img of proj.images; track img.src; let i = $index) {
+                <button
+                  class="thumbnail"
+                  [class.active]="i === selectedImageIndex()"
+                  (click)="selectImage(i)"
+                >
+                  <img [src]="img.src" [alt]="img.alt" />
+                </button>
+              }
+            </div>
+          }
+        </div>
+      }
+
+      <div class="project-info">
+        <p class="description">{{ proj.longDescriptionKey | translate }}</p>
+
+        @if (proj.technologies.length > 0) {
+          <div class="technologies">
+            <h4>{{ 'projectModal.technologies' | translate }}</h4>
+            <div class="tech-badges">
+              @for (tech of proj.technologies; track tech.name) {
+                <span class="tech-badge">
+                  <i [class]="tech.icon"></i>
+                  {{ tech.name }}
+                </span>
+              }
+            </div>
+          </div>
+        }
+
+        <div class="actions">
+          @if (proj.githubUrl) {
+            @for (url of proj.githubUrl; track url.url) {
+              <button pButton class="github-btn" (click)="openLink(url.url)">
+                <i class="devicon-github-original"></i>
+                {{ url.label | translate }}
+              </button>
+            }
+          }
+          @if (proj.demoUrl) {
+            <button pButton class="demo-btn" (click)="openLink(proj.demoUrl)">
+              <i class="pi pi-external-link"></i>
+              {{ 'projectModal.viewDemo' | translate }}
+            </button>
+          }
+        </div>
+      </div>
+    </div>
+  </p-dialog>
+}

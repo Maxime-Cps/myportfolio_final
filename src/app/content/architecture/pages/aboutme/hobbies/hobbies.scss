@@ -1,3 +1,5 @@
+@use '../../../../../../styles.scss' as *;
+
 .hobbies-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -12,7 +14,7 @@
   backdrop-filter: blur(30px);
   box-shadow: 0 4px 6px rgba(227, 228, 237, 0.11);
   border: 2px solid rgba(255, 156, 127, 0.18);
-  border-radius: 15px;
+  border-radius: $border-radius;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -37,7 +39,7 @@
 .hobby-icon {
   width: 60px;
   height: 60px;
-  color: #F5F5F5;
+  color: $white-color;
 
   ::ng-deep svg {
     width: 100%;
@@ -53,7 +55,7 @@
 }
 
 .hobby-name {
-  color: #F5F5F5;
+  color: $white-color;
   font-size: 1.2rem;
   margin: 0 0 0.5rem 0;
   font-weight: 600;
@@ -76,7 +78,7 @@
 
 .hobby-tag {
   background: rgba(45, 45, 45, 0.2);
-  color: #dfdfdf;
+  color: rgba($white-color, 0.85);
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.75rem;
@@ -90,14 +92,14 @@
 }
 
 .hobby-link {
-  color: #F5F5F5;
+  color: $white-color;
   transition: color 0.2s ease, transform 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
 
   &:hover {
-    color: #ff9c7f;
+    color: $secondary-color;
     transform: scale(1.1);
   }
 

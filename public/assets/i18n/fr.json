@@ -1,9 +1,9 @@
 {
   "nav": {
     "home": "Home",
-    "about": "A Propos",
+    "about": "À Propos",
     "projects": "Projets",
-    "experiences": "Experiences",
+    "experiences": "Expériences",
     "contact": "Contact"
   },
   "header": {
@@ -12,7 +12,7 @@
   "home": {
     "greeting": "Bonjour !",
     "intro": "Je suis Maxime Chapuis",
-    "role1": "Developpeur Junior",
+    "role1": "Développeur Junior",
     "role2": "Front et Back End",
     "imageAlt": "Photo de Maxime Chapuis"
   },
@@ -21,47 +21,47 @@
   },
   "aboutme": {
     "parcours": "Mon parcours",
-    "softSkills": "Competences humaines",
-    "hardSkills": "Competences techniques",
+    "softSkills": "Compétences humaines",
+    "hardSkills": "Compétences techniques",
     "passions": "Mes passions"
   },
   "timeline": {
     "bac": {
-      "status": "Baccalaureat Scientifique, Option Sciences de l'Ingenieur, Specialite ISN",
-      "description": "Baccalaureat obtenu en 2020 avec mention Assez Bien. Specialisation en Informatique et Sciences du Numerique. Lycee Jean Monnet."
+      "status": "Baccalauréat Scientifique, Option Sciences de l'Ingénieur, Spécialité ISN",
+      "description": "Baccalauréat obtenu en 2020 avec mention Assez Bien. Spécialisation en Informatique et Sciences du Numérique. Lycée Jean Monnet."
     },
     "licence": {
-      "status": "Licence de Physique Ingenierie"
+      "status": "Licence de Physique Ingénierie"
     },
     "but": {
       "status": "BUT Informatique",
-      "description": "Developpement Informatique Front et Back-end, Gestion de Projets, Reseaux, DevOps."
+      "description": "Développement Informatique Front et Back-end, Gestion de Projets, Réseaux, DevOps."
     }
   },
   "softSkills": {
     "teamwork": {
-      "title": "Travail d'equipe",
-      "description": "Collaborer efficacement avec differents profils"
+      "title": "Travail d'équipe",
+      "description": "Collaborer efficacement avec différents profils"
     },
     "communication": {
       "title": "Communication",
-      "description": "Echanger clairement avec les equipes et clients"
+      "description": "Échanger clairement avec les équipes et clients"
     },
     "adaptability": {
-      "title": "Adaptabilite",
+      "title": "Adaptabilité",
       "description": "M'ajuster rapidement aux nouvelles situations"
     },
     "problemSolving": {
-      "title": "Resolution de problemes",
-      "description": "Analyser et trouver des solutions creatives"
+      "title": "Résolution de problèmes",
+      "description": "Analyser et trouver des solutions créatives"
     },
     "curiosity": {
-      "title": "Curiosite",
+      "title": "Curiosité",
       "description": "Apprendre continuellement de nouvelles technologies"
     },
     "organization": {
       "title": "Organisation",
-      "description": "Gerer mon temps et prioriser les taches"
+      "description": "Gérer mon temps et prioriser les tâches"
     }
   },
   "categories": {
@@ -72,65 +72,66 @@
   },
   "hobbies": {
     "music": {
-      "name": "Musique Electronique",
-      "description": "DJ & Producteur passionne de musique electronique"
+      "name": "Musique Électronique",
+      "description": "DJ & Producteur passionné de musique électronique"
     },
     "golf": {
       "name": "Golf",
-      "description": "Joueur licencie depuis 2024 passionne par ce sport"
+      "description": "Joueur licencié depuis 2024 passionné par ce sport"
     },
     "motorsport": {
       "name": "Sport Automobile",
-      "description": "Passionne d'endurance et de F1, simracer amateur"
+      "description": "Passionné d'endurance et de F1, simracer amateur"
     },
     "association": {
       "name": "Engagement Associatif",
-      "description": "Vice President Evenement (CORE) - Charge de mission (ARIANE)"
+      "description": "Vice Président Événement (CORE) - Chargé de mission (ARIANE)"
     }
   },
   "projects": {
+    "url": "Lien vers GitHub",
     "StrasTaRoute": {
       "title": "StrasTaRoute",
       "description": "Une application mobile et web pour sécuriser les évènements sportifs dans l'Eurométropole de Strasbourg.",
-      "longDescription": "StrasTaRoute est une application innovante developpee pour securiser les evenements sportifs dans l'Eurometropole de Strasbourg. Elle permet aux organisateurs de planifier des itineraires securises, de gerer les points de controle et de communiquer en temps reel avec les participants et les equipes de securite. L'application integre des fonctionnalites de geolocalisation, d'alertes en temps reel et de gestion des incidents."
+      "longDescription": "StrasTaRoute est une application innovante développée pour sécuriser les événements sportifs dans l'Eurométropole de Strasbourg. Elle permet aux organisateurs de planifier des itinéraires sécurisés, de gérer les points de contrôle et de communiquer en temps réel avec les participants et les équipes de sécurité. L'application intègre des fonctionnalités de géolocalisation, d'alertes en temps réel et de gestion des incidents."
     },
     "crashbandibooks": {
       "title": "Crash BandiBooks",
-      "description": "Un jeu serieux developpe pour illustrer le role des Data Librarians dans la gestion des donnees de recherche.",
-      "longDescription": "Crash BandiBooks est un serious game educatif developpe en collaboration avec l'Universite de Strasbourg. Le jeu permet aux joueurs de comprendre le role crucial des Data Librarians dans la gestion, la preservation et le partage des donnees de recherche. A travers des missions interactives, les joueurs apprennent les bonnes pratiques de gestion des donnees, les enjeux de l'open science et l'importance de la documentation."
+      "description": "Un jeu sérieux développé pour illustrer le rôle des Data Librarians dans la gestion des données de recherche.",
+      "longDescription": "Crash BandiBooks est un serious game éducatif développé en collaboration avec l'Université de Strasbourg. Le jeu permet aux joueurs de comprendre le rôle crucial des Data Librarians dans la gestion, la préservation et le partage des données de recherche. À travers des missions interactives, les joueurs apprennent les bonnes pratiques de gestion des données, les enjeux de l'open science et l'importance de la documentation."
     },
     "wtfau": {
       "title": "WTFAU",
-      "description": "Ma plateforme d'authentification pour tout mes services.",
-      "longDescription": "WTFAU (Who The F*** Are You?) est ma plateforme centralisée d'authentification. Elle permet de gérer l'authentification unique (SSO) pour tous mes projets personnels. Construite avec des technologies modernes, elle offre une sécurite robuste avec support OAuth2, gestion des sessions et vérification en deux étapes."
+      "description": "Ma plateforme d'authentification pour tous mes services.",
+      "longDescription": "WTFAU (Who The F*** Are You?) est ma plateforme centralisée d'authentification. Elle permet de gérer l'authentification unique (SSO) pour tous mes projets personnels. Construite avec des technologies modernes, elle offre une sécurité robuste avec support OAuth2, gestion des sessions et vérification en deux étapes."
     },
     "jesso": {
-      "title": "Jesso",
-      "description": "L'application de gestion pour association etudiante.",
+      "title": "Jesso (WIP)",
+      "description": "L'application de gestion pour association étudiante.",
       "longDescription": "Jesso est une application complète de gestion pour les associations étudiantes. Elle permet de gérer les membres, les évènements, la trésorerie et les communications internes. Développée pour répondre aux besoins spécifiques des associations étudiantes, elle simplifie la gestion quotidienne et favorise l'engagement des membres."
     },
     "bingy": {
       "title": "Bingy",
       "description": "Application mobile de création de watchlist pour séries et films.",
-      "longDescription": "Bingy est une application mobile permettant de créer et gérer des watchlists personnalisées pour les séries et films. Elle integré l'API TMDB pour fournir des informations détaillées sur les contenus, permet de suivre sa progression et de partager ses recommandations avec ses amis. L'interface intuitive facilite la decouverte de nouveaux contenus."
+      "longDescription": "Bingy est une application mobile permettant de créer et gérer des watchlists personnalisées pour les séries et films. Elle intègre l'API TMDB pour fournir des informations détaillées sur les contenus, permet de suivre sa progression et de partager ses recommandations avec ses amis. L'interface intuitive facilite la découverte de nouveaux contenus."
     },
     "golfit": {
       "title": "GolfIT (WIP)",
-      "description": "Une application retracant vos parties et vos statistiques au golf.",
-      "longDescription": "GolfIT est une application en cours de developpement destinee aux golfeurs. Elle permet d'enregistrer ses parties, de suivre ses statistiques detaillees (nombre de coups, fairways touches, greens en regulation) et d'analyser sa progression au fil du temps. L'objectif est de fournir un outil complet pour ameliorer son jeu."
+      "description": "Une application retraçant vos parties et vos statistiques au golf.",
+      "longDescription": "GolfIT est une application en cours de développement destinée aux golfeurs. Elle permet d'enregistrer ses parties, de suivre ses statistiques détaillées (nombre de coups, fairways touchés, greens en régulation) et d'analyser sa progression au fil du temps. L'objectif est de fournir un outil complet pour améliorer son jeu."
     },
     "labyrinthe": {
       "title": "Labyrinthe",
-      "description": "Le jeu de plateau Labyrinthe recree en Java.",
-      "longDescription": "Recreation numerique du celebre jeu de plateau Labyrinthe en Java. Ce projet permet de jouer au jeu classique sur ordinateur avec une interface graphique fidele a l'original. Il inclut la generation aleatoire de labyrinthes, la gestion des deplacements et la logique complete du jeu pour 2 a 4 joueurs."
+      "description": "Le jeu de plateau Labyrinthe recréé en Java.",
+      "longDescription": "Récréation numérique du célèbre jeu de plateau Labyrinthe en Java. Ce projet permet de jouer au jeu classique sur ordinateur avec une interface graphique fidèle à l'original. Il inclut la génération aléatoire de labyrinthes, la gestion des déplacements et la logique complète du jeu pour 2 à 4 joueurs."
     },
     "pookemon": {
       "title": "POOkemon",
-      "description": "Le jeu de carte Pokemon sur votre terminal ! Le tout code en Java.",
-      "longDescription": "POOkemon est une implementation en ligne de commande du jeu de cartes Pokemon, entierement codee en Java. Ce projet met en pratique les principes de la Programmation Orientee Objet avec un systeme complet de combats, de types de Pokemon, d'attaques et d'effets speciaux. Une maniere ludique d'apprendre la POO !"
+      "description": "Le jeu de carte Pokémon sur votre terminal ! Le tout codé en Java.",
+      "longDescription": "POOkemon est une implémentation en ligne de commande du jeu de cartes Pokémon, entièrement codée en Java. Ce projet met en pratique les principes de la Programmation Orientée Objet avec un système complet de combats, de types de Pokémon, d'attaques et d'effets spéciaux. Une manière ludique d'apprendre la POO !"
     },
     "PlanMyRave": {
-      "title": "PlanMyRave",
+      "title": "PlanMyRave (WIP)",
       "description": "Application web pour organiser vos prochaines sorties en festivals et concerts.",
       "longDescription": "PlanMyRave est une application web destinée aux amateurs de musique électronique. Elle permet de découvrir les prochains festivals et concerts, de planifier ses sorties, de partager des évènements avec ses amis et de gérer son budget. L'application intègre des fonctionnalités sociales pour connecter les passionnés de musique."
     }
@@ -138,39 +139,43 @@
   "projectModal": {
     "technologies": "Technologies",
     "viewGithub": "Voir sur GitHub",
-    "viewDemo": "Voir la demo",
+    "viewGithubSTRWeb": "Voir le projet web sur GitHub",
+    "viewGithubSTRMobile": "Voir le projet mobile sur GitHub",
+    "viewGithubSTRCI": "Voir le projet CI sur GitHub",
+    "viewGithubSTRApi": "Voir le projet Api sur GitHub",
+    "viewDemo": "Voir la démo",
     "close": "Fermer"
   },
   "experiences": {
-    "title": "Mes Experiences Professionnelles",
+    "title": "Mes Expériences Professionnelles",
     "items": {
       "alternance": {
-        "title": "Alternance Developpeur",
-        "date": "Septembre 2025 - Aout 2026",
-        "description": "Alternance de 3eme annee de BUT Informatique",
+        "title": "Alternance Développeur",
+        "date": "Septembre 2025 - Août 2026",
+        "description": "Alternance de 3ème année de BUT Informatique",
         "tasks": [
-          "Developpement et maintenance de plateformes Jalios en Java JSP",
-          "Developpement d'applications Web avec Angular et TypeScript",
-          "Developpement d'API avec C# .NET",
-          "Participation aux reunions de planification et de revue de code"
+          "Développement et maintenance de plateformes Jalios en Java JSP",
+          "Développement d'applications Web avec Angular et TypeScript",
+          "Développement d'API avec C# .NET",
+          "Participation aux réunions de planification et de revue de code"
         ]
       },
       "stage": {
-        "title": "Stage Developpeur Java JSP",
+        "title": "Stage Développeur Java JSP",
         "date": "Avril 2025 - Juin 2025",
-        "description": "Stage de fin de 2eme annee de BUT Informatique",
+        "description": "Stage de fin de 2ème année de BUT Informatique",
         "tasks": [
-          "Developpement et maintenance de plateformes Jalios en Java JSP",
-          "Collaboration avec l'equipe pour ameliorer les fonctionnalites existantes",
-          "Participation aux reunions de planification et de revue de code"
+          "Développement et maintenance de plateformes Jalios en Java JSP",
+          "Collaboration avec l'équipe pour améliorer les fonctionnalités existantes",
+          "Participation aux réunions de planification et de revue de code"
         ]
       },
       "rectorat": {
-        "title": "Assistant Departement Examens et Concours",
+        "title": "Assistant Département Examens et Concours",
         "date": "Mai 2023 - Juillet 2023",
         "tasks": [
-          "Preparation des enveloppes sujets",
-          "Livraisons des sujets dans les differents lycees et colleges relais d'Alsace"
+          "Préparation des enveloppes sujets",
+          "Livraisons des sujets dans les différents lycées et collèges relais d'Alsace"
         ]
       },
       "restaurant": {
@@ -179,21 +184,21 @@
         "tasks": [
           "Prise des commandes du client",
           "Apporter les plats et boissons au client",
-          "S'assurer de la proprete des lieux"
+          "S'assurer de la propreté des lieux"
         ]
       },
       "intermarche": {
-        "title": "Employe Commercial Polyvalent au Drive",
-        "date": "Juin 2021 - Aout 2021",
+        "title": "Employé Commercial Polyvalent au Drive",
+        "date": "Juin 2021 - Août 2021",
         "tasks": [
-          "Preparation et livraison des commandes",
-          "Gestion du stockage des commandes (chaine du froid...)"
+          "Préparation et livraison des commandes",
+          "Gestion du stockage des commandes (chaîne du froid...)"
         ]
       }
     }
   },
   "footer": {
-    "copyright": "2025 Maxime Chapuis. Tous droits reserves."
+    "copyright": "2025 Maxime Chapuis. Tous droits réservés."
   },
   "contact": {
     "title": "Me Contacter",
@@ -210,6 +215,14 @@
       "email": "votre@email.com",
       "subject": "Sujet de votre message",
       "message": "Votre message..."
+    },
+    "errors": {
+      "nameRequired": "Le nom est requis.",
+      "nameMinLength": "Le nom doit contenir au moins 2 caractères.",
+      "emailRequired": "L'email est requis.",
+      "emailInvalid": "Veuillez entrer un email valide.",
+      "messageRequired": "Le message est requis.",
+      "messageMinLength": "Le message doit contenir au moins 10 caractères."
     }
   }
 }

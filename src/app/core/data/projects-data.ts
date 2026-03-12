@@ -1,26 +1,12 @@
-import {IProject} from '../../src/app/core/models/project.interface';
+import {IProject} from '../models/project.interface';
 
 export const projectsData : IProject[] = [
-  {
-    id: 'crashbandibooks',
-    titleKey: 'projects.crashbandibooks.title',
-    descriptionKey: 'projects.crashbandibooks.description',
-    longDescriptionKey: 'projects.crashbandibooks.longDescription',
-    images: [
-      { src: '/assets/img/projects/crashbandibooks/Library.png', alt: 'CrashBandiBooks Library Screenshot' }
-    ],
-    technologies: [
-      { name: 'C#', icon: 'devicon-csharp-plain' },
-      { name: 'Unity', icon: 'devicon-unity-plain' },
-    ],
-    githubUrl: 'https://github.com/Maxime-Cps/Crash_BandiBooks',
-    gradientColors: ['#000000', '#eb592f']
-  },
   {
     id: 'StrasTaRoute',
     titleKey: 'projects.StrasTaRoute.title',
     descriptionKey: 'projects.StrasTaRoute.description',
     longDescriptionKey: 'projects.StrasTaRoute.longDescription',
+    coverImage: { src: '/assets/img/projects/StrasTaRoute/StrasTaRoute.png', alt: 'StrasTaRoute Logo' },
     images: [
       { src: '/assets/img/projects/StrasTaRoute/StrasTaRoute.png', alt: 'StrasTaRoute Logo' }
     ],
@@ -31,6 +17,12 @@ export const projectsData : IProject[] = [
       { name: 'Expo', icon: 'devicon-react-plain' },
       { name: 'NestJS', icon: 'devicon-nestjs-plain' }
     ],
+    githubUrl: [
+      { label: 'projectModal.viewGithubSTRCI', url: 'https://github.com/Maxime-Cps/StrasTaRoute_CI' },
+      { label: 'projectModal.viewGithubSTRMobile', url: 'https://github.com/Maxime-Cps/StrasTaRoute_Mobile' },
+      { label: 'projectModal.viewGithubSTRWeb', url: 'https://github.com/Maxime-Cps/StrasTaRoute_Web' },
+      { label: 'projectModal.viewGithubSTRApi', url: 'https://github.com/Maxime-Cps/StrasTaRoute_Api' }
+    ],
     gradientColors: ['#000000', '#eb592f']
   },
   {
@@ -38,6 +30,7 @@ export const projectsData : IProject[] = [
     titleKey: 'projects.wtfau.title',
     descriptionKey: 'projects.wtfau.description',
     longDescriptionKey: 'projects.wtfau.longDescription',
+    coverImage: { src: '/assets/img/projects/WTFAU/WTFAU.PNG', alt: 'WTFAU' },
     images: [
       { src: '/assets/img/projects/WTFAU/WTFAU.PNG', alt: 'WTFAU' }
     ],
@@ -53,6 +46,7 @@ export const projectsData : IProject[] = [
     titleKey: 'projects.jesso.title',
     descriptionKey: 'projects.jesso.description',
     longDescriptionKey: 'projects.jesso.longDescription',
+    coverImage: { src: '/assets/img/projects/Jesso/Jesso.png', alt: 'Jesso' },
     images: [
       { src: '/assets/img/projects/Jesso/Jesso.png', alt: 'Jesso' }
     ],
@@ -62,7 +56,9 @@ export const projectsData : IProject[] = [
       { name: 'Java', icon: 'devicon-java-plain' },
       { name: 'Spring', icon: 'devicon-spring-plain' }
     ],
-    githubUrl: 'https://github.com/Maxime-Cps/JessoFront',
+    githubUrl: [
+      { label: 'projectModal.viewGithub', url: 'https://github.com/Maxime-Cps/JessoFront'}
+    ],
     gradientColors: ['#20a050', '#2ba838']
   },
   {
@@ -70,6 +66,7 @@ export const projectsData : IProject[] = [
     titleKey: 'projects.bingy.title',
     descriptionKey: 'projects.bingy.description',
     longDescriptionKey: 'projects.bingy.longDescription',
+    coverImage: { src: '/assets/img/projects/Bingy/Bingy_Dark.png', alt: 'Bingy' },
     images: [
       { src: '/assets/img/projects/Bingy/Bingy_Dark.png', alt: 'Bingy' }
     ],
@@ -85,6 +82,7 @@ export const projectsData : IProject[] = [
     titleKey: 'projects.golfit.title',
     descriptionKey: 'projects.golfit.description',
     longDescriptionKey: 'projects.golfit.longDescription',
+    coverImage: { src: '/assets/img/projects/golfit/golfit.png', alt: 'GolfIT' },
     images: [
       { src: '/assets/img/projects/golfit/golfit.png', alt: 'GolfIT' }
     ],
@@ -93,14 +91,35 @@ export const projectsData : IProject[] = [
       { name: 'TypeScript', icon: 'devicon-typescript-plain' },
       { name: '.NET', icon: 'devicon-dotnetcore-plain' }
     ],
-    githubUrl: 'https://github.com/Maxime-Cps/GolfIT_Front',
+    githubUrl: [
+      { label: 'projectModal.viewGithub', url: 'https://github.com/Maxime-Cps/GolfIT_Front'}
+    ],
     gradientColors: ['#20a050', '#2ba838']
+  },
+  {
+    id: 'crashbandibooks',
+    titleKey: 'projects.crashbandibooks.title',
+    descriptionKey: 'projects.crashbandibooks.description',
+    longDescriptionKey: 'projects.crashbandibooks.longDescription',
+    coverImage: { src: '/assets/img/projects/crashbandibooks/Library.png', alt: 'CrashBandiBooks Library Screenshot' },
+    images: [
+      { src: '/assets/img/projects/crashbandibooks/Library.png', alt: 'CrashBandiBooks Library Screenshot' }
+    ],
+    technologies: [
+      { name: 'C#', icon: 'devicon-csharp-plain' },
+      { name: 'Unity', icon: 'devicon-unity-plain' },
+    ],
+    githubUrl: [
+      { label: 'projectModal.viewGithub', url: 'https://github.com/Maxime-Cps/Crash_BandiBooks'}
+    ],
+    gradientColors: ['#000000', '#eb592f']
   },
   {
     id: 'labyrinthe',
     titleKey: 'projects.labyrinthe.title',
     descriptionKey: 'projects.labyrinthe.description',
     longDescriptionKey: 'projects.labyrinthe.longDescription',
+    coverImage: { src: '/assets/img/projects/labyrinthe/labyrinthe.png', alt: 'Labyrinthe' },
     images: [
       { src: '/assets/img/projects/labyrinthe/labyrinthe.png', alt: 'Labyrinthe' }
     ],
@@ -115,13 +134,16 @@ export const projectsData : IProject[] = [
     titleKey: 'projects.pookemon.title',
     descriptionKey: 'projects.pookemon.description',
     longDescriptionKey: 'projects.pookemon.longDescription',
+    coverImage: { src: '/assets/img/projects/pookemon/POOkemon.png', alt: 'POOkemon' },
     images: [
       { src: '/assets/img/projects/pookemon/POOkemon.png', alt: 'POOkemon' }
     ],
     technologies: [
       { name: 'Java', icon: 'devicon-java-plain' }
     ],
-    githubUrl: 'https://github.com/Maxime-Cps/Projet-POOkemon',
+    githubUrl: [
+      { label: 'projectModal.viewGithub', url: 'https://github.com/Maxime-Cps/Projet-POOkemon' }
+    ],
     gradientColors: ['#000000', '#eb592f']
   },
   {
@@ -129,8 +151,9 @@ export const projectsData : IProject[] = [
     titleKey: 'projects.PlanMyRave.title',
     descriptionKey: 'projects.PlanMyRave.description',
     longDescriptionKey: 'projects.PlanMyRave.longDescription',
+    coverImage: { src: '/assets/img/projects/PlanMyRave/PlanMyRave-2.png', alt: 'PlanMyRave' },
     images: [
-      { src: '/assets/img/projects/PlanMyRave/PlanMyRave-2.png', alt: 'PlanMyRave' }
+      { src: '/assets/img/projects/PlanMyRave/PlanMyRave-1.png', alt: 'PlanMyRave' },
     ],
     technologies: [
       { name: 'Angular', icon: 'devicon-angular-plain' },
@@ -138,7 +161,7 @@ export const projectsData : IProject[] = [
       { name: 'C#', icon: 'devicon-csharp-plain' },
       { name: '.NET', icon: 'devicon-dotnet-plain' }
     ],
-    githubUrl: '',
+    githubUrl: [],
     gradientColors: ['#000000', '#eb592f']
   }
 ];

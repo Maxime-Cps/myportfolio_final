@@ -133,6 +133,10 @@
   "projectModal": {
     "technologies": "Technologies",
     "viewGithub": "View on GitHub",
+    "viewGithubSTRWeb": "View Web project on GitHub",
+    "viewGithubSTRMobile": "View Mobile project on GitHub",
+    "viewGithubSTRCI": "View CI project on GitHub",
+    "viewGithubSTRApi": "View API project on GitHub",
     "viewDemo": "View Demo",
     "close": "Close"
   },
@@ -205,6 +209,14 @@
       "email": "your@email.com",
       "subject": "Subject of your message",
       "message": "Your message..."
+    },
+    "errors": {
+      "nameRequired": "Name is required.",
+      "nameMinLength": "Name must be at least 2 characters.",
+      "emailRequired": "Email is required.",
+      "emailInvalid": "Please enter a valid email.",
+      "messageRequired": "Message is required.",
+      "messageMinLength": "Message must be at least 10 characters."
     }
   }
 }

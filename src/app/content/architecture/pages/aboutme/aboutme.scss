@@ -1,3 +1,5 @@
+@use '../../../../../styles.scss' as *;
+
 .aboutme-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -8,7 +10,7 @@
     margin: 3rem 0 1.5rem 0;
     font-size: 1.8rem;
     font-weight: 600;
-    color: #F5F5F5;
+    color: $white-color;
     position: relative;
     display: inline-block;
     width: 100%;

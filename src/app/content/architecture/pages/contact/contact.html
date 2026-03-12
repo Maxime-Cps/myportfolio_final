@@ -26,6 +26,13 @@
               [placeholder]="'contact.placeholders.name' | translate"
               [class.invalid]="isFieldInvalid('name')"
             />
+            @if (isFieldInvalid('name')) {
+              @if (contactForm.get('name')?.errors?.['required']) {
+                <span class="field-error">{{ 'contact.errors.nameRequired' | translate }}</span>
+              } @else if (contactForm.get('name')?.errors?.['minlength']) {
+                <span class="field-error">{{ 'contact.errors.nameMinLength' | translate }}</span>
+              }
+            }
           </div>
 
           <div class="form-group">
@@ -37,6 +44,13 @@
               [placeholder]="'contact.placeholders.email' | translate"
               [class.invalid]="isFieldInvalid('email')"
             />
+            @if (isFieldInvalid('email')) {
+              @if (contactForm.get('email')?.errors?.['required']) {
+                <span class="field-error">{{ 'contact.errors.emailRequired' | translate }}</span>
+              } @else if (contactForm.get('email')?.errors?.['email']) {
+                <span class="field-error">{{ 'contact.errors.emailInvalid' | translate }}</span>
+              }
+            }
           </div>
 
           <div class="form-group">
@@ -58,6 +72,13 @@
               [placeholder]="'contact.placeholders.message' | translate"
               [class.invalid]="isFieldInvalid('message')"
             ></textarea>
+            @if (isFieldInvalid('message')) {
+              @if (contactForm.get('message')?.errors?.['required']) {
+                <span class="field-error">{{ 'contact.errors.messageRequired' | translate }}</span>
+              } @else if (contactForm.get('message')?.errors?.['minlength']) {
+                <span class="field-error">{{ 'contact.errors.messageMinLength' | translate }}</span>
+              }
+            }
           </div>
 
           <button type="submit" [disabled]="status() === 'loading'">

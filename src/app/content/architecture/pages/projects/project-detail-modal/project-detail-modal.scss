@@ -1,0 +1,210 @@
+@use '../../../../../../styles.scss' as *;
+
+::ng-deep .project-modal {
+  .p-dialog {
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba($accent-color, 0.3);
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+
+  .p-dialog-header {
+    background: transparent;
+    border-bottom: 1px solid rgba($accent-color, 0.2);
+    padding: 1.5rem;
+  }
+
+  .p-dialog-content {
+    background: transparent;
+    padding: 0;
+  }
+
+  .p-dialog-header-close {
+    color: $white-color;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba($accent-color, 0.2);
+      color: $accent-color;
+    }
+  }
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $white-color;
+}
+
+.modal-content {
+  padding: 1.5rem;
+}
+
+.gallery {
+  margin-bottom: 1.5rem;
+
+  .main-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .thumbnails {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    overflow-x: auto;
+    padding: 0.25rem;
+
+    .thumbnail {
+      width: 80px;
+      height: 60px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0;
+
+      &:hover {
+        border-color: rgba($accent-color, 0.5);
+      }
+
+      &.active {
+        border-color: $accent-color;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.project-info {
+  .description {
+    color: rgba($white-color, 0.88);
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.technologies {
+  margin-bottom: 1.5rem;
+
+  h4 {
+    color: $white-color;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .tech-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba($accent-color, 0.15);
+      border: 1px solid rgba($accent-color, 0.3);
+      border-radius: 20px;
+      color: $white-color;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+
+      i {
+        font-size: 1.1rem;
+        color: $accent-color;
+      }
+
+      &:hover {
+        background: rgba($accent-color, 0.25);
+        border-color: rgba($accent-color, 0.5);
+      }
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    i {
+      font-size: 1.2rem;
+    }
+  }
+
+  .github-btn {
+    background: rgba($main-color, 0.8);
+    border: 1px solid rgba($main-color, 0.9);
+    color: $white-color;
+
+    &:hover {
+      background: rgba($main-color, 0.85);
+      border-color: rgba($main-color, 0.95);
+    }
+  }
+
+  .demo-btn {
+    background: linear-gradient(135deg, $accent-color, #ff7a54);
+    border: none;
+    color: $white-color;
+
+    &:hover {
+      background: linear-gradient(135deg, #ff6a42, #ff8b66);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-title {
+    font-size: 1.25rem;
+  }
+
+  .modal-content {
+    padding: 1rem;
+  }
+
+  .gallery .main-image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .actions {
+    flex-direction: column;
+
+    button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

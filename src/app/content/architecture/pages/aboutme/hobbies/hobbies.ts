@@ -1,21 +1,7 @@
 import { Component, inject, computed } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { TranslationService } from '../../../../../core/services/translation.service';
-
-interface HobbyLink {
-  label: string;
-  url: string;
-  icon: string;
-}
-
-interface HobbyConfig {
-  nameKey: string;
-  descriptionKey: string;
-  icon: string;
-  image?: string;
-  links?: HobbyLink[];
-  tags: string[];
-}
+import { IHobbyConfig } from '../../../../../core/models/hobby.interface';
 
 @Component({
   selector: 'app-hobbies',
@@ -27,7 +13,7 @@ export class Hobbies {
   private readonly translationService = inject(TranslationService);
   private readonly sanitizer = inject(DomSanitizer);
 
-  private hobbyConfigs: HobbyConfig[] = [
+  private hobbyConfigs: IHobbyConfig[] = [
     {
       nameKey: 'hobbies.music.name',
       descriptionKey: 'hobbies.music.description',
