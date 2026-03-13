@@ -11,6 +11,18 @@
   margin: 2rem auto;
   padding: 2rem;
 
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 12px;
+    padding: 0.75rem;
+  }
+
   button.card-container {
     width: 100%;
     max-width: 350px;
@@ -98,6 +110,10 @@
     .heading {
       font-size: 32px;
       font-weight: 700;
+
+      @media (max-width: 480px) {
+        font-size: 22px;
+      }
     }
   }
 

@@ -12,6 +12,10 @@
   max-width: 600px;
   width: 100%;
   padding: 2rem;
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
 }
 
 .contact-inner {
@@ -21,6 +25,10 @@
     text-align: center;
     margin: 0 0 2rem 0;
     font-size: 2rem;
+
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+    }
     font-weight: 600;
     color: $white-color;
 
@@ -62,6 +70,10 @@ form {
     color: $white-color;
     font-family: $font-main;
     font-size: 0.95rem;
+
+    @media (max-width: 480px) {
+      font-size: 1rem; // évite le zoom automatique sur iOS
+    }
     transition: border-color 0.2s ease;
     width: 100%;
     box-sizing: border-box;

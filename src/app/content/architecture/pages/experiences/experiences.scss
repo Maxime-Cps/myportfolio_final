@@ -220,13 +220,32 @@
 
   ::ng-deep {
     .p-timeline.p-timeline-alternate {
+      .p-timeline-event {
+        flex-direction: row !important;
+        margin-bottom: 1.5rem !important;
+      }
+
       .p-timeline-event-opposite {
-        display: none;
+        display: none !important;
+        flex: 0 !important;
+        min-width: 0 !important;
+        padding: 0 !important;
       }
 
       .p-timeline-event-content {
-        padding-left: 1rem !important;
+        flex: 1 !important;
+        max-width: 100% !important;
+        text-align: left !important;
+        padding-left: 0.75rem !important;
         padding-right: 0 !important;
+      }
+    }
+
+    .p-card {
+      margin: 0 !important;
+
+      .p-card-body {
+        padding: 0.75rem !important;
       }
     }
   }

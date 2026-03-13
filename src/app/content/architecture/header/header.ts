@@ -1,9 +1,10 @@
 import { Component, OnInit, signal, computed, PLATFORM_ID, inject, HostListener } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 import { NavigationContainer } from '../../../tools/navigation-container/navigation-container';
 import { TranslationService } from '../../../core/services/translation.service';
 import { TranslatePipe } from '../../../core/pipes/translate.pipe';
+import { MobileMenuService } from '../../../core/services/mobile-menu.service';
 
 interface ConfettiPiece {
   left: string;
@@ -16,7 +17,7 @@ interface ConfettiPiece {
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, NavigationContainer, TranslatePipe],
+  imports: [RouterLink, RouterLinkActive, NavigationContainer, TranslatePipe],
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
@@ -24,6 +25,7 @@ export class Header implements OnInit {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly STORAGE_KEY = 'header-animation-played';
   private readonly translationService = inject(TranslationService);
+  readonly mobileMenu = inject(MobileMenuService);
 
   showAnimation = signal(false);
   currentLang = computed(() => this.translationService.lang());

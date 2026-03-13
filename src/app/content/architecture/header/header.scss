@@ -1,3 +1,106 @@
+/* ---- Mobile Menu Overlay ---- */
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fade-in-overlay 0.2s ease both;
+}
+
+@keyframes fade-in-overlay {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 2rem;
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(255, 156, 127, 0.3);
+  border-radius: 20px;
+  min-width: 220px;
+  animation: pop-in-menu 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes pop-in-menu {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+.mobile-pill {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+// Pill styles for mobile overlay (mirrored from navigation-container)
+$pill-bg: rgba(0, 0, 0, 0.4);
+$pill-border: rgba(255, 156, 127, 0.25);
+$pill-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.2);
+$pill-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.4), 0 4px 10px rgba(0, 0, 0, 0.3);
+$accent-color: rgba(255, 156, 127, 0.79);
+$text-color: #f5f5f5;
+$icon-color: #9ca3af;
+
+.mobile-menu .pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: $pill-bg;
+  backdrop-filter: blur(10px);
+  border: 1px solid $pill-border;
+  border-radius: 50px;
+  box-shadow: $pill-shadow;
+  color: $text-color;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  font-family: inherit;
+  font-size: 0.9rem;
+  width: 100%;
+  justify-content: flex-start;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $pill-shadow-hover;
+    border-color: rgba(255, 156, 127, 0.4);
+  }
+
+  &.active {
+    background: rgba(255, 156, 127, 0.15);
+    border-color: rgba(255, 156, 127, 0.5);
+  }
+}
+
+.mobile-menu .pill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 18px;
+    height: 18px;
+
+    path {
+      fill: $icon-color;
+    }
+  }
+}
+
+.mobile-menu .pill-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ---- Scroll Progress ---- */
+
 .scroll-progress-bar {
   position: fixed;
   top: 0;
@@ -49,6 +152,10 @@
   padding: 2rem 2.5rem;
   max-width: 420px;
   width: 90%;
+
+  @media (max-width: 480px) {
+    padding: 1.5rem 1.25rem;
+  }
   text-align: center;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   animation: pop-in 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
@@ -92,6 +199,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   margin-bottom: 1.25rem;
+
+  @media (max-width: 360px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .easter-egg-stat {

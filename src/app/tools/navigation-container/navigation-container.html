@@ -30,3 +30,8 @@
     <span class="pill-label">{{ 'nav.contact' | translate }}</span>
   </button>
 </nav>
+
+<!-- Hamburger button — mobile only -->
+<button class="hamburger-btn" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()">
+  @if (menuOpen()) { ✕ } @else { ☰ }
+</button>

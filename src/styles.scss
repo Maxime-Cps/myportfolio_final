@@ -29,7 +29,11 @@ $accent-color: #eb592f;
   position: sticky;
   top: 40%;
   z-index: 1000;
-  padding: 0 0.5rem ;
+  padding: 0 0.5rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .neat-canvas {
@@ -45,6 +49,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -61,6 +66,10 @@ header {
 h1 {
   margin: 0.5rem;
   font-size: 2rem;
+
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
 }
 
 h2 {
@@ -187,6 +196,12 @@ footer {
   justify-content: space-between;
   padding: 1rem;
   border-radius: $border-radius;
+
+  @media (max-width: 480px) {
+    margin: 0 0.5rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 16px;
+  }
 }
 
 .header-right {
@@ -225,6 +240,11 @@ footer {
   font-size: 1.5rem;
   font-weight: bold;
   width: 50%;
+
+  @media (max-width: 480px) {
+    width: auto;
+    font-size: 1.1rem;
+  }
 }
 
 #header-h1 {
@@ -235,6 +255,14 @@ footer {
   justify-content: left;
   margin: 0 0 0 0.8rem;
   width: 20%;
+
+  @media (max-width: 480px) {
+    display: block;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    width: auto;
+    margin: 0 0 0 0.5rem;
+  }
 }
 
 .timeline-studies {

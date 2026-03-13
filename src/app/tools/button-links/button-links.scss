@@ -6,6 +6,11 @@
   max-width: 800px;
   margin: 2rem auto;
   padding: 1rem;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 }
 
 .button_sec_raw {
@@ -22,6 +27,11 @@
   cursor: pointer;
   transition: 400ms;
   width: 20%;
+
+  @media (max-width: 480px) {
+    width: auto;
+    min-width: 160px;
+  }
 }
 
 .button_sec_raw .text_sec_raw {

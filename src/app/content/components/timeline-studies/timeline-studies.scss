@@ -75,4 +75,51 @@
   .p-timeline-event-connector {
     background: rgba(255, 156, 127, 0.3);
   }
+
+  // Mobile: collapse alternate layout to single column
+  @media (max-width: 768px) {
+    .p-timeline.p-timeline-alternate {
+      .p-timeline-event {
+        flex-direction: row !important;
+        margin-bottom: 2rem !important;
+
+        &:nth-child(even) {
+          flex-direction: row !important;
+        }
+
+        .p-timeline-event-content,
+        .p-timeline-event-opposite {
+          text-align: left !important;
+        }
+      }
+
+      .p-timeline-event-opposite {
+        display: none !important;
+        flex: 0 !important;
+        min-width: 0 !important;
+        padding: 0 !important;
+      }
+
+      .p-timeline-event-content {
+        flex: 1 !important;
+        max-width: 100% !important;
+      }
+    }
+
+    .p-card {
+      .p-card-header {
+        font-size: 1rem;
+      }
+
+      img {
+        max-width: 100% !important;
+        height: auto !important;
+        width: 100% !important;
+      }
+
+      .p-card-content p {
+        font-size: 0.85rem;
+      }
+    }
+  }
 }

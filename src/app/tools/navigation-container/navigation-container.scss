@@ -83,34 +83,36 @@ $transition: all 0.3s ease-out;
   white-space: nowrap;
 }
 
-// Responsive adjustments
+// Hamburger button — hidden on desktop
+.hamburger-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: $pill-bg;
+  backdrop-filter: blur(10px);
+  border: 1px solid $pill-border;
+  border-radius: 50px;
+  color: $text-color;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    border-color: rgba(255, 156, 127, 0.4);
+    background: rgba(255, 156, 127, 0.1);
+  }
+}
+
+// Responsive
 @media (max-width: 768px) {
   .floating-nav {
-    flex-wrap: wrap;
-    gap: 8px;
+    display: none;
   }
 
-  .pill {
-    padding: 10px 16px;
-
-    .pill-label {
-      font-size: 0.85rem;
-    }
-  }
-
-  .pill-icon svg {
-    width: 16px;
-    height: 16px;
+  .hamburger-btn {
+    display: flex;
   }
 }
 
-@media (max-width: 480px) {
-  .pill {
-    padding: 8px 12px;
-    gap: 6px;
-  }
-
-  .pill-label {
-    font-size: 0.8rem;
-  }
-}

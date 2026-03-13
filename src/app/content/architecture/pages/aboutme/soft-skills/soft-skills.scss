@@ -6,6 +6,10 @@
   gap: 15px;
   padding: 0.5rem;
   width: 100%;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .skill-card {
@@ -27,6 +31,10 @@
     color: $white-color;
     margin-bottom: 0.75rem;
     display: block;
+
+    @media (max-width: 480px) {
+      font-size: 2rem;
+    }
   }
 
   h3 {
