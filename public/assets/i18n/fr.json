@@ -11,9 +11,8 @@
   },
   "home": {
     "greeting": "Bonjour !",
-    "intro": "Je suis Maxime Chapuis",
-    "role1": "Développeur Junior",
-    "role2": "Front et Back End",
+    "name": "Maxime Chapuis",
+    "badge": "Actuellement en alternance",
     "imageAlt": "Photo de Maxime Chapuis"
   },
   "buttons": {

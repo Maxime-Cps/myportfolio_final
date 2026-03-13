@@ -11,9 +11,8 @@
   },
   "home": {
     "greeting": "Hi!",
-    "intro": "I'm Maxime Chapuis",
-    "role1": "Junior Developer",
-    "role2": "Front and Back End",
+    "name": "Maxime Chapuis",
+    "badge": "Currently on work-study",
     "imageAlt": "Photo of Maxime Chapuis"
   },
   "buttons": {

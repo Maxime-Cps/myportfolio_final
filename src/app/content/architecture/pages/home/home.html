@@ -1,13 +1,35 @@
-<div id="home-container" class="home container" [class.fade-in-fwd-third]="showAnimation()">
-  <div class="intro-image">
+<section class="hero-section" [class.fade-in-fwd-third]="showAnimation()">
+  <div class="hero-left">
+    <div class="status-badge">
+      <span class="status-dot"></span>
+      {{ 'home.badge' | translate }}
+    </div>
+
+    <p class="hero-greeting">{{ 'home.greeting' | translate }}</p>
+    <h1 class="hero-name">{{ 'home.name' | translate }}</h1>
+
+    <div class="hero-role">
+      <span>{{ typewriterText() }}</span>
+      <span class="cursor" [class.blink]="typewriterDone()">|</span>
+    </div>
+
+    <div class="tech-tags">
+      <span class="tech-tag">Angular</span>
+      <span class="tech-tag">TypeScript</span>
+      <span class="tech-tag">Java</span>
+      <span class="tech-tag">C#</span>
+      <span class="tech-tag">.NET</span>
+      <span class="tech-tag">SQL</span>
+    </div>
+
+    <app-button-links [showAnimation]="false"></app-button-links>
+  </div>
+
+  <div class="hero-right">
     <img id="selfie" ngSrc="/assets/img/me.png" height="344" width="344" [alt]="'home.imageAlt' | translate" priority />
   </div>
-  <div class="intro-text">
-    <h1>{{ 'home.greeting' | translate }}</h1>
-    <h2>{{ 'home.intro' | translate }}</h2>
-    <h3>{{ 'home.role1' | translate }}</h3>
-    <h3>{{ 'home.role2' | translate }}</h3>
-  </div>
-</div>
-<app-button-links [showAnimation]="showAnimation()"></app-button-links>
+</section>
 
+<div class="scroll-indicator" [class.visible]="showAnimation()">
+  <span>↓</span>
+</div>
