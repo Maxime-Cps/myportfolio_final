@@ -1,8 +1,8 @@
-#home-container {
-  margin: 1rem;
-}
-
 @media (max-width: 768px) {
+  #home-container {
+    margin: 1rem;
+  }
+
   .intro-image {
     width: auto;
     flex-shrink: 0;
