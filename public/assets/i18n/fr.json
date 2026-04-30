@@ -12,6 +12,11 @@
     "title": "Mon Portfolio",
     "logoAlt": "Maxime Chapuis – retour à l'accueil"
   },
+  "musicEgg": {
+    "found": "🎧 Mix secret déniché",
+    "desc": "3 clics sur le logo... t'as du flair.",
+    "listen": "Écouter sur SoundCloud →"
+  },
   "home": {
     "greeting": "Bonjour !",
     "name": "Maxime Chapuis",
@@ -104,12 +109,12 @@
     "crashbandibooks": {
       "title": "Crash BandiBooks",
       "description": "Un jeu sérieux développé pour illustrer le rôle des Data Librarians dans la gestion des données de recherche.",
-      "longDescription": "Crash BandiBooks est un serious game éducatif développé en collaboration avec l'Université de Strasbourg. Le jeu permet aux joueurs de comprendre le rôle crucial des Data Librarians dans la gestion, la préservation et le partage des données de recherche. À travers des missions interactives, les joueurs apprennent les bonnes pratiques de gestion des données, les enjeux de l'open science et l'importance de la documentation."
+      "longDescription": "Crash BandiBooks est un serious game éducatif développé dans le cadre de ma formation au BUT Informatique de l'Unistra. Le jeu permet aux joueurs de comprendre le rôle crucial des Data Librarians dans la gestion, la préservation et le partage des données de recherche. À travers des missions interactives, les joueurs apprennent les bonnes pratiques de gestion des données, les enjeux de l'open science et l'importance de la documentation."
     },
-    "wtfau": {
-      "title": "WTFAU",
-      "description": "Ma plateforme d'authentification pour tous mes services.",
-      "longDescription": "WTFAU (Who The F*** Are You?) est ma plateforme centralisée d'authentification. Elle permet de gérer l'authentification unique (SSO) pour tous mes projets personnels. Construite avec des technologies modernes, elle offre une sécurité robuste avec support OAuth2, gestion des sessions et vérification en deux étapes."
+    "golfit": {
+      "title": "GolfIT (WIP)",
+      "description": "Une application retraçant vos parties et vos statistiques au golf.",
+      "longDescription": "GolfIT est une application en cours de développement destinée aux golfeurs. Elle permet d'enregistrer ses parties, de suivre ses statistiques détaillées (nombre de coups, fairways touchés, greens en régulation) et d'analyser sa progression au fil du temps. L'objectif est de fournir un outil complet pour améliorer son jeu."
     },
     "jesso": {
       "title": "Jesso (WIP)",
@@ -119,27 +124,27 @@
     "bingy": {
       "title": "Bingy",
       "description": "Application mobile de création de watchlist pour séries et films.",
-      "longDescription": "Bingy est une application mobile permettant de créer et gérer des watchlists personnalisées pour les séries et films. Elle intègre l'API TMDB pour fournir des informations détaillées sur les contenus, permet de suivre sa progression et de partager ses recommandations avec ses amis. L'interface intuitive facilite la découverte de nouveaux contenus."
-    },
-    "golfit": {
-      "title": "GolfIT (WIP)",
-      "description": "Une application retraçant vos parties et vos statistiques au golf.",
-      "longDescription": "GolfIT est une application en cours de développement destinée aux golfeurs. Elle permet d'enregistrer ses parties, de suivre ses statistiques détaillées (nombre de coups, fairways touchés, greens en régulation) et d'analyser sa progression au fil du temps. L'objectif est de fournir un outil complet pour améliorer son jeu."
-    },
-    "labyrinthe": {
-      "title": "Labyrinthe",
-      "description": "Le jeu de plateau Labyrinthe recréé en Java.",
-      "longDescription": "Récréation numérique du célèbre jeu de plateau Labyrinthe en Java. Ce projet permet de jouer au jeu classique sur ordinateur avec une interface graphique fidèle à l'original. Il inclut la génération aléatoire de labyrinthes, la gestion des déplacements et la logique complète du jeu pour 2 à 4 joueurs."
-    },
-    "pookemon": {
-      "title": "POOkemon",
-      "description": "Le jeu de carte Pokémon sur votre terminal ! Le tout codé en Java.",
-      "longDescription": "POOkemon est une implémentation en ligne de commande du jeu de cartes Pokémon, entièrement codée en Java. Ce projet met en pratique les principes de la Programmation Orientée Objet avec un système complet de combats, de types de Pokémon, d'attaques et d'effets spéciaux. Une manière ludique d'apprendre la POO !"
+      "longDescription": "Bingy est une application mobile permettant de créer et gérer des watchlists personnalisées pour les séries et films. Elle intègre l'API TMDB pour fournir des informations détaillées sur les contenus, permet de suivre sa progression et de partager ses recommandations avec ses amis."
     },
     "PlanMyRave": {
       "title": "PlanMyRave (WIP)",
       "description": "Application web pour organiser vos prochaines sorties en festivals et concerts.",
       "longDescription": "PlanMyRave est une application web destinée aux amateurs de musique électronique. Elle permet de découvrir les prochains festivals et concerts, de planifier ses sorties, de partager des évènements avec ses amis et de gérer son budget. L'application intègre des fonctionnalités sociales pour connecter les passionnés de musique."
+    },
+    "wtfau": {
+      "title": "WTFAU",
+      "description": "Ma plateforme d'authentification pour tous mes services.",
+      "longDescription": "WTFAU (Who The F*** Are You?) est ma plateforme centralisée d'authentification. Elle permet de gérer l'authentification unique (SSO) pour tous mes projets personnels."
+    },
+    "labyrinthe": {
+      "title": "Labyrinthe",
+      "description": "Le jeu de plateau Labyrinthe recréé en Java.",
+      "longDescription": "Récréation numérique du célèbre jeu de plateau Labyrinthe en Java Swing. Ce projet permet de jouer au jeu classique sur ordinateur avec une interface graphique fidèle à l'original. Il inclut la génération aléatoire de labyrinthes, la gestion des déplacements et la logique complète du jeu pour 2 à 4 joueurs."
+    },
+    "pookemon": {
+      "title": "POOkemon",
+      "description": "Le jeu de carte Pokémon sur votre terminal ! Le tout codé en Java.",
+      "longDescription": "POOkemon est une implémentation en ligne de commande du jeu de cartes Pokémon, entièrement codée en Java. Ce projet met en pratique les principes de la Programmation Orientée Objet avec un système complet de combats, de types de Pokémon, d'attaques et d'effets spéciaux. Une manière ludique d'apprendre la POO !"
     }
   },
   "projectModal": {
