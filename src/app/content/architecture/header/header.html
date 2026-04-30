@@ -2,7 +2,7 @@
 <header>
   <div class="header-container" [class.slide-in-blurred-left]="showAnimation()">
     <div class="header-title">
-      <img routerLink="/home" id="logo" src="/messmocky.PNG" [attr.alt]="'header.logoAlt' | translate" />
+      <img routerLink="/home" id="logo" src="/messmocky.PNG" [attr.alt]="'header.logoAlt' | translate" (click)="onLogoClick()" />
       <h1 id="header-h1">{{ 'header.title' | translate }}</h1>
     </div>
     <div class="header-right">
@@ -13,6 +13,20 @@
     </div>
   </div>
 </header>
+
+@if (showEasterEgg()) {
+  <div class="music-egg-overlay" (click)="closeEasterEgg()">
+    <div class="music-egg-card" (click)="$event.stopPropagation()">
+      <button class="music-egg-close" (click)="closeEasterEgg()">✕</button>
+      <span class="music-egg-label">{{ 'musicEgg.found' | translate }}</span>
+      <div id="music-egg-canvas"></div>
+      <p class="music-egg-desc">{{ 'musicEgg.desc' | translate }}</p>
+      <a class="music-egg-btn" href="https://on.soundcloud.com/6hP8Xdw0XFvMpsVATu" target="_blank" rel="noopener noreferrer">
+        {{ 'musicEgg.listen' | translate }}
+      </a>
+    </div>
+  </div>
+}
 
 @if (mobileMenu.menuOpen()) {
   <div class="mobile-menu-overlay" (click)="mobileMenu.close()">

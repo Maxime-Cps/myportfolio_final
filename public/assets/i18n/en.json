@@ -12,6 +12,11 @@
     "title": "My Portfolio",
     "logoAlt": "Maxime Chapuis – return to home"
   },
+  "musicEgg": {
+    "found": "🎧 Secret mix found",
+    "desc": "3 clicks on the logo... you've got instincts. This one's not for everyone.",
+    "listen": "Listen on SoundCloud →"
+  },
   "home": {
     "greeting": "Hi!",
     "name": "Maxime Chapuis",
