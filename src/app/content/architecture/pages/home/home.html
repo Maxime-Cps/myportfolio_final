@@ -5,11 +5,10 @@
       {{ 'home.badge' | translate }}
     </div>
 
-    <p class="hero-greeting">{{ 'home.greeting' | translate }}</p>
-    <h1 class="hero-name">{{ 'home.name' | translate }}</h1>
+    <h2 class="hero-name">{{ 'home.name' | translate }}</h2>
 
     <div class="hero-role">
-      <span>{{ typewriterText() }}</span>
+      <span class="written-text" >{{ typewriterText() }}</span>
       <span class="cursor" [class.blink]="typewriterDone()">|</span>
     </div>
 

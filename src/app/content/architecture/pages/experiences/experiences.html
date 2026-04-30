@@ -1,5 +1,5 @@
 <div class="experiences-container">
-  <h1>{{ 'experiences.title' | translate }}</h1>
+  <h2>{{ 'experiences.title' | translate }}</h2>
 
   <section class="experiences-timeline navigation-animation">
     <p-timeline [value]="experiences()" align="alternate" class="customized-timeline">
@@ -9,19 +9,17 @@
         </span>
       </ng-template>
       <ng-template #content let-exp>
-        <p-card>
-          <ng-template #header>
-            <div class="exp-header">
-              @if (exp.image) {
-                <img ngSrc="assets/img/{{exp.image}}" [alt]="exp.company" width="120" height="60" class="company-logo" />
-              }
-              <div class="exp-header-text">
-                <h3 class="exp-title">{{ exp.title }}</h3>
-                <span class="exp-company">{{ exp.company }}@if (exp.location) { - {{ exp.location }}}</span>
-                <span class="exp-date">{{ exp.date }}</span>
-              </div>
+        <div class="exp-card">
+          <div class="exp-header">
+            @if (exp.image) {
+              <img ngSrc="assets/img/{{exp.image}}" [alt]="exp.company" width="120" height="60" class="company-logo" />
+            }
+            <div class="exp-header-text">
+              <h3 class="exp-title">{{ exp.title }}</h3>
+              <span class="exp-company">{{ exp.company }}@if (exp.location) { - {{ exp.location }}}</span>
+              <span class="exp-date">{{ exp.date }}</span>
             </div>
-          </ng-template>
+          </div>
           @if (exp.description) {
             <p class="exp-description">{{ exp.description }}</p>
           }
@@ -37,7 +35,7 @@
               }
             </div>
           }
-        </p-card>
+        </div>
       </ng-template>
     </p-timeline>
   </section>

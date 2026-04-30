@@ -41,3 +41,10 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+/docs/
+/.claude/
+/.vscode/
+/.impeccable.md
+/CLAUDE.md
+/CODE-QUALITY-REPORT.md
+/FEATURES.md

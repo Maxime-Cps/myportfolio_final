@@ -1,23 +1,37 @@
-<div class="projects container navigation-animation">
-  @for (project of projects; track project.id) {
-    <button
-      type="button"
-      class="card-container"
-      [class]="project.id"
-      (click)="openProjectDetail(project)"
-    >
-      <div class="card">
-        <div class="img-content" [style.background]="'linear-gradient(-45deg, ' + project.gradientColors[0] + ' 0%, ' + project.gradientColors[1] + ' 100%)'">
-          <img [src]="project.coverImage.src" [alt]="project.coverImage.alt" />
+<section class="projects-section navigation-animation">
+  <div class="projects-list">
+    @for (project of projects; track project.id; let i = $index) {
+      <button
+        class="project-row"
+        type="button"
+        (click)="openProjectDetail(project)"
+        [attr.aria-label]="project.titleKey | translate"
+      >
+        <span class="project-index">{{ (i + 1).toString().padStart(2, '0') }}</span>
+
+        <div class="project-main">
+          <div class="project-header">
+            <h3 class="project-name">{{ project.titleKey | translate }}</h3>
+            <div class="project-tech">
+              @for (tech of project.technologies.slice(0, 5); track tech.name) {
+                <i [class]="'tech-icon ' + tech.icon" [title]="tech.name"></i>
+              }
+            </div>
+          </div>
+          <div class="project-desc-wrap">
+            <p class="project-desc">{{ project.descriptionKey | translate }}</p>
+          </div>
         </div>
-        <div class="content">
-          <p class="heading">{{ project.titleKey | translate }}</p>
-          <p>{{ project.descriptionKey | translate }}</p>
+
+        <div class="project-thumb">
+          <img [src]="project.coverImage.src" [alt]="project.coverImage.alt" loading="lazy" />
         </div>
-      </div>
-    </button>
-  }
-</div>
+
+        <span class="project-arrow">→</span>
+      </button>
+    }
+  </div>
+</section>
 
 <app-project-detail-modal
   [project]="selectedProject()"

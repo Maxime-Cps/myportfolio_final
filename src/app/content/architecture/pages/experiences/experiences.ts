@@ -1,6 +1,5 @@
 import { Component, inject, computed } from '@angular/core';
 import { TimelineModule } from 'primeng/timeline';
-import { CardModule } from 'primeng/card';
 import { NgOptimizedImage } from '@angular/common';
 import { TranslationService } from '../../../../core/services/translation.service';
 import { TranslatePipe } from '../../../../core/pipes/translate.pipe';
@@ -9,7 +8,7 @@ import {experiencesData} from '../../../../core/data/experiences-data';
 
 @Component({
   selector: 'app-experiences',
-  imports: [TimelineModule, CardModule, NgOptimizedImage, TranslatePipe],
+  imports: [TimelineModule, NgOptimizedImage, TranslatePipe],
   templateUrl: './experiences.html',
   styleUrl: './experiences.scss'
 })

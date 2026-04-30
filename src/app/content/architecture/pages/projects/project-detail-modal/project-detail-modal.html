@@ -8,16 +8,24 @@
     [draggable]="false"
     [resizable]="false"
     styleClass="project-modal"
-    [style]="{ width: '90vw', maxWidth: '800px' }"
+    [style]="{ width: '92vw', maxWidth: '960px' }"
+    [contentStyle]="{ overflow: 'hidden', padding: '0' }"
+    appendTo="body"
   >
     <ng-template #header>
-      <span class="modal-title">{{ proj.titleKey | translate }}</span>
+      <div class="modal-header-inner">
+        <span class="modal-title">{{ proj.titleKey | translate }}</span>
+      </div>
     </ng-template>
 
-    <div class="modal-content">
-      @if (currentImage(); as image) {
-        <div class="gallery">
-          <div class="main-image" [style.background]="'linear-gradient(-45deg, ' + proj.gradientColors[0] + ' 0%, ' + proj.gradientColors[1] + ' 100%)'">
+    <div class="modal-body">
+      <!-- Left: gallery -->
+      <div class="modal-gallery">
+        @if (currentImage(); as image) {
+          <div
+            class="main-image"
+            [style.background]="'linear-gradient(135deg, ' + proj.gradientColors[0] + '22 0%, ' + proj.gradientColors[1] + '22 100%)'"
+          >
             <img [src]="image.src" [alt]="image.alt" />
           </div>
 
@@ -28,24 +36,26 @@
                   class="thumbnail"
                   [class.active]="i === selectedImageIndex()"
                   (click)="selectImage(i)"
+                  type="button"
                 >
                   <img [src]="img.src" [alt]="img.alt" />
                 </button>
               }
             </div>
           }
-        </div>
-      }
+        }
+      </div>
 
-      <div class="project-info">
-        <p class="description">{{ proj.longDescriptionKey | translate }}</p>
+      <!-- Right: info -->
+      <div class="modal-info">
+        <p class="modal-description">{{ proj.longDescriptionKey | translate }}</p>
 
         @if (proj.technologies.length > 0) {
-          <div class="technologies">
-            <h4>{{ 'projectModal.technologies' | translate }}</h4>
-            <div class="tech-badges">
+          <div class="modal-tech">
+            <span class="section-label">// stack</span>
+            <div class="tech-list">
               @for (tech of proj.technologies; track tech.name) {
-                <span class="tech-badge">
+                <span class="tech-tag">
                   <i [class]="tech.icon"></i>
                   {{ tech.name }}
                 </span>
@@ -54,17 +64,17 @@
           </div>
         }
 
-        <div class="actions">
+        <div class="modal-actions">
           @if (proj.githubUrl) {
             @for (url of proj.githubUrl; track url.url) {
-              <button pButton class="github-btn" (click)="openLink(url.url)">
+              <button class="action-btn action-btn--ghost" type="button" (click)="openLink(url.url)">
                 <i class="devicon-github-original"></i>
                 {{ url.label | translate }}
               </button>
             }
           }
           @if (proj.demoUrl) {
-            <button pButton class="demo-btn" (click)="openLink(proj.demoUrl)">
+            <button class="action-btn action-btn--accent" type="button" (click)="openLink(proj.demoUrl)">
               <i class="pi pi-external-link"></i>
               {{ 'projectModal.viewDemo' | translate }}
             </button>

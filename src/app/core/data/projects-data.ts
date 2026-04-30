@@ -13,8 +13,7 @@ export const projectsData : IProject[] = [
     technologies: [
       { name: 'Angular', icon: 'devicon-angular-plain' },
       { name: 'TypeScript', icon: 'devicon-typescript-plain' },
-      { name: 'React', icon: 'devicon-react-plain' },
-      { name: 'Expo', icon: 'devicon-react-plain' },
+      { name: 'React Expo', icon: 'devicon-react-plain' },
       { name: 'NestJS', icon: 'devicon-nestjs-plain' }
     ],
     githubUrl: [
@@ -35,8 +34,8 @@ export const projectsData : IProject[] = [
       { src: '/assets/img/projects/WTFAU/WTFAU.PNG', alt: 'WTFAU' }
     ],
     technologies: [
-      { name: '.NET', icon: 'devicon-dotnetcore-plain' },
       { name: 'C#', icon: 'devicon-csharp-plain' },
+      { name: '.NET', icon: 'devicon-dotnet-plain' },
       { name: 'MySQL', icon: 'devicon-mysql-plain' },
     ],
     gradientColors: ['#20a050', '#2ba838']
@@ -53,8 +52,8 @@ export const projectsData : IProject[] = [
     technologies: [
       { name: 'Angular', icon: 'devicon-angular-plain' },
       { name: 'TypeScript', icon: 'devicon-typescript-plain' },
-      { name: 'Java', icon: 'devicon-java-plain' },
-      { name: 'Spring', icon: 'devicon-spring-plain' }
+      { name: 'C#', icon: 'devicon-csharp-plain' },
+      { name: '.NET', icon: 'devicon-dotnet-plain' }
     ],
     githubUrl: [
       { label: 'projectModal.viewGithub', url: 'https://github.com/Maxime-Cps/JessoFront'}
@@ -71,9 +70,8 @@ export const projectsData : IProject[] = [
       { src: '/assets/img/projects/Bingy/Bingy_Dark.png', alt: 'Bingy' }
     ],
     technologies: [
-      { name: 'React Native', icon: 'devicon-react-original' },
+      { name: 'React Expo', icon: 'devicon-react-original' },
       { name: 'TypeScript', icon: 'devicon-typescript-plain' },
-      { name: 'Expo', icon: 'devicon-react-original' }
     ],
     gradientColors: ['#20a050', '#2ba838']
   },
@@ -89,7 +87,8 @@ export const projectsData : IProject[] = [
     technologies: [
       { name: 'Angular', icon: 'devicon-angular-plain' },
       { name: 'TypeScript', icon: 'devicon-typescript-plain' },
-      { name: '.NET', icon: 'devicon-dotnetcore-plain' }
+      { name: 'C#', icon: 'devicon-csharp-plain' },
+      { name: '.NET', icon: 'devicon-dotnet-plain' }
     ],
     githubUrl: [
       { label: 'projectModal.viewGithub', url: 'https://github.com/Maxime-Cps/GolfIT_Front'}
@@ -124,7 +123,6 @@ export const projectsData : IProject[] = [
       { src: '/assets/img/projects/labyrinthe/labyrinthe.png', alt: 'Labyrinthe' }
     ],
     technologies: [
-      { name: 'Java', icon: 'devicon-java-plain' },
       { name: 'Java Swing', icon: 'devicon-java-plain' }
     ],
     gradientColors: ['#20a050', '#2ba838']

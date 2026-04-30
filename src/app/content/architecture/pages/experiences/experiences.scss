@@ -5,22 +5,24 @@
   margin: 0 auto;
   padding: 1rem 2rem;
 
-  h1 {
-    text-align: center;
+  h2 {
+    text-align: left;
     margin: 2rem 0 3rem 0;
-    font-size: 2rem;
-    font-weight: 600;
+    font-family: "Zalando Sans Expanded", sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 900;
+    font-style: italic;
     color: $white-color;
-    position: relative;
+    letter-spacing: -0.01em;
 
-    &::after {
-      content: '';
-      display: block;
-      width: 100px;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, rgba(255, 156, 127, 0.8), transparent);
-      margin: 0.5rem auto 0;
-      border-radius: 2px;
+    &::before {
+      content: '// ';
+      color: #eb592f;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65em;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.05em;
     }
   }
 }
@@ -55,64 +57,23 @@
   color: $white-color;
 }
 
-// PrimeNG overrides
-::ng-deep {
-  .p-timeline.p-timeline-alternate {
-    .p-timeline-event {
-      min-height: 100px;
-    }
+// ---- Experience card ----
 
-    .p-timeline-event-opposite,
-    .p-timeline-event-content {
-      flex: 1;
-    }
+.exp-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  margin: 0.5rem;
+  border: 2px solid rgba(255, 156, 127, 0.18);
+  border-radius: 15px;
+  backdrop-filter: blur(30px);
+  background: rgba(227, 228, 237, 0.04);
+  transition: border-color 0.3s ease, transform 0.2s ease;
 
-    // Odd items (1st, 3rd...) - content on the right
-    .p-timeline-event:nth-child(odd) {
-      .p-timeline-event-content {
-        text-align: left;
-        padding-left: 1rem;
-      }
-    }
-
-    // Even items (2nd, 4th...) - content on the left
-    .p-timeline-event:nth-child(even) {
-      .p-timeline-event-content {
-        text-align: left;
-        padding-right: 1rem;
-      }
-
-      .exp-header {
-        flex-direction: row;
-      }
-    }
-  }
-
-  .p-card {
-    margin: 1rem;
-    padding: 1rem;
-    background: transparent;
-    backdrop-filter: blur(30px);
-    box-shadow: 0 4px 6px rgba(227, 228, 237, 0.11);
-    border: 2px solid rgba(255, 156, 127, 0.18);
-    border-radius: $border-radius;
-    transition: transform 0.2s ease;
-
-    &:hover {
-      transform: translateY(-3px);
-    }
-
-    .p-card-body {
-      padding: 1.25rem;
-    }
-
-    .p-card-content {
-      color: $white-color;
-    }
-  }
-
-  .p-timeline-event-connector {
-    background: rgba(255, 156, 127, 0.3);
+  &:hover {
+    border-color: rgba(255, 156, 127, 0.4);
+    transform: translateY(-3px);
   }
 }
 
@@ -120,13 +81,12 @@
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 0.5rem;
 }
 
 .company-logo {
   border-radius: 8px;
   object-fit: contain;
-  padding: 8px;
+  padding: 6px;
   flex-shrink: 0;
 }
 
@@ -150,32 +110,33 @@
 }
 
 .exp-date {
-  font-size: 0.85rem;
-  color: rgba(245, 245, 245, 0.6);
+  font-size: 0.8rem;
+  color: #eb592f;
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 
 .exp-description {
-  margin: 0.5rem 0;
+  margin: 0;
   font-size: 0.9rem;
   color: rgba(245, 245, 245, 0.8);
   font-style: italic;
 }
 
 .exp-tasks {
-  margin: 0.75rem 0;
+  margin: 0;
   padding-left: 1.25rem;
-  text-align: left !important;
-  display: block !important;
-  flex-direction: column !important;
-  list-style-type: disc !important;
-  align-items: flex-start !important;
+  list-style-type: disc;
+  display: block;
+  text-align: left;
 
   li {
-    display: list-item !important;
-    margin: 0 0 0.4rem 0 !important;
+    display: list-item;
+    margin: 0 0 0.4rem 0;
     font-size: 0.85rem;
     color: $white-color;
     line-height: 1.4;
+    width: 100%;
   }
 }
 
@@ -183,39 +144,56 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 1rem;
-  justify-content: flex-start;
+  margin-top: 0.25rem;
 }
 
 .tech-tag {
-  background: rgba(45, 45, 45, 0.2);
-  color: rgba($white-color, 0.85);
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 500;
+  background: rgba(235, 89, 47, 0.08);
+  border: 1px solid rgba(255, 156, 127, 0.3);
+  color: rgba($white-color, 0.8);
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
 }
 
-// Responsive adjustments
+// ---- PrimeNG timeline overrides ----
+
+::ng-deep {
+  .p-timeline.p-timeline-alternate {
+    .p-timeline-event {
+      min-height: 100px;
+    }
+
+    .p-timeline-event-opposite,
+    .p-timeline-event-content {
+      flex: 1;
+    }
+
+    .p-timeline-event:nth-child(odd) .p-timeline-event-content {
+      padding-left: 1rem;
+    }
+
+    .p-timeline-event:nth-child(even) .p-timeline-event-content {
+      padding-right: 1rem;
+    }
+  }
+
+  .p-timeline-event-connector {
+    background: rgba(255, 156, 127, 0.3);
+  }
+}
+
+// ---- Responsive ----
+
 @media (max-width: 768px) {
   .experiences-container {
     padding: 1rem;
-
-    h1 {
-      font-size: 1.5rem;
-    }
   }
 
   .exp-header {
     flex-direction: column;
-  }
-
-  .exp-header-text {
-    align-items: flex-start;
-  }
-
-  .company-logo {
-    align-self: flex-start;
   }
 
   ::ng-deep {
@@ -238,14 +216,6 @@
         text-align: left !important;
         padding-left: 0.75rem !important;
         padding-right: 0 !important;
-      }
-    }
-
-    .p-card {
-      margin: 0 !important;
-
-      .p-card-body {
-        padding: 0.75rem !important;
       }
     }
   }

@@ -4,10 +4,13 @@
     "about": "À Propos",
     "projects": "Projets",
     "experiences": "Expériences",
-    "contact": "Contact"
+    "contact": "Contact",
+    "openMenu": "Ouvrir le menu de navigation",
+    "closeMenu": "Fermer le menu de navigation"
   },
   "header": {
-    "title": "Mon Portfolio"
+    "title": "Mon Portfolio",
+    "logoAlt": "Maxime Chapuis – retour à l'accueil"
   },
   "home": {
     "greeting": "Bonjour !",
@@ -35,6 +38,10 @@
     "but": {
       "status": "BUT Informatique",
       "description": "Développement Informatique Front et Back-end, Gestion de Projets, Réseaux, DevOps."
+    },
+    "next": {
+      "status": "Diplôme d'Ingénieur Informatique — Systèmes d'Information",
+      "description": "CNAM Strasbourg"
     }
   },
   "softSkills": {

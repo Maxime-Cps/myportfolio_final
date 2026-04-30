@@ -34,6 +34,11 @@ $transition: all 0.3s ease-out;
   transition: $transition;
   font-family: inherit;
   font-size: 0.9rem;
+  text-decoration: none;
+
+  &:visited {
+    color: $text-color;
+  }
 
   &:hover {
     transform: translateY(-3px) scale(1.03);
@@ -45,9 +50,9 @@ $transition: all 0.3s ease-out;
     }
   }
 
-  &:focus {
-    outline: none;
-    border-color: rgba(255, 156, 127, 0.5);
+  &:focus-visible {
+    outline: 2px solid #eb592f;
+    outline-offset: 3px;
   }
 
   &.active {

@@ -1,57 +1,141 @@
 @use '../../../../../../styles.scss' as *;
 
+// ---- p-dialog shell ----
+
 ::ng-deep .project-modal {
   .p-dialog {
-    background: rgba(30, 30, 30, 0.95);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba($accent-color, 0.3);
-    border-radius: $border-radius;
+    background: rgba(14, 14, 18, 0.92);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 156, 127, 0.22);
+    border-radius: 18px;
     overflow: hidden;
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
   }
 
   .p-dialog-header {
     background: transparent;
-    border-bottom: 1px solid rgba($accent-color, 0.2);
-    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 156, 127, 0.12);
+    padding: 1.25rem 1.5rem;
+    align-items: center;
+  }
+
+  .p-dialog-title {
+    flex: 1;
   }
 
   .p-dialog-content {
     background: transparent;
     padding: 0;
+    overflow-y: auto;
   }
 
   .p-dialog-header-close {
-    color: $white-color;
-    transition: all 0.3s ease;
+    color: rgba(245, 245, 245, 0.5);
+    border-radius: 8px;
+    transition: background 0.2s ease, color 0.2s ease;
+    flex-shrink: 0;
 
     &:hover {
-      background: rgba($accent-color, 0.2);
-      color: $accent-color;
+      background: rgba(235, 89, 47, 0.12);
+      color: #eb592f;
     }
   }
 }
 
+// ---- Header ----
+
+.modal-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
 .modal-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: $white-color;
+  font-family: 'Zalando Sans Expanded', sans-serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 900;
+  font-style: italic;
+  color: #F5F5F5;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
-.modal-content {
-  padding: 1.5rem;
+// ---- Body layout ----
+
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  min-height: 0;
+  max-height: 75vh;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    max-height: none;
+    overflow-y: auto;
+  }
 }
 
-.gallery {
-  margin-bottom: 1.5rem;
+// ---- Gallery ----
 
-  .main-image {
+.modal-gallery {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(255, 156, 127, 0.1);
+
+  @media (max-width: 700px) {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 156, 127, 0.1);
+  }
+}
+
+.main-image {
+  flex: 1;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  img {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 12px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
+.thumbnails {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  overflow-x: auto;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 156, 127, 0.1);
+
+  .thumbnail {
+    width: 64px;
+    height: 48px;
+    border-radius: 6px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 1px solid rgba(255, 156, 127, 0.15);
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    background: rgba(255, 156, 127, 0.05);
+    padding: 0;
+    flex-shrink: 0;
+    outline: none;
+
+    &:hover {
+      border-color: rgba(255, 156, 127, 0.4);
+      transform: scale(1.05);
+    }
+
+    &.active {
+      border-color: #eb592f;
+    }
 
     img {
       width: 100%;
@@ -59,152 +143,114 @@
       object-fit: cover;
     }
   }
-
-  .thumbnails {
-    display: flex;
-    gap: 0.75rem;
-    margin-top: 1rem;
-    overflow-x: auto;
-    padding: 0.25rem;
-
-    .thumbnail {
-      width: 80px;
-      height: 60px;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 2px solid transparent;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 0;
-
-      &:hover {
-        border-color: rgba($accent-color, 0.5);
-      }
-
-      &.active {
-        border-color: $accent-color;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
 }
 
-.project-info {
-  .description {
-    color: rgba($white-color, 0.88);
-    line-height: 1.7;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-}
+// ---- Info panel ----
 
-.technologies {
-  margin-bottom: 1.5rem;
-
-  h4 {
-    color: $white-color;
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .tech-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-
-    .tech-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: rgba($accent-color, 0.15);
-      border: 1px solid rgba($accent-color, 0.3);
-      border-radius: 20px;
-      color: $white-color;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-
-      i {
-        font-size: 1.1rem;
-        color: $accent-color;
-      }
-
-      &:hover {
-        background: rgba($accent-color, 0.25);
-        border-color: rgba($accent-color, 0.5);
-      }
-    }
-  }
-}
-
-.actions {
+.modal-info {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.modal-description {
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.82rem;
+  color: rgba(245, 245, 245, 0.65);
+  line-height: 1.7;
+}
+
+// ---- Stack section ----
+
+.modal-tech {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  color: #eb592f;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+}
+
+.tech-list {
+  display: flex;
   flex-wrap: wrap;
+  gap: 0.4rem;
+}
 
-  button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: 12px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    cursor: pointer;
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 3px 10px;
+  background: rgba(235, 89, 47, 0.08);
+  border: 1px solid rgba(255, 156, 127, 0.3);
+  border-radius: 4px;
+  color: rgba(245, 245, 245, 0.8);
+  font-size: 0.75rem;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.03em;
 
-    i {
-      font-size: 1.2rem;
-    }
-  }
-
-  .github-btn {
-    background: rgba($main-color, 0.8);
-    border: 1px solid rgba($main-color, 0.9);
-    color: $white-color;
-
-    &:hover {
-      background: rgba($main-color, 0.85);
-      border-color: rgba($main-color, 0.95);
-    }
-  }
-
-  .demo-btn {
-    background: linear-gradient(135deg, $accent-color, #ff7a54);
-    border: none;
-    color: $white-color;
-
-    &:hover {
-      background: linear-gradient(135deg, #ff6a42, #ff8b66);
-      transform: translateY(-2px);
-    }
+  i {
+    font-size: 1rem;
+    color: rgba(245, 245, 245, 0.6);
   }
 }
 
-@media (max-width: 600px) {
-  .modal-title {
-    font-size: 1.25rem;
+// ---- Actions ----
+
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: auto;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  text-align: left;
+
+  i {
+    font-size: 1rem;
+    flex-shrink: 0;
   }
 
-  .modal-content {
-    padding: 1rem;
+  &--ghost {
+    background: rgba(245, 245, 245, 0.04);
+    border: 1px solid rgba(255, 156, 127, 0.2);
+    color: rgba(245, 245, 245, 0.8);
+
+    &:hover {
+      background: rgba(245, 245, 245, 0.08);
+      border-color: rgba(255, 156, 127, 0.4);
+    }
   }
 
-  .gallery .main-image {
-    aspect-ratio: 4 / 3;
-  }
+  &--accent {
+    background: #eb592f;
+    border: 1px solid #eb592f;
+    color: #F5F5F5;
 
-  .actions {
-    flex-direction: column;
-
-    button {
-      width: 100%;
-      justify-content: center;
+    &:hover {
+      background: #d44d26;
+      border-color: #d44d26;
+      transform: translateY(-1px);
     }
   }
 }

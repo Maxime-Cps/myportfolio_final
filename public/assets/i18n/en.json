@@ -4,10 +4,13 @@
     "about": "About Me",
     "projects": "Projects",
     "experiences": "Experiences",
-    "contact": "Contact"
+    "contact": "Contact",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu"
   },
   "header": {
-    "title": "My Portfolio"
+    "title": "My Portfolio",
+    "logoAlt": "Maxime Chapuis – return to home"
   },
   "home": {
     "greeting": "Hi!",
@@ -35,6 +38,10 @@
     "but": {
       "status": "Bachelor of Technology in Computer Science",
       "description": "Front and Back-end Development, Project Management, Networks, DevOps."
+    },
+    "next": {
+      "status": "Computer Engineering Degree — Information Systems",
+      "description": "CNAM Strasbourg"
     }
   },
   "softSkills": {

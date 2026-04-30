@@ -77,12 +77,14 @@
 }
 
 .hobby-tag {
-  background: rgba(45, 45, 45, 0.2);
-  color: rgba($white-color, 0.85);
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 500;
+  background: rgba(235, 89, 47, 0.08);
+  border: 1px solid rgba(255, 156, 127, 0.28);
+  color: rgba($white-color, 0.75);
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
 }
 
 .hobby-links {

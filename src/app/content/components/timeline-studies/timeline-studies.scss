@@ -2,6 +2,74 @@
   width: 100%;
 }
 
+// ---- Timeline card (unified) ----
+
+@keyframes pulse-next {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(235, 89, 47, 0); }
+  50%       { box-shadow: 0 0 0 8px rgba(235, 89, 47, 0.12); }
+}
+
+.timeline-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  padding: 1.25rem 1.5rem;
+  border: 2px solid rgba(255, 156, 127, 0.18);
+  border-radius: 15px;
+  backdrop-filter: blur(30px);
+  background: rgba(227, 228, 237, 0.04);
+  margin: 0.5rem;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: rgba(255, 156, 127, 0.4);
+    transform: translateY(-3px);
+  }
+
+  &--next {
+    border-style: dashed;
+    border-color: rgba(235, 89, 47, 0.45);
+    background: rgba(235, 89, 47, 0.05);
+    opacity: 0.88;
+    animation: pulse-next 2.5s ease-in-out infinite;
+
+    &:hover {
+      border-color: rgba(235, 89, 47, 0.7);
+      opacity: 1;
+    }
+  }
+}
+
+.timeline-card-img {
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+}
+
+.timeline-card-label {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #F5F5F5;
+}
+
+.timeline-card-date {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #eb592f;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.timeline-card-desc {
+  margin: 0;
+  font-size: 0.82rem;
+  color: rgba(245, 245, 245, 0.6);
+  line-height: 1.4;
+}
+
 .customized-timeline {
   max-width: 1200px;
   margin: 0 auto;
@@ -14,6 +82,11 @@
 
 // Fix alignment for alternate timeline
 ::ng-deep {
+  .next-marker {
+    background: rgba(235, 89, 47, 0.15);
+    border-radius: 50%;
+  }
+
   .p-timeline {
     &.p-timeline-alternate {
       .p-timeline-event {
@@ -38,36 +111,6 @@
 
       .p-timeline-event-content {
         flex: 1;
-      }
-    }
-  }
-
-  .p-card {
-    background: transparent;
-    backdrop-filter: blur(30px);
-    box-shadow: 0 4px 6px rgba(227, 228, 237, 0.11);
-    border: 2px solid rgba(255, 156, 127, 0.18);
-    border-radius: 15px;
-
-    .p-card-header {
-      color: #F5F5F5;
-    }
-
-    .p-card-subtitle {
-      color: rgba(245, 245, 245, 0.7);
-    }
-
-    .p-card-body {
-      padding: 1rem;
-    }
-
-    .p-card-content {
-      color: #F5F5F5;
-
-      p {
-        margin: 0.5rem 0 0 0;
-        font-size: 0.9rem;
-        line-height: 1.5;
       }
     }
   }

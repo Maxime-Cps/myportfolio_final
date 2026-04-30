@@ -2,29 +2,32 @@
 
 <p-timeline [value]="events()" align="alternate" class="customized-timeline">
   <ng-template #marker let-event>
-        <span class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm">
-            <i id="timeline-icon" [class]="event.icon" ></i>
-        </span>
+    <span
+      class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+      [class.next-marker]="event.isNext"
+    >
+      <i id="timeline-icon" [class]="event.icon"></i>
+    </span>
   </ng-template>
   <ng-template #content let-event>
-    <p-card [header]="event.status" [subheader]="event.date" >
+    <div class="timeline-card" [class.timeline-card--next]="event.isNext">
       @if (event.image) {
         @if (event.image === 'facPhygenie.png') {
-          <img ngSrc="../assets/img/{{event.image}}" [alt]="event.status" width="300" height="116" class="shadow" />
+          <img ngSrc="../assets/img/{{event.image}}" [alt]="event.status" width="300" height="116" class="timeline-card-img" />
         } @else if (event.image === 'lyceeJeanMonnet.jpeg') {
-          <img ngSrc="../assets/img/{{event.image}}" [alt]="event.status" width="250" height="130" class="shadow" />
+          <img ngSrc="../assets/img/{{event.image}}" [alt]="event.status" width="250" height="130" class="timeline-card-img" />
         } @else if (event.image === 'butInfo.png') {
-          <img ngSrc="../assets/img/{{event.image}}" [alt]="event.status" width="300" height="93" class="shadow" />
-        } @else {
-          <img ngSrc="../assets/img/{{event.image}}" [alt]="event.status" width="200" height="150" class="shadow" />
+          <img ngSrc="../assets/img/{{event.image}}" [alt]="event.status" width="300" height="93" class="timeline-card-img" />
+        } @else if (event.image === 'cnam.png') {
+          <img ngSrc="../assets/img/{{event.image}}" [alt]="event.status" width="200" height="75" class="timeline-card-img" />
         }
       }
+      <p class="timeline-card-label">{{ event.status }}</p>
+      <p class="timeline-card-date">{{ event.date }}</p>
       @if (event.description) {
-      <p>
-        {{ event.description }}
-      </p>
+        <p class="timeline-card-desc">{{ event.description }}</p>
       }
-    </p-card>
+    </div>
   </ng-template>
 </p-timeline>
 </section>

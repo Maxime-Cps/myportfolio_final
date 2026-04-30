@@ -96,11 +96,12 @@ nav {
   border: 2px solid rgba(255, 156, 127, 0.18);
   border-radius: 30px;
   font-size: 2rem;
+  padding: 0.5rem;
 }
 
 ul {
   list-style-type: none;
-  padding: 0;;
+  padding: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -110,7 +111,7 @@ ul {
 }
 
 footer {
-  color: white;
+  color: $white-color;
   padding: 1rem;
   text-align: center;
 }
@@ -445,4 +446,17 @@ button {
 }
 ::view-transition-old(count) {
   animation-name: -ua-view-transition-fade-out, rotate-out;
+}
+
+/* ------------------------------- */
+/*      Reduced Motion Support     */
+/* ------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

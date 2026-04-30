@@ -13,6 +13,7 @@ interface TimelineEvent {
   color: string;
   image: string;
   descriptionKey?: string;
+  isNext?: boolean;
 }
 
 @Component({
@@ -27,12 +28,21 @@ export class TimelineStudies {
 
   private eventConfigs: TimelineEvent[] = [
     {
-      statusKey: 'timeline.bac.status',
-      date: '2020',
-      icon: 'pi pi-check-circle',
-      color: '#4B9CD3',
-      image: 'lyceeJeanMonnet.jpeg',
-      descriptionKey: 'timeline.bac.description'
+      statusKey: 'timeline.next.status',
+      date: '2026 - 2029',
+      icon: 'pi pi-flag',
+      color: '#eb592f',
+      image: 'cnam.png',
+      descriptionKey: 'timeline.next.description',
+      isNext: true
+    },
+    {
+      statusKey: 'timeline.but.status',
+      date: '2023-2026',
+      icon: 'pi pi-spin pi-spinner-dotted',
+      color: '#F0AD4E',
+      image: 'butInfo.png',
+      descriptionKey: 'timeline.but.description'
     },
     {
       statusKey: 'timeline.licence.status',
@@ -42,12 +52,12 @@ export class TimelineStudies {
       image: 'facPhygenie.png'
     },
     {
-      statusKey: 'timeline.but.status',
-      date: '2023-2026',
-      icon: 'pi pi-spin pi-spinner-dotted',
-      color: '#F0AD4E',
-      image: 'butInfo.png',
-      descriptionKey: 'timeline.but.description'
+      statusKey: 'timeline.bac.status',
+      date: '2020',
+      icon: 'pi pi-check-circle',
+      color: '#4B9CD3',
+      image: 'lyceeJeanMonnet.jpeg',
+      descriptionKey: 'timeline.bac.description'
     }
   ];
 
@@ -61,7 +71,8 @@ export class TimelineStudies {
         icon: config.icon,
         color: config.color,
         image: config.image,
-        description: typeof description === 'string' ? description : undefined
+        description: typeof description === 'string' ? description : undefined,
+        isNext: config.isNext ?? false
       };
     });
   });

@@ -26,12 +26,12 @@
   border: 1px solid rgba(255, 156, 127, 0.3);
   border-radius: 20px;
   min-width: 220px;
-  animation: pop-in-menu 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: pop-in-menu 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes pop-in-menu {
-  from { transform: scale(0.85); opacity: 0; }
-  to   { transform: scale(1);    opacity: 1; }
+  from { transform: scale(0.92) translateY(8px); opacity: 0; }
+  to   { transform: scale(1)    translateY(0);   opacity: 1; }
 }
 
 .mobile-pill {
@@ -65,11 +65,21 @@ $icon-color: #9ca3af;
   font-size: 0.9rem;
   width: 100%;
   justify-content: flex-start;
+  text-decoration: none;
+
+  &:visited {
+    color: $text-color;
+  }
 
   &:hover {
     transform: translateY(-2px);
     box-shadow: $pill-shadow-hover;
     border-color: rgba(255, 156, 127, 0.4);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #eb592f;
+    outline-offset: 3px;
   }
 
   &.active {
@@ -110,116 +120,4 @@ $icon-color: #9ca3af;
   z-index: 9999;
   transition: width 0.1s linear;
   pointer-events: none;
-}
-
-/* ---- Easter Egg ---- */
-
-.easter-egg-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: all;
-}
-
-@keyframes confetti-fall {
-  0% {
-    transform: translateY(-20px) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(110vh) rotate(var(--rotation, 360deg));
-    opacity: 0.4;
-  }
-}
-
-.confetti-piece {
-  position: fixed;
-  top: -10px;
-  border-radius: 2px;
-  animation: confetti-fall linear forwards;
-  pointer-events: none;
-}
-
-.easter-egg-card {
-  position: relative;
-  backdrop-filter: blur(30px);
-  background: rgba(30, 30, 30, 0.85);
-  border: 2px solid rgba(255, 156, 127, 0.4);
-  border-radius: 20px;
-  padding: 2rem 2.5rem;
-  max-width: 420px;
-  width: 90%;
-
-  @media (max-width: 480px) {
-    padding: 1.5rem 1.25rem;
-  }
-  text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  animation: pop-in 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-}
-
-@keyframes pop-in {
-  from { transform: scale(0.5); opacity: 0; }
-  to   { transform: scale(1);   opacity: 1; }
-}
-
-.easter-egg-close {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  background: transparent;
-  border: none;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 0.25rem 0.5rem;
-  width: auto;
-  outline: none;
-  &:hover { color: #fff; }
-}
-
-.easter-egg-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #F5F5F5;
-  margin-bottom: 0.5rem;
-}
-
-.easter-egg-subtitle {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 1.5rem;
-}
-
-.easter-egg-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-
-  @media (max-width: 360px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.easter-egg-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 0.75rem 0.5rem;
-}
-
-.stat-emoji  { font-size: 1.5rem; }
-.stat-value  { font-size: 1.2rem; font-weight: bold; color: #eb592f; margin-top: 0.25rem; }
-.stat-label  { font-size: 0.7rem; color: rgba(255, 255, 255, 0.5); margin-top: 0.15rem; text-align: center; }
-
-.easter-egg-footer {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.4);
-  font-style: italic;
 }
