@@ -215,9 +215,12 @@ $icon-color: #9ca3af;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   height: 3px;
   background: linear-gradient(to right, #eb592f, rgba(255, 156, 127, 0.79));
   z-index: 9999;
-  transition: width 0.1s linear;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.1s linear;
   pointer-events: none;
 }

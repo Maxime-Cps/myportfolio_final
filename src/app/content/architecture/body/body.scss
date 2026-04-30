@@ -2,3 +2,10 @@
   position: relative;
   overflow: hidden;
 }
+
+.neat-placeholder {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(ellipse at 30% 40%, #2a1660 0%, #0d0a2e 55%, #060010 100%);
+}

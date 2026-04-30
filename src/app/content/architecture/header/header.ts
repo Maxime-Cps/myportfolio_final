@@ -21,6 +21,7 @@ export class Header implements OnInit, OnDestroy {
   showAnimation = signal(false);
   currentLang = computed(() => this.translationService.lang());
   scrollProgress = signal(0);
+  scrollTransform = computed(() => `scaleX(${this.scrollProgress() / 100})`);
 
   showEasterEgg = signal(false);
   private p5Instance: { remove: () => void } | null = null;

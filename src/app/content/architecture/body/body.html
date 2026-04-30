@@ -1,2 +1,6 @@
-<app-neat></app-neat>
+@defer (on idle) {
+  <app-neat></app-neat>
+} @placeholder {
+  <div class="neat-placeholder"></div>
+}
 <router-outlet></router-outlet>
