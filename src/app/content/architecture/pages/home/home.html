@@ -1,4 +1,6 @@
 <section class="hero-section" [class.fade-in-fwd-third]="showAnimation()">
+  <span class="hero-marker" aria-hidden="true">01 — Hero</span>
+
   <div class="hero-left">
     <div class="status-badge">
       <span class="status-dot"></span>
@@ -25,6 +27,7 @@
   </div>
 
   <div class="hero-right">
+    <span class="hero-rotate-label" aria-hidden="true">// Maxime · Strasbourg · 2026</span>
     <img id="selfie" ngSrc="/assets/img/me.png" height="344" width="344" [alt]="'home.imageAlt' | translate" priority />
   </div>
 </section>

@@ -27,6 +27,19 @@
     "cv": "My Resume"
   },
   "aboutme": {
+    "intro": {
+      "kicker": "More than a dev",
+      "lead": "Beyond the code.",
+      "body": "Electronic DJ & Producer under the alias MESSMOCKY, licensed golfer, endurance & F1 fan, Events Vice-President at CORE student association (2024)\n\nMy curiosity doesn't stop at my terminal!",
+      "stats": {
+        "dj": "DJing since",
+        "djYear": "2019",
+        "golf": "Golfing since",
+        "golfYear": "2024",
+        "assos": "Associations",
+        "assosCount": "2"
+      }
+    },
     "parcours": "My Journey",
     "softSkills": "Soft Skills",
     "hardSkills": "Technical Skills",
