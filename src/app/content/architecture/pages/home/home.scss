@@ -1,28 +1,57 @@
 // ---- Hero Section ----
 
 .hero-section {
-  display: flex;
-  flex-direction: row;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
   align-items: center;
-  gap: 4rem;
-  padding: 3rem 4rem;
+  gap: 1.5rem;
+  padding: 4rem 4rem 3rem;
   min-height: 70vh;
-  max-width: 1100px;
+  max-width: 1180px;
   margin: 0 auto;
+  overflow: visible;
+}
+
+.hero-marker {
+  position: absolute;
+  top: 1.75rem;
+  right: 4rem;
+  font-family: "Space Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 156, 127, 0.6);
 }
 
 .hero-left {
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-right {
-  flex: 0 0 auto;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  transform: translate(2rem, -1rem);
+}
+
+.hero-rotate-label {
+  position: absolute;
+  top: 50%;
+  left: -2.4rem;
+  transform: rotate(-90deg) translateX(50%);
+  transform-origin: left top;
+  font-family: "Space Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(255, 156, 127, 0.45);
+  white-space: nowrap;
 }
 
 // ---- Badge ----
@@ -32,7 +61,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.4rem 1rem;
-  background: rgba(255, 156, 127, 0.12);
+  background: rgba(255, 156, 127, 0.08);
   border: 1px solid rgba(255, 156, 127, 0.35);
   border-radius: 50px;
   font-size: 0.8rem;
@@ -67,12 +96,15 @@
 .hero-name {
   margin: 0;
   font-family: "Zalando Sans Expanded", sans-serif;
-  font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+  font-size: clamp(3rem, 9vw, 7.5rem);
   font-weight: 900;
   font-style: italic;
-  line-height: 1.0;
-  letter-spacing: -0.02em;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
   color: #F5F5F5;
+  white-space: nowrap;
+  position: relative;
+  z-index: 3;
 }
 
 .hero-role {
@@ -107,7 +139,7 @@
 
 .tech-tag {
   padding: 0.25rem 0.7rem;
-  background: rgba(235, 89, 47, 0.07);
+  background: transparent;
   border: 1px solid rgba(255, 156, 127, 0.28);
   border-radius: 4px;
   font-size: 0.72rem;
@@ -139,8 +171,14 @@
   height: 350px;
   object-fit: cover;
   border-radius: 10%;
+  transform: rotate(-3deg);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+
+  &:hover {
+    transform: rotate(0);
+  }
 }
 
 // ---- Scroll indicator ----
@@ -170,34 +208,65 @@
   100% { transform: translateY(0);    opacity: 0.4; }
 }
 
+// ---- Tablet ----
+
+@media (max-width: 1024px) {
+  .hero-section {
+    grid-template-columns: 1.2fr 1fr;
+    padding: 3rem 2.5rem 2rem;
+  }
+
+  .hero-marker {
+    right: 2.5rem;
+  }
+
+  .hero-rotate-label {
+    display: none;
+  }
+
+  .hero-right {
+    transform: translate(0.5rem, 0);
+  }
+}
+
 // ---- Mobile ----
 
 @media (max-width: 768px) {
   .hero-section {
-    flex-direction: column-reverse;
-    padding: 1.5rem 1.5rem;
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem 1rem;
     gap: 2rem;
     min-height: auto;
     margin: 0.5rem;
   }
 
+  .hero-marker {
+    position: static;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+
   .hero-left {
     gap: 1rem;
     width: 100%;
+    order: 2;
   }
 
   .hero-right {
+    order: 1;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
+    transform: none;
   }
 
   #selfie {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
   }
 
   .hero-name {
-    font-size: 2rem;
+    font-size: clamp(2.6rem, 12vw, 4rem);
+    white-space: normal;
   }
 
   .hero-role {
@@ -207,16 +276,12 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    padding: 1rem;
+    padding: 1.25rem 1rem;
     margin: 0.5rem;
   }
 
   #selfie {
-    width: 150px;
-    height: 150px;
-  }
-
-  .hero-name {
-    font-size: 1.6rem;
+    width: 160px;
+    height: 160px;
   }
 }

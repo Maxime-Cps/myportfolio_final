@@ -1,12 +1,13 @@
 <div class="hobbies-grid">
-  @for (hobby of hobbies(); track hobby.name) {
-    <div class="hobby-card">
-      <div class="hobby-visual">
+  @for (hobby of hobbies(); track hobby.name; let i = $index) {
+    <article class="hobby-card" [class.hobby-card--no-image]="!hobby.image" [attr.data-index]="i">
+      <div class="hobby-media">
         @if (hobby.image) {
-          <img [src]="hobby.image" [alt]="hobby.name" />
+          <img class="hobby-media__img" [src]="hobby.image" [alt]="hobby.name" loading="lazy" />
         } @else {
-          <div class="hobby-icon" [innerHTML]="getSafeIcon(hobby.icon)"></div>
+          <div class="hobby-media__icon" [innerHTML]="getSafeIcon(hobby.icon)"></div>
         }
+        <span class="hobby-media__index">0{{ i + 1 }}</span>
       </div>
       <div class="hobby-content">
         <h3 class="hobby-name">{{ hobby.name }}</h3>
@@ -26,6 +27,6 @@
           </div>
         }
       </div>
-    </div>
+    </article>
   }
 </div>

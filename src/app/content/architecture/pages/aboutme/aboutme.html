@@ -1,24 +1,29 @@
 
 <div class="aboutme-container">
 
+  <section class="aboutme-intro">
+    <span class="aboutme-intro__kicker">// {{ 'aboutme.intro.kicker' | translate }}</span>
+    <h1 class="aboutme-intro__lead">{{ 'aboutme.intro.lead' | translate }}</h1>
+    <p class="aboutme-intro__body">{{ 'aboutme.intro.body' | translate }}</p>
+    <div class="aboutme-intro__stats">
+      <div class="aboutme-stat">
+        <span class="aboutme-stat__label">{{ 'aboutme.intro.stats.dj' | translate }}</span>
+        <span class="aboutme-stat__value">{{ 'aboutme.intro.stats.djYear' | translate }}</span>
+      </div>
+      <div class="aboutme-stat">
+        <span class="aboutme-stat__label">{{ 'aboutme.intro.stats.golf' | translate }}</span>
+        <span class="aboutme-stat__value">{{ 'aboutme.intro.stats.golfYear' | translate }}</span>
+      </div>
+      <div class="aboutme-stat">
+        <span class="aboutme-stat__label">{{ 'aboutme.intro.stats.assos' | translate }}</span>
+        <span class="aboutme-stat__value">{{ 'aboutme.intro.stats.assosCount' | translate }}</span>
+      </div>
+    </div>
+  </section>
+
   <h2>{{ 'aboutme.parcours' | translate }}</h2>
   <div class="timeline-container">
     <app-timeline-studies></app-timeline-studies>
-  </div>
-
-  <div class="skills-container">
-    <div class="soft-skills-container">
-      <h2>{{ 'aboutme.softSkills' | translate }}</h2>
-      <div class="soft-skills-container">
-        <app-soft-skills></app-soft-skills>
-      </div>
-    </div>
-    <div class="hard-skills-container">
-      <h2>{{ 'aboutme.hardSkills' | translate }}</h2>
-      <div class="tabs-container">
-        <app-tabs-menu></app-tabs-menu>
-      </div>
-    </div>
   </div>
 
   <h2>{{ 'aboutme.passions' | translate }}</h2>

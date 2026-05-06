@@ -27,6 +27,19 @@
     "cv": "Mon CV"
   },
   "aboutme": {
+    "intro": {
+      "kicker": "Plus qu'un dev",
+      "lead": "Au-delà du code.",
+      "body": "DJ et Producteur Electro sous l'alias MESSMOCKY, golfeur licencié, fan d'endurance et de F1, Vice-président événementiel de l'amicale CORE (2024)\n\nMa curiosité ne s'arrête pas qu'à mon terminal !",
+      "stats": {
+        "dj": "DJ depuis",
+        "djYear": "2019",
+        "golf": "Golfeur depuis",
+        "golfYear": "2024",
+        "assos": "Associations",
+        "assosCount": "2"
+      }
+    },
     "parcours": "Mon parcours",
     "softSkills": "Compétences humaines",
     "hardSkills": "Compétences techniques",

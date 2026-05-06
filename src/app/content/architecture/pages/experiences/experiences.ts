@@ -5,10 +5,12 @@ import { TranslationService } from '../../../../core/services/translation.servic
 import { TranslatePipe } from '../../../../core/pipes/translate.pipe';
 import { IExperience } from '../../../../core/models/experience.interface';
 import {experiencesData} from '../../../../core/data/experiences-data';
+import { SoftSkills } from '../aboutme/soft-skills/soft-skills';
+import { TabsMenu } from '../../../components/tabs-menu/tabs-menu';
 
 @Component({
   selector: 'app-experiences',
-  imports: [TimelineModule, NgOptimizedImage, TranslatePipe],
+  imports: [TimelineModule, NgOptimizedImage, TranslatePipe, SoftSkills, TabsMenu],
   templateUrl: './experiences.html',
   styleUrl: './experiences.scss'
 })

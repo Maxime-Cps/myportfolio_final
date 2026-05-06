@@ -1,8 +1,7 @@
 .skills-grid-container {
-  backdrop-filter: blur(30px);
-  box-shadow: 0 4px 6px rgba(227, 228, 237, 0.11);
-  border: 2px solid rgba(255, 156, 127, 0.18);
-  border-radius: 15px;
+  background: rgba(15, 15, 15, 0.4);
+  border: 1px solid rgba(255, 156, 127, 0.2);
+  border-radius: 12px;
   padding: 1rem;
   margin: 0.5rem;
 }
