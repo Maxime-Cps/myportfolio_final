@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, signal, PLATFORM_ID, inject } from '@angular/core';
 import { isPlatformBrowser, NgOptimizedImage } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { ButtonLinks } from '../../../../tools/button-links/button-links';
 import { TranslatePipe } from '../../../../core/pipes/translate.pipe';
 
@@ -8,6 +9,7 @@ import { TranslatePipe } from '../../../../core/pipes/translate.pipe';
   imports: [
     ButtonLinks,
     NgOptimizedImage,
+    RouterLink,
     TranslatePipe
   ],
   templateUrl: './home.html',
@@ -16,13 +18,18 @@ import { TranslatePipe } from '../../../../core/pipes/translate.pipe';
 export class Home implements OnInit, OnDestroy {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly STORAGE_KEY = 'home-animation-played';
+  readonly featuredGithubUrl = 'https://github.com/Maxime-Cps/StrasTaRoute_Web';
   private readonly ROLES = [
-    'Développeur Full Stack',
-    'DevOps',
-    'Développeur Front & Back End',
-    'Chasseur de bugs depuis 2023',
-    'Fan de Production musicale, Golf et de Sports Automobiles',
+    'Alternant Angular · Java · .NET chez CAPCOD',
+    'Front, Back et DevOps',
+    'DJ, golfeur, fan de F1 et de GT3',
   ];
+
+  openFeaturedGithub(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      window.open(this.featuredGithubUrl, '_blank', 'noopener,noreferrer');
+    }
+  }
 
   showAnimation = signal(false);
   typewriterText = signal('');

@@ -21,10 +21,31 @@
     "greeting": "Bonjour !",
     "name": "Maxime Chapuis",
     "badge": "Actuellement en alternance chez CAPCOD",
-    "imageAlt": "Photo de Maxime Chapuis"
+    "imageAlt": "Photo de Maxime Chapuis",
+    "featured": {
+      "eyebrow": "Projet phare",
+      "title": "StrasTaRoute",
+      "punch": "Plateforme web & mobile pour planifier la sécurité d'événements sportifs — carte interactive, équipes, équipements, timeline.",
+      "problem": {
+        "label": "Problème",
+        "text": "Coordonner organisateurs, équipes terrain et équipements de sécurité (barrières, véhicules, points d'attention) sur un parcours."
+      },
+      "approach": {
+        "label": "Mon rôle",
+        "text": "Chef de projet & développeur partie web. 4 dépôts : Web (Angular + Leaflet), Mobile (Expo), API (NestJS), CI (Docker)."
+      },
+      "result": {
+        "label": "Résultat",
+        "text": "Carte interactive (parcours, zones, POI), timeline Gantt pose/retrait, exports PDF/CSV, synchro mobile par QR code."
+      },
+      "stack": "Angular · Leaflet · NestJS · Expo · Docker",
+      "viewProjects": "Voir tous les projets →",
+      "viewCode": "Code sur GitHub"
+    }
   },
   "buttons": {
-    "cv": "Mon CV"
+    "cv": "Mon CV",
+    "contact": "Me contacter"
   },
   "aboutme": {
     "parcours": "Mon parcours",

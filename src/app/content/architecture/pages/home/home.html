@@ -29,6 +29,43 @@
   </div>
 </section>
 
+<section class="featured" [class.fade-in-fwd-third]="showAnimation()">
+  <span class="featured-eyebrow">{{ 'home.featured.eyebrow' | translate }}</span>
+  <div class="featured-card">
+    <div class="featured-head">
+      <h3 class="featured-title">{{ 'home.featured.title' | translate }}</h3>
+      <p class="featured-punch">{{ 'home.featured.punch' | translate }}</p>
+    </div>
+
+    <div class="featured-grid">
+      <div class="featured-block">
+        <span class="featured-label">{{ 'home.featured.problem.label' | translate }}</span>
+        <p>{{ 'home.featured.problem.text' | translate }}</p>
+      </div>
+      <div class="featured-block">
+        <span class="featured-label">{{ 'home.featured.approach.label' | translate }}</span>
+        <p>{{ 'home.featured.approach.text' | translate }}</p>
+      </div>
+      <div class="featured-block">
+        <span class="featured-label">{{ 'home.featured.result.label' | translate }}</span>
+        <p>{{ 'home.featured.result.text' | translate }}</p>
+      </div>
+    </div>
+
+    <div class="featured-foot">
+      <span class="featured-stack">{{ 'home.featured.stack' | translate }}</span>
+      <div class="featured-ctas">
+        <a routerLink="/home/projects" class="featured-cta featured-cta--primary">
+          {{ 'home.featured.viewProjects' | translate }}
+        </a>
+        <button type="button" (click)="openFeaturedGithub()" class="featured-cta featured-cta--ghost">
+          {{ 'home.featured.viewCode' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="scroll-indicator" [class.visible]="showAnimation()">
   <span>↓</span>
 </div>

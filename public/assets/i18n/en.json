@@ -21,10 +21,31 @@
     "greeting": "Hi!",
     "name": "Maxime Chapuis",
     "badge": "Currently on work-study",
-    "imageAlt": "Photo of Maxime Chapuis"
+    "imageAlt": "Photo of Maxime Chapuis",
+    "featured": {
+      "eyebrow": "Featured project",
+      "title": "StrasTaRoute",
+      "punch": "Web & mobile platform to plan safety for sports events — interactive map, teams, equipment, timeline.",
+      "problem": {
+        "label": "Problem",
+        "text": "Coordinate organizers, field teams and safety equipment (barriers, vehicles, warning points) along a route."
+      },
+      "approach": {
+        "label": "My role",
+        "text": "Project lead & web developer. 4 repos: Web (Angular + Leaflet), Mobile (Expo), API (NestJS), CI (Docker)."
+      },
+      "result": {
+        "label": "Result",
+        "text": "Interactive map (routes, zones, POIs), Gantt timeline for setup/teardown, PDF/CSV exports, mobile sync via QR code."
+      },
+      "stack": "Angular · Leaflet · NestJS · Expo · Docker",
+      "viewProjects": "See all projects →",
+      "viewCode": "Code on GitHub"
+    }
   },
   "buttons": {
-    "cv": "My Resume"
+    "cv": "My Resume",
+    "contact": "Contact me"
   },
   "aboutme": {
     "parcours": "My Journey",
