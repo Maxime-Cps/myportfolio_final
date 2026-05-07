@@ -4,11 +4,18 @@ export interface IHobbyLink {
   icon: string;
 }
 
+export interface IHobbyMedia {
+  type: 'image' | 'video';
+  src: string;
+  alt?: string;
+  mode?: 'cover' | 'contain';
+}
+
 export interface IHobbyConfig {
   nameKey: string;
   descriptionKey: string;
   icon: string;
-  image?: string;
+  media?: IHobbyMedia[];
   links?: IHobbyLink[];
   tags: string[];
 }
