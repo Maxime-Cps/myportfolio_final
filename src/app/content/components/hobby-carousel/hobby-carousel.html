@@ -1,1 +1,48 @@
-<div class="carousel-wrapper"></div>
+<div
+  class="carousel-wrapper"
+  (pointerdown)="onPointerDown($event)"
+  (pointerup)="onPointerUp($event)">
+
+  @if (hasMedia()) {
+    <div class="carousel-track" [style.transform]="trackOffset()">
+      @for (item of media(); track item.src) {
+        <div class="carousel-slide" [class.carousel-slide--contain]="item.mode === 'contain'">
+          @if (item.type === 'image') {
+            <img [src]="item.src" [alt]="item.alt ?? ''" loading="lazy" />
+          } @else {
+            <video [src]="item.src" controls></video>
+          }
+        </div>
+      }
+    </div>
+  } @else {
+    <div class="carousel-icon" [innerHTML]="getSafeIcon(icon())"></div>
+  }
+
+  @if (showControls()) {
+    <button class="carousel-arrow carousel-arrow--prev" (click)="prev()" aria-label="Previous">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </button>
+    <button class="carousel-arrow carousel-arrow--next" (click)="next()" aria-label="Next">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+    </button>
+
+    <div class="carousel-dots">
+      @for (item of media(); track item.src; let i = $index) {
+        <span
+          class="carousel-dot"
+          [class.carousel-dot--active]="i === currentIndex()"
+          (click)="currentIndex.set(i)">
+        </span>
+      }
+    </div>
+  }
+
+  <span class="hobby-card__index">{{ badgeLabel() }}</span>
+</div>
