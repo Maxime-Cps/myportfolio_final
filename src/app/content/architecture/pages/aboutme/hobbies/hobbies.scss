@@ -50,6 +50,11 @@
 .hobby-card__visual {
   position: relative;
   overflow: hidden;
+  min-height: 260px;
+
+  @media (max-width: 768px) {
+    min-height: 200px;
+  }
 }
 
 .hobby-card__body {
