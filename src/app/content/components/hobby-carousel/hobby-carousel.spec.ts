@@ -82,4 +82,32 @@ describe('HobbyCarousel', () => {
     component.next();
     expect(component.trackOffset()).toBe('translateX(-100%)');
   });
+
+  it('onPointerUp with swipe right (delta > 50) calls prev()', () => {
+    fixture.componentRef.setInput('media', [
+      { type: 'image', src: 'a.jpg' },
+      { type: 'image', src: 'b.jpg' }
+    ]);
+    component.next();
+    spyOn(component, 'prev').and.callThrough();
+    component.onPointerDown({ clientX: 40 } as PointerEvent);
+    component.onPointerUp({ clientX: 100 } as PointerEvent);
+    expect(component.prev).toHaveBeenCalled();
+  });
+
+  it('onPointerUp with swipe left (delta < -50) calls next()', () => {
+    fixture.componentRef.setInput('media', [
+      { type: 'image', src: 'a.jpg' },
+      { type: 'image', src: 'b.jpg' }
+    ]);
+    spyOn(component, 'next').and.callThrough();
+    component.onPointerDown({ clientX: 100 } as PointerEvent);
+    component.onPointerUp({ clientX: 20 } as PointerEvent);
+    expect(component.next).toHaveBeenCalled();
+  });
+
+  it('getSafeIcon returns a truthy SafeHtml value', () => {
+    const result = component.getSafeIcon('<svg>icon</svg>');
+    expect(result).toBeTruthy();
+  });
 });
