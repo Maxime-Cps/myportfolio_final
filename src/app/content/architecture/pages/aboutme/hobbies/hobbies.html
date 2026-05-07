@@ -1,24 +1,24 @@
-<div class="hobbies-grid">
+<div class="hobbies-stack">
   @for (hobby of hobbies(); track hobby.name; let i = $index) {
-    <article class="hobby-card" [class.hobby-card--no-image]="!hobby.image" [attr.data-index]="i">
-      <div class="hobby-media">
-        @if (hobby.image) {
-          <img class="hobby-media__img" [src]="hobby.image" [alt]="hobby.name" loading="lazy" />
-        } @else {
-          <div class="hobby-media__icon" [innerHTML]="getSafeIcon(hobby.icon)"></div>
-        }
-        <span class="hobby-media__index">0{{ i + 1 }}</span>
+    <article
+      class="hobby-card"
+      [class.hobby-card--reverse]="i % 2 === 1">
+      <div class="hobby-card__visual">
+        <app-hobby-carousel
+          [media]="hobby.media"
+          [icon]="hobby.icon"
+          [cardIndex]="i" />
       </div>
-      <div class="hobby-content">
-        <h3 class="hobby-name">{{ hobby.name }}</h3>
-        <p class="hobby-description">{{ hobby.description }}</p>
-        <div class="hobby-tags">
+      <div class="hobby-card__body">
+        <h3 class="hobby-card__name">{{ hobby.name }}</h3>
+        <p class="hobby-card__desc">{{ hobby.description }}</p>
+        <div class="hobby-card__tags">
           @for (tag of hobby.tags; track tag) {
             <span class="hobby-tag">{{ tag }}</span>
           }
         </div>
         @if (hobby.links) {
-          <div class="hobby-links">
+          <div class="hobby-card__links">
             @for (link of hobby.links; track link.label) {
               <a [href]="link.url" target="_blank" rel="noopener noreferrer" class="hobby-link" [title]="link.label">
                 <span [innerHTML]="getSafeIcon(link.icon)"></span>
