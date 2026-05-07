@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Neat } from './neat';
+import { NeatComponent } from './neat';
 
 describe('Neat', () => {
-  let component: Neat;
-  let fixture: ComponentFixture<Neat>;
+  let component: NeatComponent;
+  let fixture: ComponentFixture<NeatComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Neat]
+      imports: [NeatComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Neat);
+    fixture = TestBed.createComponent(NeatComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
