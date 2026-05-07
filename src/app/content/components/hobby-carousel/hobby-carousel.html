@@ -10,7 +10,7 @@
           @if (item.type === 'image') {
             <img [src]="item.src" [alt]="item.alt ?? ''" loading="lazy" />
           } @else {
-            <video [src]="item.src" type="video/mp4" controls></video>
+            <video controls><source [src]="item.src" type="video/mp4" /></video>
           }
         </div>
       }
@@ -38,7 +38,7 @@
         <span
           class="carousel-dot"
           [class.carousel-dot--active]="i === currentIndex()"
-          (click)="currentIndex.set(i)">
+          (click)="goTo(i)">
         </span>
       }
     </div>

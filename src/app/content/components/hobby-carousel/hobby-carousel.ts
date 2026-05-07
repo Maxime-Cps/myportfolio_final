@@ -35,6 +35,10 @@ export class HobbyCarousel {
     this.currentIndex.update(i => Math.min(this.media().length - 1, i + 1));
   }
 
+  goTo(i: number): void {
+    this.currentIndex.set(Math.max(0, Math.min(this.media().length - 1, i)));
+  }
+
   onPointerDown(e: PointerEvent): void {
     this.startX = e.clientX;
   }
