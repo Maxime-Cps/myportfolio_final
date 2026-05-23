@@ -57,7 +57,7 @@
         "djYear": "2019",
         "golf": "Golfeur depuis",
         "golfYear": "2024",
-        "assos": "Associations",
+        "assos": "Expériences associative",
         "assosCount": "2"
       }
     },
@@ -134,6 +134,19 @@
     }
   },
   "projects": {
+    "intro": {
+      "kicker": "// Des projets concrets",
+      "lead": "Le code en action.",
+      "body": "Des projets académiques et perso qui couvrent mobile, web, backend et jeux sérieux.\n\nChaque projet = une technologie apprise, un problème résolu, une compétence construite.",
+      "stats": {
+        "projects": "Projets réalisés",
+        "projectsCount": "9",
+        "technologies": "Technologies maîtrisées",
+        "technologiesCount": "12+",
+        "since": "Dev depuis",
+        "sinceYear": "2023"
+      }
+    },
     "url": "Lien vers GitHub",
     "StrasTaRoute": {
       "title": "StrasTaRoute",

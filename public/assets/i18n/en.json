@@ -134,6 +134,19 @@
     }
   },
   "projects": {
+    "intro": {
+      "kicker": "// Concrete projects",
+      "lead": "Code in action.",
+      "body": "Academic and personal projects spanning mobile, web, backend and serious games.\n\nEach project = a technology learned, a problem solved, a skill built.",
+      "stats": {
+        "projects": "Projects built",
+        "projectsCount": "9",
+        "technologies": "Technologies mastered",
+        "technologiesCount": "12+",
+        "since": "Dev since",
+        "sinceYear": "2023"
+      }
+    },
     "StrasTaRoute": {
       "title": "StrasTaRoute",
       "description": "A mobile and web application to secure sports events in the Strasbourg Eurometropolis.",
