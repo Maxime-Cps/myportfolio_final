@@ -1,0 +1,15 @@
+<section class="page-intro">
+  <span class="page-intro__kicker">{{ kicker() }}</span>
+  <h1 class="page-intro__lead">{{ lead() }}</h1>
+  <p class="page-intro__body">{{ body() }}</p>
+  @if (stats().length) {
+    <div class="page-intro__stats">
+      @for (stat of stats(); track stat.label) {
+        <div class="page-intro__stat">
+          <span class="page-intro__stat-value">{{ stat.value }}</span>
+          <span class="page-intro__stat-label">{{ stat.label }}</span>
+        </div>
+      }
+    </div>
+  }
+</section>
