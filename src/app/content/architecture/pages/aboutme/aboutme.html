@@ -1,25 +1,11 @@
-
 <div class="aboutme-container">
 
-  <section class="aboutme-intro">
-    <span class="aboutme-intro__kicker">// {{ 'aboutme.intro.kicker' | translate }}</span>
-    <h1 class="aboutme-intro__lead">{{ 'aboutme.intro.lead' | translate }}</h1>
-    <p class="aboutme-intro__body">{{ 'aboutme.intro.body' | translate }}</p>
-    <div class="aboutme-intro__stats">
-      <div class="aboutme-stat">
-        <span class="aboutme-stat__label">{{ 'aboutme.intro.stats.dj' | translate }}</span>
-        <span class="aboutme-stat__value">{{ 'aboutme.intro.stats.djYear' | translate }}</span>
-      </div>
-      <div class="aboutme-stat">
-        <span class="aboutme-stat__label">{{ 'aboutme.intro.stats.golf' | translate }}</span>
-        <span class="aboutme-stat__value">{{ 'aboutme.intro.stats.golfYear' | translate }}</span>
-      </div>
-      <div class="aboutme-stat">
-        <span class="aboutme-stat__label">{{ 'aboutme.intro.stats.assos' | translate }}</span>
-        <span class="aboutme-stat__value">{{ 'aboutme.intro.stats.assosCount' | translate }}</span>
-      </div>
-    </div>
-  </section>
+  <app-page-intro
+    [kicker]="'aboutme.intro.kicker' | translate"
+    [lead]="'aboutme.intro.lead' | translate"
+    [body]="'aboutme.intro.body' | translate"
+    [stats]="aboutmeStats()"
+  />
 
   <h2>{{ 'aboutme.parcours' | translate }}</h2>
   <div class="timeline-container">
