@@ -1,7 +1,6 @@
-@use '../../../../../styles.scss' as *;
+@use '../../../../styles.scss' as *;
 
 .page-intro {
-  position: relative;
   margin: 1rem 0 3rem;
   padding: 2rem 0;
   display: grid;
@@ -28,7 +27,7 @@
     font-style: italic;
     line-height: 0.95;
     letter-spacing: -0.03em;
-    color: #F5F5F5;
+    color: $white-color;
 
     &::before { content: none !important; }
   }
@@ -70,7 +69,7 @@
     font-size: 1.6rem;
     font-weight: 900;
     font-style: italic;
-    color: #eb592f;
+    color: $accent-color;
     line-height: 1;
   }
 

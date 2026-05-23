@@ -1,5 +1,4 @@
 import { Component, input } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 export interface PageIntroStat {
   value: string;
@@ -8,7 +7,7 @@ export interface PageIntroStat {
 
 @Component({
   selector: 'app-page-intro',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './page-intro.html',
   styleUrl: './page-intro.scss'
 })
