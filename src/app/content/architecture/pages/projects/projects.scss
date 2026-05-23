@@ -196,6 +196,10 @@ app-page-intro {
 // ---- Responsive ----
 
 @media (max-width: 768px) {
+  app-page-intro {
+    padding: 0 1.25rem;
+  }
+
   .projects-section {
     padding: 1rem 1.25rem;
   }
