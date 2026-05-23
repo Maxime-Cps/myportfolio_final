@@ -1,3 +1,10 @@
+<app-page-intro
+  [kicker]="'projects.intro.kicker' | translate"
+  [lead]="'projects.intro.lead' | translate"
+  [body]="'projects.intro.body' | translate"
+  [stats]="projectsStats()"
+/>
+
 <section class="projects-section navigation-animation">
   <div class="projects-list">
     @for (project of projects; track project.id; let i = $index) {

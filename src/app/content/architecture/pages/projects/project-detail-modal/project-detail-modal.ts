@@ -6,7 +6,7 @@ import { TranslatePipe } from '../../../../../core/pipes/translate.pipe';
 
 @Component({
   selector: 'app-project-detail-modal',
-  imports: [Dialog, ButtonDirective, TranslatePipe],
+  imports: [Dialog, TranslatePipe],
   templateUrl: './project-detail-modal.html',
   styleUrl: './project-detail-modal.scss'
 })

@@ -1,9 +1,16 @@
 // ---- Projects — Case Study Index ----
 
+app-page-intro {
+  display: block;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+}
+
 .projects-section {
   max-width: 1100px;
   margin: 0 auto;
-  padding: clamp(1rem, 4vw, 3rem) clamp(1.5rem, 4vw, 3rem);
+  padding: 0 clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 3rem);
 }
 
 .projects-list {
