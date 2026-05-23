@@ -77,6 +77,11 @@ export class TranslationService {
     return value;
   }
 
+  getString(key: string): string {
+    const value = this.get(key);
+    return typeof value === 'string' ? value : key;
+  }
+
   toggleLanguage(): void {
     const newLang: Language = this.currentLang() === 'fr' ? 'en' : 'fr';
     this.setLanguage(newLang);

@@ -24,15 +24,10 @@ export class Projects {
 
   projects: IProject[] = projectsData;
 
-  private str(key: string): string {
-    const v = this.t.get(key);
-    return typeof v === 'string' ? v : key;
-  }
-
   readonly projectsStats = computed(() => [
-    { value: this.str('projects.intro.stats.projectsCount'),     label: this.str('projects.intro.stats.projects')     },
-    { value: this.str('projects.intro.stats.technologiesCount'), label: this.str('projects.intro.stats.technologies') },
-    { value: this.str('projects.intro.stats.sinceYear'),         label: this.str('projects.intro.stats.since')        },
+    { value: this.t.getString('projects.intro.stats.projectsCount'),     label: this.t.getString('projects.intro.stats.projects')     },
+    { value: this.t.getString('projects.intro.stats.technologiesCount'), label: this.t.getString('projects.intro.stats.technologies') },
+    { value: this.t.getString('projects.intro.stats.sinceYear'),         label: this.t.getString('projects.intro.stats.since')        },
   ]);
 
   openProjectDetail(project: IProject): void {

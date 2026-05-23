@@ -36,6 +36,7 @@ describe('PageIntro', () => {
     const statEls = fixture.nativeElement.querySelectorAll('.page-intro__stat');
     expect(statEls.length).toBe(1);
     expect(statEls[0].querySelector('.page-intro__stat-value')?.textContent).toBe('9');
+    expect(statEls[0].querySelector('.page-intro__stat-label')?.textContent).toBe('Projects');
   });
 
   it('hides stats section when stats is empty', () => {

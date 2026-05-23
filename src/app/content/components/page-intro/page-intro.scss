@@ -11,7 +11,7 @@
 
   &__kicker {
     grid-column: 1 / -1;
-    font-family: "Space Mono", monospace;
+    font-family: $font-main;
     font-size: 0.72rem;
     letter-spacing: 0.28em;
     text-transform: uppercase;
@@ -21,7 +21,7 @@
 
   &__lead {
     margin: 0;
-    font-family: "Zalando Sans Expanded", sans-serif;
+    font-family: $font-title;
     font-size: clamp(2.5rem, 7vw, 5rem);
     font-weight: 900;
     font-style: italic;
@@ -65,7 +65,7 @@
   gap: 0.15rem;
 
   &-value {
-    font-family: "Zalando Sans Expanded", sans-serif;
+    font-family: $font-title;
     font-size: 1.6rem;
     font-weight: 900;
     font-style: italic;
@@ -74,7 +74,7 @@
   }
 
   &-label {
-    font-family: "Space Mono", monospace;
+    font-family: $font-main;
     font-size: 0.72rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;

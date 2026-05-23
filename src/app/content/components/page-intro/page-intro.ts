@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, input } from '@angular/core';
 
 export interface PageIntroStat {
   value: string;
@@ -9,7 +9,8 @@ export interface PageIntroStat {
   selector: 'app-page-intro',
   imports: [],
   templateUrl: './page-intro.html',
-  styleUrl: './page-intro.scss'
+  styleUrl: './page-intro.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PageIntro {
   kicker = input.required<string>();
