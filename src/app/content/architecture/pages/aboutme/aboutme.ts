@@ -19,9 +19,14 @@ import { TranslationService } from '../../../../core/services/translation.servic
 export class Aboutme {
   private readonly t = inject(TranslationService);
 
+  private str(key: string): string {
+    const v = this.t.get(key);
+    return typeof v === 'string' ? v : key;
+  }
+
   readonly aboutmeStats = computed(() => [
-    { label: this.t.get('aboutme.intro.stats.dj')    as string, value: this.t.get('aboutme.intro.stats.djYear')     as string },
-    { label: this.t.get('aboutme.intro.stats.assos') as string, value: this.t.get('aboutme.intro.stats.assosCount') as string },
-    { label: this.t.get('aboutme.intro.stats.golf')  as string, value: this.t.get('aboutme.intro.stats.golfYear')   as string },
+    { label: this.str('aboutme.intro.stats.dj'),    value: this.str('aboutme.intro.stats.djYear')     },
+    { label: this.str('aboutme.intro.stats.assos'), value: this.str('aboutme.intro.stats.assosCount') },
+    { label: this.str('aboutme.intro.stats.golf'),  value: this.str('aboutme.intro.stats.golfYear')   },
   ]);
 }
