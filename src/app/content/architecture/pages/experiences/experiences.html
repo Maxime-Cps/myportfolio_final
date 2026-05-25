@@ -1,11 +1,11 @@
-<div class="experiences-container">
+<app-page-intro
+  [kicker]="'experiences.intro.kicker' | translate"
+  [lead]="'experiences.intro.lead' | translate"
+  [body]="'experiences.intro.body' | translate"
+  [stats]="experiencesStats()"
+/>
 
-  <app-page-intro
-    [kicker]="'experiences.intro.kicker' | translate"
-    [lead]="'experiences.intro.lead' | translate"
-    [body]="'experiences.intro.body' | translate"
-    [stats]="experiencesStats()"
-  />
+<div class="experiences-container">
 
   <section class="experiences-timeline navigation-animation">
     <p-timeline [value]="experiences()" align="alternate" class="customized-timeline">

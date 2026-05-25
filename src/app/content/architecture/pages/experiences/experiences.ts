@@ -16,21 +16,21 @@ import { PageIntro } from '../../../components/page-intro/page-intro';
   styleUrl: './experiences.scss'
 })
 export class Experiences {
-  private readonly translationService = inject(TranslationService);
+  private readonly t = inject(TranslationService);
 
-  private experienceConfigs: IExperience[] = experiencesData;
+  private readonly experienceConfigs: IExperience[] = experiencesData;
 
   readonly experiencesStats = computed(() => [
-    { value: this.translationService.getString('experiences.intro.stats.countValue'),         label: this.translationService.getString('experiences.intro.stats.count')          },
-    { value: this.translationService.getString('experiences.intro.stats.sinceYear'),          label: this.translationService.getString('experiences.intro.stats.since')          },
-    { value: this.translationService.getString('experiences.intro.stats.apprenticeshipYear'), label: this.translationService.getString('experiences.intro.stats.apprenticeship') },
+    { value: this.t.getString('experiences.intro.stats.countValue'),         label: this.t.getString('experiences.intro.stats.count')          },
+    { value: this.t.getString('experiences.intro.stats.sinceYear'),          label: this.t.getString('experiences.intro.stats.since')          },
+    { value: this.t.getString('experiences.intro.stats.apprenticeshipYear'), label: this.t.getString('experiences.intro.stats.apprenticeship') },
   ]);
 
-  experiences = computed(() => {
+  readonly experiences = computed(() => {
     return this.experienceConfigs.map(config => {
-      const title = this.translationService.get(config.titleKey);
-      const date = this.translationService.get(config.dateKey);
-      const description = config.descriptionKey ? this.translationService.get(config.descriptionKey) : undefined;
+      const title = this.t.get(config.titleKey);
+      const date = this.t.get(config.dateKey);
+      const description = config.descriptionKey ? this.t.get(config.descriptionKey) : undefined;
       return {
         title: typeof title === 'string' ? title : config.titleKey,
         company: config.company,
@@ -46,7 +46,7 @@ export class Experiences {
   });
 
   private getTranslatedTasks(key: string): string[] {
-    const tasks = this.translationService.get(key);
+    const tasks = this.t.get(key);
     if (Array.isArray(tasks)) {
       return tasks.filter((t): t is string => typeof t === 'string');
     }
