@@ -205,6 +205,19 @@
     "close": "Fermer"
   },
   "experiences": {
+    "intro": {
+      "kicker": "// Terrain + alternance",
+      "lead": "Du code en production.",
+      "body": "Stages, jobs étudiants et alternance chez CAPCOD.\n\nDes vrais projets, des vrais contraintes, des vrais livrables.",
+      "stats": {
+        "count": "Expériences",
+        "countValue": "5",
+        "since": "Depuis",
+        "sinceYear": "2021",
+        "apprenticeship": "En alternance depuis",
+        "apprenticeshipYear": "2025"
+      }
+    },
     "title": "Mes Expériences Professionnelles",
     "items": {
       "alternance": {
@@ -259,6 +272,11 @@
     "copyright": "2025 Maxime Chapuis. Tous droits réservés."
   },
   "contact": {
+    "intro": {
+      "kicker": "// Travaillons ensemble",
+      "lead": "Parlons-en.",
+      "body": "Une idée, un projet, une opportunité ? Laisse un message, je réponds vite."
+    },
     "title": "Me Contacter",
     "name": "Nom",
     "email": "Email",

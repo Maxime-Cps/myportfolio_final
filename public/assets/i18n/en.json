@@ -199,6 +199,19 @@
     "close": "Close"
   },
   "experiences": {
+    "intro": {
+      "kicker": "// Field experience",
+      "lead": "Code in production.",
+      "body": "Internships, student jobs and work-study at CAPCOD.\n\nReal projects, real constraints, real deliverables.",
+      "stats": {
+        "count": "Experiences",
+        "countValue": "5",
+        "since": "Since",
+        "sinceYear": "2021",
+        "apprenticeship": "Work-study since",
+        "apprenticeshipYear": "2025"
+      }
+    },
     "title": "My Professional Experiences",
     "items": {
       "alternance": {
@@ -253,6 +266,11 @@
     "copyright": "2025 Maxime Chapuis. All rights reserved."
   },
   "contact": {
+    "intro": {
+      "kicker": "// Let's work together",
+      "lead": "Let's talk.",
+      "body": "An idea, a project, an opportunity? Drop a message, I reply fast."
+    },
     "title": "Contact Me",
     "name": "Name",
     "email": "Email",
