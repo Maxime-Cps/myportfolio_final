@@ -4,13 +4,14 @@ import { NgOptimizedImage } from '@angular/common';
 import { TranslationService } from '../../../../core/services/translation.service';
 import { TranslatePipe } from '../../../../core/pipes/translate.pipe';
 import { IExperience } from '../../../../core/models/experience.interface';
-import {experiencesData} from '../../../../core/data/experiences-data';
+import { experiencesData } from '../../../../core/data/experiences-data';
 import { SoftSkills } from '../aboutme/soft-skills/soft-skills';
 import { TabsMenu } from '../../../components/tabs-menu/tabs-menu';
+import { PageIntro } from '../../../components/page-intro/page-intro';
 
 @Component({
   selector: 'app-experiences',
-  imports: [TimelineModule, NgOptimizedImage, TranslatePipe, SoftSkills, TabsMenu],
+  imports: [TimelineModule, NgOptimizedImage, TranslatePipe, SoftSkills, TabsMenu, PageIntro],
   templateUrl: './experiences.html',
   styleUrl: './experiences.scss'
 })
@@ -18,6 +19,12 @@ export class Experiences {
   private readonly translationService = inject(TranslationService);
 
   private experienceConfigs: IExperience[] = experiencesData;
+
+  readonly experiencesStats = computed(() => [
+    { value: this.translationService.getString('experiences.intro.stats.countValue'),         label: this.translationService.getString('experiences.intro.stats.count')          },
+    { value: this.translationService.getString('experiences.intro.stats.sinceYear'),          label: this.translationService.getString('experiences.intro.stats.since')          },
+    { value: this.translationService.getString('experiences.intro.stats.apprenticeshipYear'), label: this.translationService.getString('experiences.intro.stats.apprenticeship') },
+  ]);
 
   experiences = computed(() => {
     return this.experienceConfigs.map(config => {

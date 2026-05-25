@@ -1,5 +1,11 @@
 <div class="experiences-container">
-  <h2>{{ 'experiences.title' | translate }}</h2>
+
+  <app-page-intro
+    [kicker]="'experiences.intro.kicker' | translate"
+    [lead]="'experiences.intro.lead' | translate"
+    [body]="'experiences.intro.body' | translate"
+    [stats]="experiencesStats()"
+  />
 
   <section class="experiences-timeline navigation-animation">
     <p-timeline [value]="experiences()" align="alternate" class="customized-timeline">
@@ -42,11 +48,11 @@
 
   <section class="skills-section">
     <div class="skills-block">
-      <h2>{{ 'aboutme.hardSkills' | translate }}</h2>
+      <h3>{{ 'aboutme.hardSkills' | translate }}</h3>
       <app-tabs-menu></app-tabs-menu>
     </div>
     <div class="skills-block">
-      <h2>{{ 'aboutme.softSkills' | translate }}</h2>
+      <h3>{{ 'aboutme.softSkills' | translate }}</h3>
       <app-soft-skills></app-soft-skills>
     </div>
   </section>
