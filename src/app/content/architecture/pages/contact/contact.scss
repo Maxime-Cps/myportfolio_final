@@ -1,5 +1,18 @@
 @use '../../../../../styles.scss' as *;
 
+app-page-intro {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  padding: 0 2rem;
+}
+
+@media (max-width: 480px) {
+  app-page-intro {
+    padding: 0 1rem;
+  }
+}
+
 .contact-page {
   display: flex;
   justify-content: center;
@@ -20,31 +33,6 @@
 
 .contact-inner {
   width: 100%;
-
-  h2 {
-    text-align: left;
-    margin: 0 0 2rem 0;
-    font-family: "Zalando Sans Expanded", sans-serif;
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
-    font-weight: 900;
-    font-style: italic;
-    color: $white-color;
-    letter-spacing: -0.01em;
-
-    @media (max-width: 480px) {
-      font-size: 1.5rem;
-    }
-
-    &::before {
-      content: '// ';
-      color: #eb592f;
-      font-family: 'Space Mono', monospace;
-      font-size: 0.65em;
-      font-style: normal;
-      font-weight: 400;
-      letter-spacing: 0.05em;
-    }
-  }
 }
 
 form {

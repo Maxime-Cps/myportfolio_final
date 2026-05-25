@@ -1,8 +1,13 @@
 <div class="contact-page navigation-animation">
+
+  <app-page-intro
+    [kicker]="'contact.intro.kicker' | translate"
+    [lead]="'contact.intro.lead' | translate"
+    [body]="'contact.intro.body' | translate"
+  />
+
   <div class="contact container">
     <div class="contact-inner">
-      <h2>{{ 'contact.title' | translate }}</h2>
-
       @if (status() === 'success') {
         <div class="success-message">
           <i class="pi pi-check-circle"></i>

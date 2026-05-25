@@ -1,14 +1,16 @@
-import { Component, signal, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslatePipe } from '../../../../core/pipes/translate.pipe';
 import { environment } from '../../../../../environments/environment';
+import { PageIntro } from '../../../components/page-intro/page-intro';
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, TranslatePipe],
+  imports: [ReactiveFormsModule, TranslatePipe, PageIntro],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
 })
