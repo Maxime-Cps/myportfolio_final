@@ -1,4 +1,4 @@
-import { Component, inject, computed } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, computed } from '@angular/core';
 import { TimelineModule } from 'primeng/timeline';
 import { NgOptimizedImage } from '@angular/common';
 import { TranslationService } from '../../../../core/services/translation.service';
@@ -13,7 +13,8 @@ import { PageIntro } from '../../../components/page-intro/page-intro';
   selector: 'app-experiences',
   imports: [TimelineModule, NgOptimizedImage, TranslatePipe, SoftSkills, TabsMenu, PageIntro],
   templateUrl: './experiences.html',
-  styleUrl: './experiences.scss'
+  styleUrl: './experiences.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Experiences {
   private readonly t = inject(TranslationService);
