@@ -3,7 +3,7 @@
 app-page-intro {
   display: block;
   width: 100%;
-  max-width: 700px;
+  max-width: 600px;
   padding: 0 2rem;
 }
 
@@ -15,7 +15,8 @@ app-page-intro {
 
 .contact-page {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem 1rem;
 }
 
