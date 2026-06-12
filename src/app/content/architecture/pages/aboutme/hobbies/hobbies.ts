@@ -2,11 +2,10 @@ import { Component, inject, computed } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { TranslationService } from '../../../../../core/services/translation.service';
 import { IHobbyConfig } from '../../../../../core/models/hobby.interface';
-import { HobbyCarousel } from '../../../../../content/components/hobby-carousel/hobby-carousel';
 
 @Component({
   selector: 'app-hobbies',
-  imports: [HobbyCarousel],
+  imports: [],
   templateUrl: './hobbies.html',
   styleUrl: './hobbies.scss'
 })

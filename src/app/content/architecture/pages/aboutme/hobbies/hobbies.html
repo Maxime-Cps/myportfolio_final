@@ -1,24 +1,42 @@
-<div class="hobbies-stack">
+<div class="hobbies-bento">
   @for (hobby of hobbies(); track hobby.name; let i = $index) {
     <article
-      class="hobby-card"
-      [class.hobby-card--reverse]="i % 2 === 1">
-      <div class="hobby-card__visual">
-        <app-hobby-carousel
-          [media]="hobby.media"
-          [icon]="hobby.icon"
-          [cardIndex]="i" />
+      class="hobby-tile"
+      [class.hobby-tile--featured]="hobby.featured"
+      [class.hobby-tile--logo]="hobby.media?.mode === 'contain'">
+
+      <div class="hobby-tile__media">
+        @if (hobby.media) {
+          @if (hobby.media.type === 'video') {
+            <video
+              [poster]="hobby.media.poster ?? ''"
+              autoplay muted loop playsinline
+              [attr.aria-label]="hobby.media.alt ?? hobby.name">
+              <source [src]="hobby.media.src" type="video/mp4" />
+            </video>
+          } @else {
+            <img [src]="hobby.media.src" [alt]="hobby.media.alt ?? hobby.name" loading="lazy" />
+          }
+        } @else {
+          <div class="hobby-tile__icon" [innerHTML]="getSafeIcon(hobby.icon)"></div>
+        }
+        <div class="hobby-tile__scrim"></div>
       </div>
-      <div class="hobby-card__body">
-        <h3 class="hobby-card__name">{{ hobby.name }}</h3>
-        <p class="hobby-card__desc">{{ hobby.description }}</p>
-        <div class="hobby-card__tags">
+
+      <span class="hobby-tile__index">{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span>
+
+      <div class="hobby-tile__body">
+        <h3 class="hobby-tile__name">{{ hobby.name }}</h3>
+        <div class="hobby-tile__desc-wrap">
+          <p class="hobby-tile__desc">{{ hobby.description }}</p>
+        </div>
+        <div class="hobby-tile__tags">
           @for (tag of hobby.tags; track tag) {
             <span class="hobby-tag">{{ tag }}</span>
           }
         </div>
         @if (hobby.links) {
-          <div class="hobby-card__links">
+          <div class="hobby-tile__links">
             @for (link of hobby.links; track link.label) {
               <a [href]="link.url" target="_blank" rel="noopener noreferrer" class="hobby-link" [title]="link.label">
                 <span [innerHTML]="getSafeIcon(link.icon)"></span>
