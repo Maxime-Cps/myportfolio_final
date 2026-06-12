@@ -10,7 +10,7 @@
           @if (hobby.media.type === 'video') {
             <video
               [poster]="hobby.media.poster ?? ''"
-              autoplay muted loop playsinline
+              autoplay [muted]="true" loop playsinline
               [attr.aria-label]="hobby.media.alt ?? hobby.name">
               <source [src]="hobby.media.src" type="video/mp4" />
             </video>
