@@ -4,6 +4,9 @@
 
 ::ng-deep .project-modal {
   .p-dialog {
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
     background: rgba(14, 14, 18, 0.92);
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
@@ -27,6 +30,8 @@
   .p-dialog-content {
     background: transparent;
     padding: 0;
+    flex: 1 1 auto;
+    min-height: 0;
     overflow-y: auto;
   }
 

@@ -22,6 +22,11 @@
     "name": "Maxime Chapuis",
     "badge": "Currently on work-study",
     "imageAlt": "Photo of Maxime Chapuis",
+    "roles": [
+      "Work-study Angular · Java · .NET at CAPCOD",
+      "Front, Back and DevOps",
+      "DJ, golfer, F1 & GT3 fan"
+    ],
     "featured": {
       "eyebrow": "Featured project",
       "title": "StrasTaRoute",
@@ -201,11 +206,11 @@
   "experiences": {
     "intro": {
       "kicker": "// Field experience",
-      "lead": "Code in production.",
-      "body": "Internships, student jobs and work-study at CAPCOD.\n\nReal projects, real constraints, real deliverables.",
+      "lead": "Hands-on, in the field.",
+      "body": "Internships, student jobs and work-study at CAPCOD.\n\nCommitment, autonomy, results.",
       "stats": {
         "count": "Experiences",
-        "countValue": "5",
+        "countValue": "6",
         "since": "Since",
         "sinceYear": "2021",
         "apprenticeship": "Work-study since",
@@ -214,6 +219,17 @@
     },
     "title": "My Professional Experiences",
     "items": {
+      "alternanceCNAM": {
+        "title": "Developer Apprentice",
+        "date": "September 2026 - August 2029",
+        "description": "Computer Engineering degree apprenticeship at CNAM Strasbourg",
+        "tasks": [
+          "Development and maintenance of Jalios platforms in Java JSP",
+          "Development of Web applications with Angular and TypeScript",
+          "API development with C# .NET",
+          "Participation in planning and code review meetings"
+        ]
+      },
       "alternance": {
         "title": "Developer Apprenticeship",
         "date": "September 2025 - August 2026",

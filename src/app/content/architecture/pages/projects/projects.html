@@ -10,8 +10,9 @@
     @for (project of projects; track project.id; let i = $index) {
       <button
         class="project-row"
+        [class.expanded]="expandedId() === project.id"
         type="button"
-        (click)="openProjectDetail(project)"
+        (click)="onRowClick(project)"
         [attr.aria-label]="project.titleKey | translate"
       >
         <span class="project-index">{{ (i + 1).toString().padStart(2, '0') }}</span>

@@ -2,6 +2,17 @@ import {IExperience} from '../models/experience.interface';
 
 export const experiencesData : IExperience[] = [
   {
+    titleKey: 'experiences.items.alternanceCNAM.title',
+    company: 'CAPCOD',
+    location: 'Strasbourg',
+    dateKey: 'experiences.items.alternanceCNAM.date',
+    icon: 'pi pi-code',
+    image: 'capcod.jpeg',
+    descriptionKey: 'experiences.items.alternanceCNAM.description',
+    tasksKey: 'experiences.items.alternanceCNAM.tasks',
+    technologies: ['Java', 'JSP', 'Jalios', 'Angular', 'TypeScript', 'C#', '.NET', 'Git']
+  },
+  {
     titleKey: 'experiences.items.alternance.title',
     company: 'CAPCOD',
     location: 'Strasbourg',

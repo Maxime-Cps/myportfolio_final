@@ -22,6 +22,11 @@
     "name": "Maxime Chapuis",
     "badge": "Actuellement en alternance chez CAPCOD",
     "imageAlt": "Photo de Maxime Chapuis",
+    "roles": [
+      "Alternant Angular · Java · .NET chez CAPCOD",
+      "Front, Back et DevOps",
+      "DJ, golfeur, fan de F1 et de GT3"
+    ],
     "featured": {
       "eyebrow": "Projet phare",
       "title": "StrasTaRoute",
@@ -207,11 +212,11 @@
   "experiences": {
     "intro": {
       "kicker": "// Terrain + alternance",
-      "lead": "Du code en production.",
-      "body": "Stages, jobs étudiants et alternance chez CAPCOD.\n\nDes vrais projets, des vrais contraintes, des vrais livrables.",
+      "lead": "Du concret, sur le terrain.",
+      "body": "Stages, jobs étudiants et alternance chez CAPCOD.\n\nDe l'engagement, de l'autonomie, des résultats.",
       "stats": {
         "count": "Expériences",
-        "countValue": "5",
+        "countValue": "6",
         "since": "Depuis",
         "sinceYear": "2021",
         "apprenticeship": "En alternance depuis",
@@ -220,6 +225,17 @@
     },
     "title": "Mes Expériences Professionnelles",
     "items": {
+      "alternanceCNAM": {
+        "title": "Alternant Développeur",
+        "date": "Septembre 2026 - Août 2029",
+        "description": "Alternance de cursus Ingénieur Informatique au CNAM Strasbourg",
+        "tasks": [
+          "Développement et maintenance de plateformes Jalios en Java JSP",
+          "Développement d'applications Web avec Angular et TypeScript",
+          "Développement d'API avec C# .NET",
+          "Participation aux réunions de planification et de revue de code"
+        ]
+      },
       "alternance": {
         "title": "Alternance Développeur",
         "date": "Septembre 2025 - Août 2026",

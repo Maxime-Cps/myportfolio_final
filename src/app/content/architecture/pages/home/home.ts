@@ -3,6 +3,7 @@ import { isPlatformBrowser, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ButtonLinks } from '../../../../tools/button-links/button-links';
 import { TranslatePipe } from '../../../../core/pipes/translate.pipe';
+import { TranslationService } from '../../../../core/services/translation.service';
 
 @Component({
   selector: 'app-home',
@@ -17,13 +18,22 @@ import { TranslatePipe } from '../../../../core/pipes/translate.pipe';
 })
 export class Home implements OnInit, OnDestroy {
   private readonly platformId = inject(PLATFORM_ID);
+  private readonly t = inject(TranslationService);
   private readonly STORAGE_KEY = 'home-animation-played';
   readonly featuredGithubUrl = 'https://github.com/Maxime-Cps/StrasTaRoute_Web';
-  private readonly ROLES = [
+  private readonly FALLBACK_ROLES = [
     'Alternant Angular · Java · .NET chez CAPCOD',
     'Front, Back et DevOps',
     'DJ, golfeur, fan de F1 et de GT3',
   ];
+
+  /** Roles read from the active translation file so the typewriter follows the language. */
+  private get roles(): string[] {
+    const value = this.t.get('home.roles');
+    return Array.isArray(value) && value.length > 0
+      ? value.filter((v): v is string => typeof v === 'string')
+      : this.FALLBACK_ROLES;
+  }
 
   openFeaturedGithub(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -58,7 +68,9 @@ export class Home implements OnInit, OnDestroy {
   }
 
   private typeRole(): void {
-    const role = this.ROLES[this.roleIndex];
+    const roles = this.roles;
+    this.roleIndex = this.roleIndex % roles.length;
+    const role = roles[this.roleIndex];
     let charIndex = 0;
 
     this.typewriterDone.set(false);
@@ -89,7 +101,7 @@ export class Home implements OnInit, OnDestroy {
         charIndex--;
         this.typewriterTimer = setTimeout(erase, 30);
       } else {
-        this.roleIndex = (this.roleIndex + 1) % this.ROLES.length;
+        this.roleIndex = (this.roleIndex + 1) % this.roles.length;
         this.typewriterTimer = setTimeout(() => this.typeRole(), 400);
       }
     };
