@@ -1,4 +1,4 @@
-import { Component, inject, computed } from '@angular/core';
+import { Component, inject, computed, signal, ChangeDetectionStrategy } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { TranslationService } from '../../../../../core/services/translation.service';
 import { IHobbyConfig } from '../../../../../core/models/hobby.interface';
@@ -7,7 +7,8 @@ import { IHobbyConfig } from '../../../../../core/models/hobby.interface';
   selector: 'app-hobbies',
   imports: [],
   templateUrl: './hobbies.html',
-  styleUrl: './hobbies.scss'
+  styleUrl: './hobbies.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Hobbies {
   private readonly translationService = inject(TranslationService);
@@ -56,8 +57,10 @@ export class Hobbies {
     }
   ];
 
+  expanded = signal<Set<number>>(new Set());
+
   hobbies = computed(() => {
-    return this.hobbyConfigs.map((config, index) => {
+    return this.hobbyConfigs.map((config, index, arr) => {
       const name = this.translationService.get(config.nameKey);
       const description = this.translationService.get(config.descriptionKey);
       return {
@@ -67,10 +70,26 @@ export class Hobbies {
         media: config.media?.[0] ?? null,
         links: config.links,
         tags: config.tags,
-        featured: index === 0
+        featured: index === 0,
+        banner: index === arr.length - 1,
+        index: String(index + 1).padStart(2, '0')
       };
     });
   });
+
+  isExpanded(i: number): boolean {
+    return this.expanded().has(i);
+  }
+
+  toggle(i: number): void {
+    const next = new Set(this.expanded());
+    if (next.has(i)) {
+      next.delete(i);
+    } else {
+      next.add(i);
+    }
+    this.expanded.set(next);
+  }
 
   getSafeIcon(icon: string): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(icon);

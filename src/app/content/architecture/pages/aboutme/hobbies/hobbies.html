@@ -3,7 +3,11 @@
     <article
       class="hobby-tile"
       [class.hobby-tile--featured]="hobby.featured"
-      [class.hobby-tile--logo]="hobby.media?.mode === 'contain'">
+      [class.hobby-tile--logo]="hobby.media?.mode === 'contain'"
+      [class.hobby-tile--banner]="hobby.banner"
+      [class.hobby-tile--expanded]="isExpanded(i)"
+      [attr.tabindex]="hobby.featured ? null : 0"
+      (click)="hobby.featured ? null : toggle(i)">
 
       <div class="hobby-tile__media">
         @if (hobby.media) {
@@ -23,7 +27,7 @@
         <div class="hobby-tile__scrim"></div>
       </div>
 
-      <span class="hobby-tile__index">{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span>
+      <span class="hobby-tile__index">{{ hobby.index }}</span>
 
       <div class="hobby-tile__body">
         <h3 class="hobby-tile__name">{{ hobby.name }}</h3>

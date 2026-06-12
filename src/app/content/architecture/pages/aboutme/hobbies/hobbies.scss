@@ -31,7 +31,7 @@
     min-height: 340px;
   }
 
-  &:nth-child(4) {
+  &--banner {
     grid-column: 1 / -1;
     min-height: 130px;
   }
@@ -43,8 +43,19 @@
 
     .hobby-tile__media img,
     .hobby-tile__media video { transform: scale(1.04); }
+  }
 
-    &:not(.hobby-tile--featured) .hobby-tile__desc-wrap { grid-template-rows: 1fr; }
+  &:not(.hobby-tile--featured) {
+    &:hover .hobby-tile__desc-wrap,
+    &:focus-within .hobby-tile__desc-wrap,
+    &.hobby-tile--expanded .hobby-tile__desc-wrap {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid #eb592f;
+    outline-offset: 4px;
   }
 
   @media (max-width: 768px) {
