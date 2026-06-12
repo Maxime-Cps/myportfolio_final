@@ -1,5 +1,14 @@
 @use '../../../../../../styles.scss' as *;
 
+// The host is a flex child of `.hobbies-container` (justify-content: center),
+// and every tile's content is absolutely positioned — so the grid has no
+// intrinsic width to size against. Make the host fill its parent explicitly.
+:host {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
 .hobbies-bento {
   display: grid;
   grid-template-columns: 1.25fr 1fr;
