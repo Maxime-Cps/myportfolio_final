@@ -2,7 +2,7 @@
 <header>
   <div class="header-container" [class.slide-in-blurred-left]="showAnimation()">
     <div class="header-title">
-      <img routerLink="/home" id="logo" src="/messmocky.PNG" [attr.alt]="'header.logoAlt' | translate" (click)="onLogoClick()" />
+      <img routerLink="/home" id="logo" src="/assets/img/messmocky.webp" [attr.alt]="'header.logoAlt' | translate" (click)="onLogoClick()" (keydown)="onLogoClick()" />
       <h1 id="header-h1">{{ 'header.title' | translate }}</h1>
     </div>
     <div class="header-right">
@@ -15,8 +15,8 @@
 </header>
 
 @if (showEasterEgg()) {
-  <div class="music-egg-overlay" (click)="closeEasterEgg()">
-    <div class="music-egg-card" (click)="$event.stopPropagation()">
+  <div class="music-egg-overlay" (click)="closeEasterEgg()" (keydown)="closeEasterEgg()">
+    <div class="music-egg-card" (click)="$event.stopPropagation()" (keydown)="$event.stopPropagation()">
       <button class="music-egg-close" (click)="closeEasterEgg()">✕</button>
       <span class="music-egg-label">{{ 'musicEgg.found' | translate }}</span>
       <div id="music-egg-canvas"></div>
@@ -29,8 +29,8 @@
 }
 
 @if (mobileMenu.menuOpen()) {
-  <div class="mobile-menu-overlay" (click)="mobileMenu.close()">
-    <nav class="mobile-menu" (click)="$event.stopPropagation()">
+  <div class="mobile-menu-overlay" (click)="mobileMenu.close()" (keydown)="mobileMenu.close()">
+    <nav class="mobile-menu" (click)="$event.stopPropagation()" (keydown)="$event.stopPropagation()" >
       <a class="pill mobile-pill" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="mobileMenu.close()">
         <span class="pill-icon"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m1.5 13v1a.5.5 0 0 0 .3379.4731 18.9718 18.9718 0 0 0 6.1621 1.0269 18.9629 18.9629 0 0 0 6.1621-1.0269.5.5 0 0 0 .3379-.4731v-1a6.5083 6.5083 0 0 0 -4.461-6.1676 3.5 3.5 0 1 0 -4.078 0 6.5083 6.5083 0 0 0 -4.461 6.1676zm4-9a2.5 2.5 0 1 1 2.5 2.5 2.5026 2.5026 0 0 1 -2.5-2.5zm2.5 3.5a5.5066 5.5066 0 0 1 5.5 5.5v.6392a18.08 18.08 0 0 1 -11 0v-.6392a5.5066 5.5066 0 0 1 5.5-5.5z"></path></svg></span>
         <span class="pill-label">{{ 'nav.home' | translate }}</span>

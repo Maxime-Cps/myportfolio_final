@@ -145,7 +145,7 @@
       "body": "Des projets académiques et perso qui couvrent mobile, web, backend et jeux sérieux.\n\nChaque projet = une technologie apprise, un problème résolu, une compétence construite.",
       "stats": {
         "projects": "Projets réalisés",
-        "projectsCount": "9",
+        "projectsCount": "8",
         "technologies": "Technologies maîtrisées",
         "technologiesCount": "12+",
         "since": "Dev depuis",
@@ -182,11 +182,6 @@
       "title": "PlanMyRave (WIP)",
       "description": "Application web pour organiser vos prochaines sorties en festivals et concerts.",
       "longDescription": "PlanMyRave est une application web destinée aux amateurs de musique électronique. Elle permet de découvrir les prochains festivals et concerts, de planifier ses sorties, de partager des évènements avec ses amis et de gérer son budget. L'application intègre des fonctionnalités sociales pour connecter les passionnés de musique."
-    },
-    "wtfau": {
-      "title": "WTFAU",
-      "description": "Ma plateforme d'authentification pour tous mes services.",
-      "longDescription": "WTFAU (Who The F*** Are You?) est ma plateforme centralisée d'authentification. Elle permet de gérer l'authentification unique (SSO) pour tous mes projets personnels."
     },
     "labyrinthe": {
       "title": "Labyrinthe",

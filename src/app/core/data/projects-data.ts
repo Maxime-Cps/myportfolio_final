@@ -25,22 +25,6 @@ export const projectsData : IProject[] = [
     gradientColors: ['#000000', '#eb592f']
   },
   {
-    id: 'wtfau',
-    titleKey: 'projects.wtfau.title',
-    descriptionKey: 'projects.wtfau.description',
-    longDescriptionKey: 'projects.wtfau.longDescription',
-    coverImage: { src: '/assets/img/projects/WTFAU/WTFAU.PNG', alt: 'WTFAU' },
-    images: [
-      { src: '/assets/img/projects/WTFAU/WTFAU.PNG', alt: 'WTFAU' }
-    ],
-    technologies: [
-      { name: 'C#', icon: 'devicon-csharp-plain' },
-      { name: '.NET', icon: 'devicon-dotnet-plain' },
-      { name: 'MySQL', icon: 'devicon-mysql-plain' },
-    ],
-    gradientColors: ['#20a050', '#2ba838']
-  },
-  {
     id: 'jesso',
     titleKey: 'projects.jesso.title',
     descriptionKey: 'projects.jesso.description',

@@ -9,6 +9,7 @@ export interface IHobbyMedia {
   src: string;
   alt?: string;
   mode?: 'cover' | 'contain';
+  poster?: string;
 }
 
 export interface IHobbyConfig {

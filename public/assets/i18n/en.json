@@ -145,7 +145,7 @@
       "body": "Academic and personal projects spanning mobile, web, backend and serious games.\n\nEach project = a technology learned, a problem solved, a skill built.",
       "stats": {
         "projects": "Projects built",
-        "projectsCount": "9",
+        "projectsCount": "8",
         "technologies": "Technologies mastered",
         "technologiesCount": "12+",
         "since": "Dev since",
@@ -161,11 +161,6 @@
       "title": "Crash BandiBooks",
       "description": "A serious game developed to illustrate the role of Data Librarians in research data management.",
       "longDescription": "Crash BandiBooks is an educational serious game developed in collaboration with the University of Strasbourg. The game helps players understand the crucial role of Data Librarians in managing, preserving and sharing research data. Through interactive missions, players learn best practices for data management, open science challenges and the importance of documentation."
-    },
-    "wtfau": {
-      "title": "WTFAU",
-      "description": "My authentication platform for all my services.",
-      "longDescription": "WTFAU (What The F*** Authentication) is my centralized authentication platform. It provides single sign-on (SSO) for all my personal projects. Built with modern technologies, it offers robust security with OAuth2 support, session management and two-factor verification."
     },
     "jesso": {
       "title": "Jesso",
