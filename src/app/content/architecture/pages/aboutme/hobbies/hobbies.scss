@@ -83,6 +83,12 @@
   }
 }
 
+// Golf (featured) video: bias the crop toward the top so more of the
+// upper part of the footage stays visible.
+.hobby-tile--featured .hobby-tile__media video {
+  object-position: center top;
+}
+
 .hobby-tile--logo .hobby-tile__media {
   background: linear-gradient(135deg, rgba(58, 37, 22, 0.95), rgba(18, 12, 8, 0.9));
   display: flex;
