@@ -16,6 +16,13 @@ export class Hobbies {
 
   private readonly hobbyConfigs: IHobbyConfig[] = [
     {
+      nameKey: 'hobbies.golf.name',
+      descriptionKey: 'hobbies.golf.description',
+      media: [{ type: 'video', src: 'assets/img/golf-2.MOV', mode: 'cover', poster: 'assets/img/golf-1.jpg', alt: 'Swing de golf' }],
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-land-plot-icon lucide-land-plot"><path d="m12 8 6-3-6-3v10"/><path d="m8 11.99-5.5 3.14a1 1 0 0 0 0 1.74l8.5 4.86a2 2 0 0 0 2 0l8.5-4.86a1 1 0 0 0 0-1.74L16 12"/><path d="m6.49 12.85 11.02 6.3"/><path d="M17.51 12.85 6.5 19.15"/></svg>`,
+      tags: ['Sport', 'Competition', 'Precision']
+    },
+    {
       nameKey: 'hobbies.music.name',
       descriptionKey: 'hobbies.music.description',
       media: [{ type: 'image', src: 'assets/img/dj-1.JPG', mode: 'cover', alt: 'Maxime en DJ set' }],
@@ -32,15 +39,9 @@ export class Hobbies {
       ]
     },
     {
-      nameKey: 'hobbies.golf.name',
-      descriptionKey: 'hobbies.golf.description',
-      media: [{ type: 'video', src: 'assets/img/golf-3.MP4', mode: 'cover', poster: 'assets/img/golf-1.jpg', alt: 'Swing de golf' }],
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-land-plot-icon lucide-land-plot"><path d="m12 8 6-3-6-3v10"/><path d="m8 11.99-5.5 3.14a1 1 0 0 0 0 1.74l8.5 4.86a2 2 0 0 0 2 0l8.5-4.86a1 1 0 0 0 0-1.74L16 12"/><path d="m6.49 12.85 11.02 6.3"/><path d="M17.51 12.85 6.5 19.15"/></svg>`,
-      tags: ['Sport', 'Competition', 'Precision']
-    },
-    {
       nameKey: 'hobbies.motorsport.name',
       descriptionKey: 'hobbies.motorsport.description',
+      media: [{ type: 'image', src: 'assets/img/kart.webp', mode: 'cover', alt: 'Maxime en course de karting' }],
       icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
         <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
       </svg>`,

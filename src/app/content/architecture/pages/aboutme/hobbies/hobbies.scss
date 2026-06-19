@@ -35,14 +35,10 @@
     border-color 0.3s ease,
     box-shadow 0.4s ease;
 
+  // Golf featured: left column, spans all three right-column rows.
   &--featured {
-    grid-row: span 2;
+    grid-row: span 3;
     min-height: 340px;
-  }
-
-  &--banner {
-    grid-column: 1 / -1;
-    min-height: 130px;
   }
 
   &:hover {
