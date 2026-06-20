@@ -42,6 +42,6 @@ export const config: NeatConfig = {
   grainSparsity: 0,
   grainIntensity: 0,
   grainSpeed: 0,
-  resolution: 1,
+  resolution: 0.5,
   yOffset: 0,
 };

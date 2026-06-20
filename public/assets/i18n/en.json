@@ -20,10 +20,10 @@
   "home": {
     "greeting": "Hi!",
     "name": "Maxime Chapuis",
-    "badge": "Currently on work-study",
+    "badge": "Currently on apprenticeship",
     "imageAlt": "Photo of Maxime Chapuis",
     "roles": [
-      "Work-study Angular · Java · .NET at CAPCOD",
+      "Apprenticeship Angular · Java · .NET at CAPCOD",
       "Front, Back and DevOps",
       "DJ, golfer, F1 & GT3 fan"
     ],
@@ -207,13 +207,13 @@
     "intro": {
       "kicker": "// Field experience",
       "lead": "Hands-on, in the field.",
-      "body": "Internships, student jobs and work-study at CAPCOD.\n\nCommitment, autonomy, results.",
+      "body": "Internships, student jobs and apprenticeship at CAPCOD.\n\nCommitment, autonomy, results.",
       "stats": {
         "count": "Experiences",
         "countValue": "6",
         "since": "Since",
         "sinceYear": "2021",
-        "apprenticeship": "Work-study since",
+        "apprenticeship": "Apprenticeship since",
         "apprenticeshipYear": "2025"
       }
     },

@@ -2,7 +2,7 @@
 <header>
   <div class="header-container" [class.slide-in-blurred-left]="showAnimation()">
     <div class="header-title">
-      <img routerLink="/home" id="logo" src="/assets/img/messmocky.webp" [attr.alt]="'header.logoAlt' | translate" (click)="onLogoClick()" (keydown)="onLogoClick()" />
+      <img routerLink="/home" id="logo" src="/assets/img/messmocky.webp" width="144" height="144" [attr.alt]="'header.logoAlt' | translate" (click)="onLogoClick()" (keydown)="onLogoClick()" />
       <h1 id="header-h1">{{ 'header.title' | translate }}</h1>
     </div>
     <div class="header-right">
