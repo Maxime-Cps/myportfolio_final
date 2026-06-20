@@ -1,0 +1,15 @@
+# Maxime Chapuis — Portfolio
+
+> Portfolio de Maxime Chapuis, développeur Front & Back End et étudiant en BUT Informatique à Strasbourg, alternant Angular / Java / .NET chez CAPCOD. DJ, golfeur et fan de F1.
+
+## Pages
+
+- [Accueil](https://mchapuis-portfolio.vercel.app/home) : présentation, stack technique et liens (GitHub, LinkedIn, CV, contact).
+- [À propos](https://mchapuis-portfolio.vercel.app/home/aboutme) : parcours, centres d'intérêt et hobbies.
+- [Projets](https://mchapuis-portfolio.vercel.app/home/projects) : projets personnels et académiques (StrasTaRoute, PlanMyRave, etc.).
+- [Expériences](https://mchapuis-portfolio.vercel.app/home/experiences) : expériences professionnelles et alternance.
+- [Contact](https://mchapuis-portfolio.vercel.app/home/contact) : formulaire et coordonnées.
+
+## Ressources
+
+- [Site principal](https://mchapuis-portfolio.vercel.app/)
