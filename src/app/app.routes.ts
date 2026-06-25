@@ -9,31 +9,31 @@ export const routes: Routes = [
   {
     path: '',
     component: Home,
-    title: 'myportfolio'
+    title: 'Maxime\'s Portfolio'
   },
   {
     path: 'home',
     component: Home,
-    title: 'myportfolio'
+    title: 'Maxime\'s Portfolio'
   },
   {
     path: 'home/aboutme',
     component: Aboutme,
-    title: 'About Me - myportfolio'
+    title: 'About Me'
   },
   {
     path: 'home/projects',
     component: Projects,
-    title: 'Projects - myportfolio'
+    title: 'Projects'
   },
   {
     path: 'home/experiences',
     component: Experiences,
-    title: 'Experiences - myportfolio'
+    title: 'Experiences'
   },
   {
     path: 'home/contact',
     component: Contact,
-    title: 'Contact - myportfolio'
+    title: 'Contact'
   },
 ];

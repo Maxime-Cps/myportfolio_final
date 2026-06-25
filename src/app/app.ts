@@ -11,5 +11,5 @@ import {Footer} from './content/architecture/footer/footer';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('myportfolio');
+  protected readonly title = signal('Maxime\'s Portfolio');
 }

@@ -100,9 +100,15 @@ $transition: all 0.3s ease-out;
   border: 1px solid $pill-border;
   border-radius: 50px;
   color: $text-color;
-  font-size: 1.2rem;
+  padding: 0;
   cursor: pointer;
   transition: $transition;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
 
   &:hover {
     border-color: rgba(255, 156, 127, 0.4);
