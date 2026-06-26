@@ -3,9 +3,13 @@
   overflow: hidden;
 }
 
-.neat-placeholder {
+.neat-bg {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: radial-gradient(ellipse at 30% 40%, #2a1660 0%, #0d0a2e 55%, #060010 100%);
+  background-color: #1c0a9e;
+  background-image: url('/assets/img/neat-bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
