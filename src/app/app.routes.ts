@@ -1,39 +1,34 @@
 import { Routes } from '@angular/router';
-import {Home} from './content/architecture/pages/home/home';
-import {Aboutme} from './content/architecture/pages/aboutme/aboutme';
-import {Projects} from './content/architecture/pages/projects/projects';
-import {Experiences} from './content/architecture/pages/experiences/experiences';
-import {Contact} from './content/architecture/pages/contact/contact';
 
 export const routes: Routes = [
   {
     path: '',
-    component: Home,
+    loadComponent: () => import('./content/architecture/pages/home/home').then(m => m.Home),
     title: 'Maxime\'s Portfolio'
   },
   {
     path: 'home',
-    component: Home,
+    loadComponent: () => import('./content/architecture/pages/home/home').then(m => m.Home),
     title: 'Maxime\'s Portfolio'
   },
   {
     path: 'home/aboutme',
-    component: Aboutme,
+    loadComponent: () => import('./content/architecture/pages/aboutme/aboutme').then(m => m.Aboutme),
     title: 'About Me'
   },
   {
     path: 'home/projects',
-    component: Projects,
+    loadComponent: () => import('./content/architecture/pages/projects/projects').then(m => m.Projects),
     title: 'Projects'
   },
   {
     path: 'home/experiences',
-    component: Experiences,
+    loadComponent: () => import('./content/architecture/pages/experiences/experiences').then(m => m.Experiences),
     title: 'Experiences'
   },
   {
     path: 'home/contact',
-    component: Contact,
+    loadComponent: () => import('./content/architecture/pages/contact/contact').then(m => m.Contact),
     title: 'Contact'
   },
 ];
