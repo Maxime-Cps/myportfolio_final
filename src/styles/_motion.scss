@@ -1,0 +1,90 @@
+// Motion toolkit — mixins only, no CSS output.
+// Safe to `@use` from any component stylesheet without duplicating rules.
+//
+// Three effects live here:
+//   1. `reveal`    — scroll-driven entrance, CSS-only (no JS, no observer).
+//   2. `spotlight` — cursor-tracked glow, fed by the `appMagnetic` directive.
+//   3. `tilt`      — 3D lean towards the cursor, same directive.
+//
+// These emit nested rules, and Sass warns about plain declarations that follow
+// one. Include them in this order, after the rule's own declarations:
+// `tilt` → `spotlight` → `reveal`.
+
+// ---- 1. Scroll-driven reveal ----
+//
+// Uses the native `view()` timeline: the element animates as it crosses the
+// viewport, with no scroll listener and no layout thrash. Gated behind
+// `@supports` so browsers without scroll-driven animations simply render the
+// content in its final state instead of leaving it invisible.
+//
+// The keyframes (`reveal-rise`) are declared once in `styles.scss`. They animate
+// the standalone `translate` property, not `transform`, so component-level hover
+// transforms keep working on the same element.
+//
+// The range ends at `entry 100%` — the moment the element has finished entering the
+// viewport. Ranges expressed in `cover` need far more scrolling than that, which the
+// last elements of a page never get: they would stay stuck half-transparent.
+//
+// $distance — how far the element rises, in px.
+// $start    — where the animation begins. Push it later to stagger siblings that
+//             would otherwise share a timeline (same row of a grid, say).
+// $end      — where it ends. Leave it alone unless you know the element is not last.
+@mixin reveal($distance: 24px, $start: entry 0%, $end: entry 100%) {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      --reveal-distance: #{$distance};
+      animation: reveal-rise 1s linear both;
+      animation-timeline: view();
+      animation-range: #{$start} #{$end};
+    }
+  }
+}
+
+// ---- 2. Cursor spotlight ----
+//
+// Paints a radial glow that follows the pointer. The `is-magnetic` class and the
+// `--pointer-x` / `--pointer-y` variables are set by the `appMagnetic` directive,
+// which only activates on fine pointers outside reduced-motion — so touch users
+// and reduced-motion users never see this layer at all.
+//
+// The glow sits on `::after`; keep `::before` free for component-specific decoration.
+@mixin spotlight($color: rgba(235, 89, 47, 0.18), $size: 340px) {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    background: radial-gradient(
+      $size circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+      $color,
+      transparent 68%
+    );
+  }
+
+  &.is-magnetic:hover::after {
+    opacity: 1;
+  }
+}
+
+// ---- 3. Pointer tilt ----
+//
+// Reads the `--tilt-x` / `--tilt-y` variables written by `appMagnetic` when its
+// `appMagneticTilt` input is set.
+//
+// This owns `transform` on the element, and `reveal` owns `translate`, so a hover
+// lift can use neither: set `--lift` instead (e.g. `&:hover { --lift: -5px; }`).
+// Changing the variable re-computes the transform, which still transitions smoothly.
+@mixin tilt($perspective: 700px) {
+  transform:
+    perspective($perspective)
+    translate3d(0, var(--lift, 0), 0)
+    rotateX(var(--tilt-x, 0deg))
+    rotateY(var(--tilt-y, 0deg));
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}

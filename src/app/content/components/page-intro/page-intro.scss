@@ -1,4 +1,5 @@
-@use '../../../../styles.scss' as *;
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/motion' as motion;
 
 .page-intro {
   margin: 1rem 0 3rem;
@@ -64,6 +65,7 @@
   flex-direction: column;
   gap: 0.15rem;
 
+  @include motion.reveal($distance: 16px);
   &-value {
     font-family: $font-title;
     font-size: 1.6rem;

@@ -2,10 +2,11 @@ import { Component, inject, computed } from '@angular/core';
 import { TranslationService } from '../../../../../core/services/translation.service';
 import { ISoftSkillConfig } from '../../../../../core/models/soft-skill.interface';
 import {softSkillsData} from '../../../../../core/data/soft-skills-data';
+import { MagneticDirective } from '../../../../../tools/magnetic/magnetic.directive';
 
 @Component({
   selector: 'app-soft-skills',
-  imports: [],
+  imports: [MagneticDirective],
   templateUrl: './soft-skills.html',
   styleUrl: './soft-skills.scss'
 })

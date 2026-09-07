@@ -1,3 +1,5 @@
+@use '../../../../styles/motion' as motion;
+
 .timeline-studies {
   width: 100%;
 }
@@ -22,6 +24,8 @@
   margin: 0.5rem;
   transition: border-color 0.3s ease, transform 0.2s ease;
 
+  @include motion.reveal($distance: 26px);
+
   &:hover {
     border-color: rgba(255, 156, 127, 0.4);
     transform: translateY(-3px);
@@ -32,6 +36,8 @@
     border-color: rgba(235, 89, 47, 0.45);
     background: rgba(235, 89, 47, 0.05);
     opacity: 0.88;
+    // Deliberately opts out of the scroll reveal: this card stays dimmed to read as
+    // "not there yet", and the reveal would animate it back to full opacity.
     animation: pulse-next 2.5s ease-in-out infinite;
 
     &:hover {

@@ -1,3 +1,5 @@
+@use '../../../../../styles/motion' as motion;
+
 // ---- Hero Section ----
 
 .hero-section {
@@ -236,6 +238,17 @@
   padding-left: 0.9rem;
   border-left: 2px solid rgba(255, 156, 127, 0.45);
 
+  // Same row, so all three timelines would fire together: stagger their start.
+  @include motion.reveal($distance: 20px);
+
+  &:nth-child(2) {
+    animation-range-start: entry 15%;
+  }
+
+  &:nth-child(3) {
+    animation-range-start: entry 30%;
+  }
+
   p {
     margin: 0;
     font-size: 0.88rem;
@@ -274,6 +287,8 @@
   display: flex;
   justify-content: center;
   padding: 0.5rem 0 1rem;
+
+  @include motion.reveal($distance: 16px);
 }
 
 .featured-cta {

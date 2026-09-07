@@ -1,0 +1,17 @@
+// Design tokens — variables only, no CSS output.
+//
+// Lives apart from `styles.scss` on purpose: that file carries the global rules
+// and the @font-face block, so `@use`-ing it from a component copies ~24 kB of
+// already-global CSS into that component's bundle. Components pull their tokens
+// from here instead; `styles.scss` uses this same partial, so there is one
+// source of truth.
+
+$main-color: #3d3d3d;
+$secondary-color: rgba(255, 156, 127, 0.79);
+$white-color: #F5F5F5;
+$button-border-radius: 5px;
+$border-radius: 30px;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$font-title: "Zalando Sans Expanded", sans-serif;
+$font-main: 'Space Mono', monospace;
+$accent-color: #eb592f;

@@ -15,7 +15,7 @@
         </span>
       </ng-template>
       <ng-template #content let-exp>
-        <div class="exp-card">
+        <div class="exp-card" appMagnetic>
           <div class="exp-header">
             @if (exp.image) {
               <img ngSrc="assets/img/{{exp.image}}" [alt]="exp.company" width="120" height="60" class="company-logo" />
