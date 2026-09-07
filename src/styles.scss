@@ -458,6 +458,24 @@ button {
   animation-name: -ua-view-transition-fade-out, rotate-out;
 }
 
+/**
+ * ----------------------------------------
+ * scroll-driven reveal (see styles/_motion.scss)
+ * ----------------------------------------
+ */
+
+/* Animates `translate`, not `transform`, so component hover transforms survive. */
+@keyframes reveal-rise {
+  from {
+    opacity: 0;
+    translate: 0 var(--reveal-distance, 24px);
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
 /* ------------------------------- */
 /*      Reduced Motion Support     */
 /* ------------------------------- */

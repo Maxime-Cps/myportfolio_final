@@ -1,5 +1,7 @@
 // ---- Projects — Case Study Index ----
 
+@use '../../../../../styles/motion' as motion;
+
 app-page-intro {
   display: block;
   max-width: 1100px;
@@ -38,6 +40,9 @@ app-page-intro {
   color: #F5F5F5;
   font-family: inherit;
   transition: background 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+
+  @include motion.spotlight($size: 420px);
+  @include motion.reveal($distance: 28px);
 
   // accent line draws in from bottom on hover
   &::before {
@@ -269,5 +274,9 @@ app-page-intro {
 
   .project-row:hover .project-desc-wrap {
     grid-template-rows: 1fr;
+  }
+
+  .project-row::after {
+    transition: none !important;
   }
 }

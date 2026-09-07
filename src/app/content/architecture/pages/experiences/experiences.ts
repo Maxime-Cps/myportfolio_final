@@ -8,10 +8,11 @@ import { experiencesData } from '../../../../core/data/experiences-data';
 import { SoftSkills } from '../aboutme/soft-skills/soft-skills';
 import { TabsMenu } from '../../../components/tabs-menu/tabs-menu';
 import { PageIntro } from '../../../components/page-intro/page-intro';
+import { MagneticDirective } from '../../../../tools/magnetic/magnetic.directive';
 
 @Component({
   selector: 'app-experiences',
-  imports: [TimelineModule, NgOptimizedImage, TranslatePipe, SoftSkills, TabsMenu, PageIntro],
+  imports: [TimelineModule, NgOptimizedImage, TranslatePipe, SoftSkills, TabsMenu, PageIntro, MagneticDirective],
   templateUrl: './experiences.html',
   styleUrl: './experiences.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

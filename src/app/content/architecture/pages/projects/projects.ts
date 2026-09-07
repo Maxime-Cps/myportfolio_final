@@ -6,13 +6,15 @@ import { ProjectDetailModal } from './project-detail-modal/project-detail-modal'
 import { projectsData } from '../../../../core/data/projects-data';
 import { PageIntro } from '../../../components/page-intro/page-intro';
 import { TranslationService } from '../../../../core/services/translation.service';
+import { MagneticDirective } from '../../../../tools/magnetic/magnetic.directive';
 
 @Component({
   selector: 'app-projects',
   imports: [
     TranslatePipe,
     ProjectDetailModal,
-    PageIntro
+    PageIntro,
+    MagneticDirective
   ],
   templateUrl: './projects.html',
   styleUrl: './projects.scss'
